@@ -1,0 +1,233 @@
+make: Entering directory '/home/pi/tenonos-benchmark-v1/tenon-c11'
+  LN      Makefile
+  CP      config
+  GEN     libuklibid: libraries.in.new
+  LN      app-rtos-benchmark-abi_qemu-arm64.dbg.gdb.py
+  GEN     uk-gdb.py
+  GEN     config.h
+  CP      libuklibid: libraries.in
+  AWK     libuklibid: libid.h
+  AWK     libuklibid: namemap.c
+  AWK     libuklibid: selfids.c
+  AWK     libuklibid: exportsyms.uk
+  CC      libkvmplat: cpu_native.common.o
+  AS      libkvmplat: cache64.common.o
+  CC      libkvmplat: smccc.common.o
+  AS      libkvmplat: smccc_invoke.common.o
+  CC      libkvmplat: lcpu.arm64_common.o
+  CC      libkvmplat: traps_arm64.isr.o
+  CC      libkvmplat: tls.common.o
+  CC      libkvmplat: fp_arm64.isr.o
+  AS      libkvmplat: lcpu_start.o
+  AS      libkvmplat: entry64.isr.o
+  AS      libkvmplat: exceptions64.isr.o
+  AS      libkvmplat: pagetable64.isr.o
+  CC      libkvmplat: setup.o
+  CC      libkvmplat: lcpu.o
+  CC      libkvmplat: shutdown.o
+  CC      libkvmplat: memory.o
+  CC      libkvmplat: io.o
+  CC      libkvmplat: lcpu.common.o
+  CC      libkvmplat: memory.common.o
+  CC      libkvmplat: bootinfo.common.o
+  CC      libkvmplat: bootinfo_fdt.common.o
+  CC      libkvmplat: qemu_mrds.o
+  AS      libkvmplat: libinfo.libuklibid.o
+  LDS     libkvmplat: link64.lds
+  LDS     libkvmplat: bootinfo.lds
+  LDS     libkvmplat: static_memregion.lds
+  CC      libkvmpl031: pl031.o
+  CC      libkvmpl031: rtc.o
+  AS      libkvmpl031: libinfo.libuklibid.o
+  CC      apprhealstonebenchmark: rst_time.o
+  CC      apprhealstonebenchmark: rst_isr.o
+  CC      apprhealstonebenchmark: rst_sem.o
+  CC      apprhealstonebenchmark: rst_task.o
+  CC      apprhealstonebenchmark: rst_yield.o
+  CC      apprhealstonebenchmark: rst_reschedule.o
+  CC      apprhealstonebenchmark: rst_irq.o
+  CC      apprhealstonebenchmark: rst_tick.o
+  CC      apprhealstonebenchmark: rst_semaphore_shuffle.o
+  CC      apprhealstonebenchmark: rst_task_preempt.o
+  CC      apprhealstonebenchmark: rst_task_switch.o
+  CC      apprhealstonebenchmark: rst_interrupt_latency.o
+  CC      apprhealstonebenchmark: rst_task_switch_multi_threaded.o
+  CC      apprhealstonebenchmark: rst_set_timer_offset.o
+  CC      apprhealstonebenchmark: main.o
+  AS      apprhealstonebenchmark: libinfo.libuklibid.o
+  CC      libfdt: fdt.o
+  CC      libfdt: fdt_addresses.o
+  CC      libfdt: fdt_empty_tree.o
+  CC      libfdt: fdt_overlay.o
+  CC      libfdt: fdt_ro.o
+  CC      libfdt: fdt_rw.o
+  CC      libfdt: fdt_strerror.o
+  CC      libfdt: fdt_sw.o
+  CC      libfdt: fdt_wip.o
+  AS      libfdt: libinfo.libuklibid.o
+  CC      libnolibc: errno.o
+  CC      libnolibc: stdio.o
+  CC      libnolibc: ctype.o
+  CC      libnolibc: stdlib.o
+  CC      libnolibc: string.o
+  CC      libnolibc: strsignal.o
+  CC      libnolibc: psignal.o
+  CC      libnolibc: __month_to_secs.o
+  CC      libnolibc: __secs_to_tm.o
+  CC      libnolibc: timegm.o
+  CC      libnolibc: __tm_to_secs.o
+  CC      libnolibc: __year_to_secs.o
+  CC      libnolibc: htons.o
+  CC      libnolibc: ntohs.o
+  CC      libnolibc: h_errno.o
+  CC      libnolibc: getopt.o
+  CC      libnolibc: sscanf.o
+  CC      libnolibc: scanf.o
+  CC      libnolibc: asprintf.o
+  CC      libnolibc: random.o
+  CC      libnolibc: qsort.o
+  AS      libnolibc: libinfo.libuklibid.o
+  CC      libukalloc: alloc.o
+  AS      libukalloc: libinfo.libuklibid.o
+  CC      libukallocbbuddy: bbuddy.o
+  AS      libukallocbbuddy: libinfo.libuklibid.o
+  CC      libukargparse: argparse.o
+  AS      libukargparse: libinfo.libuklibid.o
+  AS      libukatomic: libinfo.libuklibid.o
+  AS      libukbitops: libinfo.libuklibid.o
+  CC      libukboot: boot.o
+  CC      libukboot: version.o
+  CC      libukboot: shutdown_req.o
+  CC      libukboot: shutdown_req.isr.o
+  CC      libukboot: tenonos_banner.o
+  AS      libukboot: libinfo.libuklibid.o
+  CC      libukboot_main: weak_main.o
+  AS      libukboot_main: libinfo.libuklibid.o
+  CC      libukbus: bus.o
+  AS      libukbus: libinfo.libuklibid.o
+  CC      libukdebug: print.o
+  CC      libukdebug: outf.o
+  CC      libukdebug: hexdump.o
+  AS      libukdebug: libinfo.libuklibid.o
+  CC      libuklibid: namemap.o
+  CC      libuklibid: selfids.o
+  CC      libuklibid: rtmap.o
+  AS      libuklibid: libinfo.global.o
+  AS      libuklibid: libinfo.libuklibid.o
+  CC      libukintctlr: ukintctlr.o
+  AS      libukintctlr: libinfo.libuklibid.o
+  CC      libuklock: semaphore.o
+  AS      libuklock: libinfo.libuklibid.o
+  CC      libuksched: sched.o
+  AS      libuksched: libinfo.libuklibid.o
+  CC      libukschedcoop: schedcoop.o
+  AS      libukschedcoop: libinfo.libuklibid.o
+  CC      libtnschedprio: schedprio.o
+  AS      libtnschedprio: libinfo.libuklibid.o
+  CC      libuktimeconv: timeconv.o
+  AS      libuktimeconv: libinfo.libuklibid.o
+  CC      libukofw: fdt.o
+  AS      libukofw: libinfo.libuklibid.o
+  CC      libtnsystick: tnsystick.o
+  AS      libtnsystick: libinfo.libuklibid.o
+  CC      libtntimer: tntimer.o
+  AS      libtntimer: libinfo.libuklibid.o
+  CC      libukthread: thread.o
+  AS      libukthread: libinfo.libuklibid.o
+  AS      libtnpaging: libinfo.libuklibid.o
+  AS      libarm64arch: libinfo.libuklibid.o
+  CC      libcontext: ctx.isr.o
+  CC      libcontext: ectx.isr.o
+  AS      libcontext: ctx.arm64.o
+  CC      libcontext: tls.arm64.o
+  AS      libcontext: libinfo.libuklibid.o
+  CC      libukbus_platform: platform_bus.o
+  AS      libukbus_platform: libinfo.libuklibid.o
+  CC      libukintctlr_gic: ukintctlr.o
+  CC      libukintctlr_gic: gic-common.o
+  CC      libukintctlr_gic: gic-v2.o
+  AS      libukintctlr_gic: libinfo.libuklibid.o
+  CC      libuktty_pl011: pl011.o
+  AS      libuktty_pl011: libinfo.libuklibid.o
+  AS      libtnsysclock: libinfo.libuklibid.o
+  CC      arm_generic_timer: arm_generic_timer.o
+  AS      arm_generic_timer: libinfo.libuklibid.o
+  LD      libkvmplat.ld.o
+  LD      libkvmpl031.ld.o
+  LD      apprhealstonebenchmark.ld.o
+  LD      libfdt.ld.o
+  LD      libnolibc.ld.o
+  LD      libukalloc.ld.o
+  LD      libukallocbbuddy.ld.o
+  LD      libukargparse.ld.o
+  LD      libukatomic.ld.o
+  LD      libukbitops.ld.o
+  LD      libukboot.ld.o
+  LD      libukboot_main.ld.o
+  LD      libukbus.ld.o
+  LD      libukdebug.ld.o
+  LD      libuklibid.ld.o
+  LD      libukintctlr.ld.o
+  LD      libuklock.ld.o
+  LD      libuksched.ld.o
+  LD      libukschedcoop.ld.o
+  LD      libtnschedprio.ld.o
+  LD      libuktimeconv.ld.o
+  LD      libukofw.ld.o
+  LD      libtnsystick.ld.o
+  LD      libtntimer.ld.o
+  LD      libukthread.ld.o
+  LD      libtnpaging.ld.o
+  LD      libarm64arch.ld.o
+  LD      libcontext.ld.o
+  LD      libukbus_platform.ld.o
+  LD      libukintctlr_gic.ld.o
+  LD      libuktty_pl011.ld.o
+  LD      libtnsysclock.ld.o
+  LD      arm_generic_timer.ld.o
+  OBJCOPY libkvmplat.o
+  OBJCOPY libkvmpl031.o
+  OBJCOPY apprhealstonebenchmark.o
+  OBJCOPY libfdt.o
+  OBJCOPY libnolibc.o
+  OBJCOPY libukalloc.o
+  OBJCOPY libukallocbbuddy.o
+  OBJCOPY libukargparse.o
+  OBJCOPY libukatomic.o
+  OBJCOPY libukbitops.o
+  OBJCOPY libukboot.o
+  OBJCOPY libukboot_main.o
+  OBJCOPY libukbus.o
+  OBJCOPY libukdebug.o
+  OBJCOPY libuklibid.o
+  OBJCOPY libukintctlr.o
+  OBJCOPY libuklock.o
+  OBJCOPY libuksched.o
+  OBJCOPY libukschedcoop.o
+  OBJCOPY libtnschedprio.o
+  OBJCOPY libuktimeconv.o
+  OBJCOPY libukofw.o
+  OBJCOPY libtnsystick.o
+  OBJCOPY libtntimer.o
+  OBJCOPY libukthread.o
+  OBJCOPY libtnpaging.o
+  OBJCOPY libarm64arch.o
+  OBJCOPY libcontext.o
+  OBJCOPY libukbus_platform.o
+  OBJCOPY libukintctlr_gic.o
+  OBJCOPY libuktty_pl011.o
+  OBJCOPY libtnsysclock.o
+  OBJCOPY arm_generic_timer.o
+  MKDIR   static_page
+  MAKE    static_page
+  CC      libtnpaging: staticpg.c
+  GEN     static_page
+  TNMKPT  tn_static_pgtable.o
+  LD      app-rtos-benchmark-abi_qemu-arm64.dbg
+  TNMKPT  tn_static_pgtable
+  SCSTRIP app-rtos-benchmark-abi_qemu-arm64
+  UKBI    app-rtos-benchmark-abi_qemu-arm64.bootinfo
+  OBJCOPY app-rtos-benchmark-abi_qemu-arm64.bin
+  MKLINUX app-rtos-benchmark-abi_qemu-arm64.img
+  GZ      app-rtos-benchmark-abi_qemu-arm64.gz
+make: Leaving directory '/home/pi/tenonos-benchmark-v1/tenon-c11'

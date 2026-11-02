@@ -1,0 +1,16 @@
+config DETAIL_STATS
+	bool "whether need detai stats"
+	default y
+
+config TIME_USE_64BIT
+	bool "time measure unit use uint64"
+	default y
+
+config EXCLUDE_DIRECTIVE_LATENCY
+	bool "exclude directive latency when calculate result"
+	default y
+
+config ARM_CYCLE
+	bool "Use arm cpu cycle provided by PMCCNTR_EL0"
+	default y
+

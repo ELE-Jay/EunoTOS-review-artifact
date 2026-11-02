@@ -1,0 +1,30 @@
+{
+  "id": "TC-C-2-graph",
+  "task_id": "TC-C",
+  "method": "graph",
+  "family": "system_modification",
+  "started_utc": "2026-10-27T14:36:16.224257+00:00",
+  "applicable": true,
+  "infrastructure_invalid": false,
+  "timed_out": false,
+  "budget_wall_s": 1800,
+  "gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": true
+  },
+  "raw_gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": true
+  },
+  "external_check_sha256": "ffbe6d8411f198760043ee6db60711cfb4fbb7922c4b2613c07c05d37e2f3c36",
+  "finished_utc": "2026-10-27T14:37:25.857793+00:00",
+  "observed_wall_s": 69.63361471198732,
+  "benchmark_trial": true,
+  "end_to_end_pass": true
+}

@@ -1,0 +1,41 @@
+{
+  "id": "tenon-resource-modification-v1",
+  "task_bank": "registry/tenonos_tasks_rpi4_v1.json",
+  "task_bank_sha256": "d7659f899aac7a94ab1f18116b908f8ab078e27ddeeda377adf6126975a2f8fb",
+  "source_task": "TC-C",
+  "methods": [
+    "direct",
+    "graph"
+  ],
+  "histories_per_method": 3,
+  "rounds_per_history": 2,
+  "target_rule": "Switch to the other allocator relative to the actually retained parent at each round. A rejected first round does not turn the next task into a no-op.",
+  "generation_budget_s": 180,
+  "maximum_output_tokens_per_round": 1152,
+  "graph_stage_token_caps": {
+    "objective": 288,
+    "paths": 288
+  },
+  "per_round_decision_budget_s": 1800,
+  "per_history_budget_s": 3600,
+  "maximum_model_calls": 24,
+  "maximum_completion_tokens": 13824,
+  "attempts_per_round": 1,
+  "candidate_guest_boots": 3,
+  "parent_check_guest_boots": 3,
+  "model": "deepseek-v4-pro",
+  "service": "deepseek",
+  "thinking": "disabled",
+  "temperature": 0,
+  "initial_reference": "artifacts/reports/tenonos-rpi4-v1/references/composition",
+  "alternate_feasible_reference": "artifacts/reports/tenonos-rpi4-v1/references/modification",
+  "feedback": "Only prior acceptance, stage booleans and required/resolved configuration checks; no raw guest captures, numeric runtime observations, paper or credentials.",
+  "acceptance": "Accept only a native-valid candidate passing the existing build, three fresh original-suite guest executions, resolved requirements, preservation checks and the round decision deadline. Otherwise retain the previous image and configuration, and verify that image in fresh guests.",
+  "completion_boundary": "Round observation includes generation, transfer, build, three guest validations and any rejected-candidate recovery checks. The decision deadline is 1800 s; history accounting includes both rounds and recovery but excludes initial-parent checks and offline audit.",
+  "interpretation": "Prescribed state-linked configuration changes evaluated with frozen original tests. KVM guests exit between invocations; this is build-and-reboot configuration lineage, not in-place hot update, an optimizer, held-out workload certification or RSI. Initial/recovery boots are state checks, not extra candidate replications.",
+  "base_protocol": "registry/tenonos_policy_sequence_v1.json",
+  "change": "Budget sensitivity only: 1152 aggregate output tokens per round and 288 per graph objective/path stage. Prompts, graph, threshold, utility selection, task, parent rule, feedback, acceptance and rollback are unchanged. Source-location bindings are isolated and recorded.",
+  "external_validation": "registry/tenonos_scale_validation_rpi4_v1.json is frozen before this batch. Do not expose its outputs in generation, feedback, selection or retries; validate retained configurations separately after collection.",
+  "authorization": "User explicitly permits reasonable subsequent API experiments toward the goal. This batch is bounded to 24 calls and 13824 output tokens, transmitting only frozen tasks, public metadata/graph fragments and the permitted configuration-check feedback.",
+  "resource_specification": "registry/tenonos_resource_histories_v1.json"
+}

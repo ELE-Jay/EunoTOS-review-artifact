@@ -1,0 +1,7 @@
+{
+  "python": "3.11",
+  "vendored": {
+    "pyelftools": "0.32"
+  },
+  "pip_install_required": false
+}

@@ -1,0 +1,4 @@
+$(eval $(call addlib_s,libuktty_ns8250,$(CONFIG_LIBTNTTY_NS8250)))
+
+CINCLUDES-y             += -I$(LIBUKTTY_NS8250_BASE)/include
+LIBUKTTY_NS8250_SRCS-y += $(LIBUKTTY_NS8250_BASE)/ns8250.c

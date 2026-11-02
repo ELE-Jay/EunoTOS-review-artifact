@@ -1,0 +1,16 @@
+################################################################################
+#
+# Driver registrations
+#
+################################################################################
+
+UK_DRIV_SYSCLOCK_BASE := $(UK_DRIV_BASE)/tnsysclock
+$(eval $(call addlib_s,libtnsysclock,$(CONFIG_SYSCLOCK)))
+
+ASINCLUDES-$(CONFIG_SYSCLOCK)  += -I$(UK_DRIV_SYSCLOCK_BASE)/include
+CINCLUDES-$(CONFIG_SYSCLOCK)   += -I$(UK_DRIV_SYSCLOCK_BASE)/include
+CXXINCLUDES-$(CONFIG_SYSCLOCK) += -I$(UK_DRIV_SYSCLOCK_BASE)/include
+
+$(eval $(call import_lib,$(UK_DRIV_SYSCLOCK_BASE)/arm_generic_timer))
+$(eval $(call import_lib,$(UK_DRIV_SYSCLOCK_BASE)/tsc_i8254))
+

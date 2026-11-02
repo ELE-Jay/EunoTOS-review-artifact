@@ -1,0 +1,12 @@
+$(eval $(call addlib_s,libukthread,$(CONFIG_LIBUKTHREAD)))
+
+CINCLUDES-$(CONFIG_LIBUKTHREAD)     += -I$(LIBUKTHREAD_BASE)/include
+CXXINCLUDES-$(CONFIG_LIBUKTHREAD)   += -I$(LIBUKTHREAD_BASE)/include
+
+LIBUKTHREAD_SRCS-y += $(LIBUKTHREAD_BASE)/thread.c
+LIBUKTHREAD_SRCS-y += $(LIBUKTHREAD_BASE)/extra.ld
+LIBUKTHREAD_THREAD_FLAGS-$(call gcc_version_ge,8,0) += -Wno-cast-function-type
+
+ifneq ($(filter y,$(CONFIG_LIBUKTHREAD_TEST) $(CONFIG_LIBUKTEST_ALL)),)
+LIBUKTHREAD_SRCS-y += $(LIBUKTHREAD_BASE)/tests/test_thread.c
+endif

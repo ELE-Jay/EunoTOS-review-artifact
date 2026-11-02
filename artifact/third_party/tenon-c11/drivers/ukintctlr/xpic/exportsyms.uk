@@ -1,0 +1,4 @@
+uk_intctlr_probe
+uk_intctlr_xpic_handle_irq
+trap_el1_irq
+

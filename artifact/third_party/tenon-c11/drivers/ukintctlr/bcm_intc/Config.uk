@@ -1,0 +1,21 @@
+menuconfig LIBUKINTCTLR_BCM_INTC
+	bool "bcm interrupt controller"
+	depends on (HAVE_INTCTLR && ARCH_ARM_64)
+	select LIBUKINTCTLR
+	default n
+
+config LIBUKINTCTLR_BCM2835_INTC
+	bool "bcm2835 interrupt controller"
+	depends on (LIBUKINTCTLR_BCM_INTC)
+	default n
+
+config LIBUKINTCTLR_BCM2836_INTC
+	bool "bcm2836/bcm2837 interrupt controller"
+	depends on (LIBUKINTCTLR_BCM_INTC)
+	select LIBUKINTCTLR_BCM2835_INTC
+	default y
+
+config LIBUKINTCTLR_BCM_INTC_TEST
+	bool "Enable unit tests"
+	depends on (LIBUKINTCTLR_BCM_INTC && LIBUKTEST)
+	default n

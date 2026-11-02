@@ -1,0 +1,22 @@
+{
+  "identity": "8e19c7fee9a0d4cec3f4a27b7e2f2585069c923958242c73bd4209718c090f3d",
+  "profile": {
+    "identity": "8e19c7fee9a0d4cec3f4a27b7e2f2585069c923958242c73bd4209718c090f3d",
+    "profile": "accepted-tlsf",
+    "provider": "premeasured",
+    "peak_bytes": 5820048,
+    "behavior_pass": true,
+    "build": "artifacts/reports/tenonos-author-engine-20261027-v1/policy-choice-campaign-v1/H1-direct/R2/evaluation/build",
+    "memory_evidence": "artifacts/reports/tenonos-allocated-occupancy-rpi4-v1.json",
+    "memory_sha256": "ac665e259e3f3482faa22e718a21795e53b1243acfda62b2e7498e16d20f818f",
+    "behavior_evidence": "artifacts/reports/tenonos-runtime-oracle-rpi4-v6/audit.json",
+    "behavior_sha256": "d99ae9a2e21a98985d9777d1e459d4e20e8d543c7f3396c137af015d88c908e3"
+  },
+  "profile_reused": true,
+  "maximum_bytes": 6291456,
+  "status": "qualified",
+  "fresh_resource_guests": 0,
+  "energy_inherited": false,
+  "native_end_s": 538833.095216353,
+  "qualification_end_s": 538853.161536888
+}

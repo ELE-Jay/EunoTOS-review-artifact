@@ -1,0 +1,37 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2024 The TenonOS Authors
+
+CC ?= gcc
+CFLAGS ?= -Wall -Wextra -O2
+LDFLAGS ?= -lelf
+obj_dir ?= .
+src ?= .
+
+src_dirs := $(sort $(dir $(src)))
+obj := $(patsubst %.c,$(obj_dir)/%.o,$(notdir $(src)))
+target ?= $(obj_dir)/static_page
+
+INCLUDES ?= -I../include
+EXCLUDES ?=
+
+VALID_INCLUDES = $(filter-out $(EXCLUDES)%, $(INCLUDES))
+
+define verbose_cmd
+	@printf '  %-7s %s\n' '$(1)' '$(2)'
+	@$(3)
+endef
+
+vpath %.c $(src_dirs)
+
+all: $(target)
+
+$(target): $(obj)
+	$(call verbose_cmd,GEN,$(notdir $(target)),$(CC) $(CFLAGS) $(VALID_INCLUDES) $^ -o $@ $(LDFLAGS))
+
+$(obj_dir)/%.o: %.c
+	$(call verbose_cmd,CC,libtnpaging: $(notdir $<),$(CC) $(CFLAGS) $(VALID_INCLUDES) -c -o $@ $<)
+
+clean:
+	$(call verbose_cmd,CLEAN,$(notdir $(target)),rm -f $(target) $(obj))
+
+.PHONY: all clean

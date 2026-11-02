@@ -1,0 +1,41 @@
+4)úets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3ffb0000,len:6096
+load:0x40080000,len:32880
+entry 0x400841a8
+I (29) boot: ESP Simple boot
+I (29) boot: compile time Oct  6 2026 00:14:29
+W (29) boot: Unicore bootloader
+I (29) spi_flash: detected chip: generic
+I (32) spi_flash: flash io: dio
+I (35) boot: chip revision: v1.1
+I (38) boot.esp32: SPI Speed      : 40MHz
+I (41) boot.esp32: SPI Mode       : DIO
+I (45) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+[esp32] [INF] DRAM: lma 0x00001020 vma 0x3ffb0000 len 0x17d0   (6096)
+[esp32] [INF] IRAM: lma 0x000027f8 vma 0x40080000 len 0x8070   (32880)
+[esp32] [INF] padd: lma 0x0000a878 vma 0x00000000 len 0x5780   (22400)
+[esp32] [INF] IMAP: lma 0x00010000 vma 0x400d0000 len 0x3060   (12384)
+[esp32] [INF] padd: lma 0x00013068 vma 0x00000000 len 0xcf90   (53136)
+[esp32] [INF] DMAP: lma 0x00020000 vma 0x3f400000 len 0xc98    (3224)
+[esp32] [INF] Image with 6 segments
+[esp32] [INF] DROM segment: paddr=00020000h, vaddr=3f400000h, size=00C98h (  3224) map
+[esp32] [INF] IROM segment: paddr=00010000h, vaddr=400d0000h, size=03060h ( 12384) map
+
+*** Booting Zephyr OS build 3.7.0 ***
+Thread-Metric Zephyr ESP32 boot
+Thread-Metric queue self-check PASS
+**** Thread-Metric Message Processing Test **** Relative Time: 30
+Time Period Total:  17454003
+
+**** Thread-Metric Message Processing Test **** Relative Time: 60
+Time Period Total:  17455893
+
+**** Thread-Metric Message Processing Test **** Relative Time: 90
+Time Period Total:  17455905
+

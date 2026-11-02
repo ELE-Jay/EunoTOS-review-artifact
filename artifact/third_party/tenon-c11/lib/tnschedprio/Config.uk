@@ -1,0 +1,35 @@
+menuconfig LIBTNSCHEDPRIO
+	bool "tnschedprio: Priority scheduler with preemptive support"
+	default n
+	select LIBNOLIBC if !HAVE_LIBC
+	select LIBUKSCHED
+	select LIBUKSCHED_THREAD_PRIORITY
+
+if LIBTNSCHEDPRIO
+	config LIBTNSCHEDPRIO_ENABLE_PREEMTIVE
+	bool "Enable preemption among threads of the same priority"
+	default y
+	help
+		This option allows threads of the same priority to
+		preempt each other during scheduling.
+		When this option is disabled, other threads
+		with the same priority as the current thread can only
+		run after the current thread has exited or voluntarily yielded the CPU.
+
+	choice LIBTNSCHEDPRIO_RUNQ
+	prompt "Choice runq algorithm"
+	default LIBTNSCHEDPRIO_RUNQ_TAILQ
+		config LIBTNSCHEDPRIO_RUNQ_TAILQ
+		depends on LIBUKSCHED_RUNQ_TAILQ
+		bool "Use linked queue based algorithm for run queue"
+
+		config LIBTNSCHEDPRIO_RUNQ_LIST
+		depends on LIBUKSCHED_RUNQ_LIST
+		bool "Use double linked list based algorithm for run queue"
+	endchoice
+
+	config LIBTNSCHEDPRIO_TEST
+		bool "Enable unit tests"
+		default n
+		select LIBUKTEST
+endif

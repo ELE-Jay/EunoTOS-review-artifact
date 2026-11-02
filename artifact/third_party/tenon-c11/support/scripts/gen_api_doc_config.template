@@ -1,0 +1,23 @@
+# Doxyfile 1.9.8
+
+PROJECT_NAME           = Unikraft
+PROJECT_BRIEF          = "Unikraft document"
+OUTPUT_DIRECTORY       = {{OUTPUT_DIR}}
+OPTIMIZE_OUTPUT_FOR_C  = YES
+EXTRACT_ALL            = YES
+HIDE_SCOPE_NAMES       = YES
+INPUT                  = {{INPUT_DIR}}
+RECURSIVE              = YES
+STRIP_CODE_COMMENTS    = NO
+REFERENCES_LINK_SOURCE = NO
+PDF_HYPERLINKS         = NO
+GENERATE_AUTOGEN_DEF   = YES
+CLASS_GRAPH            = NO
+COLLABORATION_GRAPH    = NO
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+GRAPHICAL_HIERARCHY    = NO
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_MAN           = NO
+HAVE_DOT               = NO

@@ -1,0 +1,30 @@
+{
+  "id": "TC-C-1-direct",
+  "task_id": "TC-C",
+  "method": "direct",
+  "family": "system_modification",
+  "started_utc": "2026-10-27T14:29:35.861209+00:00",
+  "applicable": true,
+  "infrastructure_invalid": false,
+  "timed_out": false,
+  "budget_wall_s": 1800,
+  "gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": true
+  },
+  "raw_gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": true
+  },
+  "external_check_sha256": "370c00860879806bb376c649527866a9c78ca3592c32b7341bda147df6567e16",
+  "finished_utc": "2026-10-27T14:30:40.473036+00:00",
+  "observed_wall_s": 64.61183672701009,
+  "benchmark_trial": true,
+  "end_to_end_pass": true
+}

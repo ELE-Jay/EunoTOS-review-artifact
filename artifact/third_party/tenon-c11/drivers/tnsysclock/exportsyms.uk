@@ -1,0 +1,6 @@
+tn_sysclock_probe
+tn_sysclock_get_counts
+tn_sysclock_isr_notify
+tn_sysclock_mask_irq
+tn_sysclock_unmask_irq
+tn_sysclock_set_next

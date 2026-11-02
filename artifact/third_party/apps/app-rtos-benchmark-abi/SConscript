@@ -1,0 +1,26 @@
+from building import *
+
+cwd     = GetCurrentDir()
+
+src = Split('''
+adapter/os/rt-thread/rst_task.c
+adapter/os/rt-thread/rst_sem.c
+adapter/os/rt-thread/rst_queue.c
+adapter/os/rt-thread/rst_yield.c
+adapter/os/rt-thread/rst_isr.c
+adapter/os/rt-thread/rst_irq.c
+adapter/os/rt-thread/rst_tick.c
+adapter/os/rt-thread/rst_reschedule.c
+''')
+src += ['adapter/time/armcycle/rst_time.c']
+src += ['src/rst_semaphore_shuffle.c']
+src += ['src/rst_task_preempt.c']
+src += ['src/rst_task_switch.c']
+src += ['src/rst_task_switch_multi_threaded.c']
+src += ['src/rst_interrupt_latency.c']
+src += ['src/rst_set_timer_offset.c']
+src += ['main.c']
+CPPPATH = [cwd + '/include']
+
+group = DefineGroup('r-rhealstone', src, depend = [''], CPPPATH = CPPPATH)
+Return('group')

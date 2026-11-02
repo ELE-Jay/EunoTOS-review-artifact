@@ -1,0 +1,18 @@
+{
+  "board_mac": "34:98:7a:a2:85:28",
+  "meter_usb_id": "5fc9:0063",
+  "meter_serial": "086477",
+  "sole_board_supply_through_meter": true,
+  "no_unmetered_data_usb_supply": true,
+  "confirmation_source": "direct_user_message",
+  "operator_confirmation": "是，全部供电经过 POWER-Z",
+  "operator_confirmation_context": "当前 ESP32 的所有供电是否都经过 POWER-Z，且另一条 USB/串口线没有绕过仪表供电？",
+  "reconnection_confirmation": "接好了，继续",
+  "direction_confirmation": "电流方向取正即可",
+  "verified_utc": "2026-10-21T07:17:53+00:00",
+  "polarity": -1,
+  "polarity_basis": "The new 118 raw samples after reconnect are all negative. Apply one fixed -1 conversion as authorized by the operator, retain signed packets and reject sign changes; never use pointwise absolute values.",
+  "continuity_basis": "Prior direct sole-supply confirmation plus the current reconnect/continue statement; no bypass change reported. This is operator evidence, not an independent electrical isolation test.",
+  "calibration": "instrument default; external calibration not verified",
+  "scope": "Prior setup record for subsequent fresh original-workload energy captures only; not a retroactive qualification of the readiness trace."
+}

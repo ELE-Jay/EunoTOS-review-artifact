@@ -1,0 +1,65 @@
+{
+  "board_mac": "34:98:7a:a2:85:28",
+  "case": "message_processing",
+  "systems": [
+    "FreeRTOS",
+    "Zephyr",
+    "NuttX"
+  ],
+  "schedule": [
+    [
+      "FreeRTOS",
+      "Zephyr",
+      "NuttX"
+    ],
+    [
+      "NuttX",
+      "FreeRTOS",
+      "Zephyr"
+    ],
+    [
+      "Zephyr",
+      "NuttX",
+      "FreeRTOS"
+    ]
+  ],
+  "reused_performance_evidence": "artifacts/reports/esp32-message-cohort-b1-v1",
+  "reused_performance_audit_sha256": "4c1e7a4f3eedc2fc58aca6853f7529399d06a47a98b2ff9a704d51e902fbe454",
+  "source_proofs": {
+    "FreeRTOS": {
+      "source": "tm-freertos-native-aligned-v1/message_processing",
+      "images": {
+        "iotosbench_tm.elf": "9e9010c68d9503cb8bbc7aa3594e69cdc85b79ac08b11c1d348c3c2f6ce93e36",
+        "iotosbench_tm.bin": "7eac4619148f198ae35d4934f163d9843329826a01bac0fd165c530fa4ce2a63",
+        "bootloader.bin": "0e1323b06fcd49b0700d7201e15aa9a7ac88ac32025471bcf8e8b3c4ccee83ca",
+        "partition-table.bin": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+      },
+      "config_sha256": "dff62037ee6e0004496fa847f22be71af7ce61009d75ceff233b0784c8206dd2",
+      "case": "message_processing"
+    },
+    "Zephyr": {
+      "source": "zephyr-gcc13-align/message_processing",
+      "images": {
+        "zephyr.elf": "b910a88e53492579a8bce389c41357a8ff4b447d13a523e3a8c467ef3c958410",
+        "zephyr.bin": "2c8b187435b8710ccbb36419c971988dcef407bcdf6522167fe22a8411c0f396"
+      },
+      "config_sha256": "c612063e0ed7740d44f1ad1e977e4733f873088a018bfa1ec9645e3f6319e4aa",
+      "case": "message_processing"
+    },
+    "NuttX": {
+      "source": "tm-nuttx-native-aligned-v1/message_processing",
+      "images": {
+        "nuttx": "c7b487f7ffb5106464f0b92e611978ea5514f7185575354b81b5c6e9de7ed791",
+        "nuttx.bin": "b7ee14278e47c9a85cd07caa1b025af4fd95a8c7900a9a89e31e6a7da229d5d2",
+        "bootloader-esp32.bin": "8eab36ffdee5760d38b9c7139736b1fd89cb1b472fc3192dc86ab32b27f56621",
+        "partition-table-esp32.bin": "a482eb8745d8b140f15662bcfd64abf5c9c666b00d586d985a28b1a960c5c1fc"
+      },
+      "config_sha256": "3e7d1e86e73572aebbaf1b86803edd9a8f5b61f17853246f38b0bfd26c98d255",
+      "case": "message_processing"
+    }
+  },
+  "acquire": "missing same-clock power and original completed work; no separate performance rerun",
+  "replace_prior_performance": false,
+  "reuse_old_board_energy_for_b1": false,
+  "new_metric_created": false
+}

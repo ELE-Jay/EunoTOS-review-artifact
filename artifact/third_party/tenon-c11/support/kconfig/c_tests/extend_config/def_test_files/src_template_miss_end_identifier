@@ -1,0 +1,18 @@
+<timestamp_c>
+#define AUTOCONF_TIMESTAMP
+
+<set_s>
+#define ENABLE_%1$s 1
+#ifdef MAKE_SUID
+# define IF_%1$s(...) __VA_ARGS__ "CONFIG_%1$s"
+#else
+# define IF_%1$s(...) __VA_ARGS__
+#endif
+<end_set_s>
+
+<unset_s>
+#undef CONFIG_%1$s
+#define ENABLE_%1$s 0
+#define IF_%1$s(...)
+#define IF_NOT_%1$s(...) __VA_ARGS__
+<end_unset_s>

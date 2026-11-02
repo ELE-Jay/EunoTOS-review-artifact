@@ -1,0 +1,65 @@
+menuconfig LIBUKSCHED
+	bool "uksched: Abstraction for schedulers"
+	default n
+	select LIBNOLIBC if !HAVE_LIBC
+	select LIBUKDEBUG
+	select LIBUKALLOC
+	select HAVE_SCHED
+	select LIBTNSYSTICK
+	select LIBTNTIMER
+	depends on LIBUKTHREAD
+
+if LIBUKSCHED
+	config LIBUKSCHED_THREAD_PRIORITY
+		bool "Enable thread priority"
+		default n
+		select LIBUKSCHED_WAITQ_LIST
+		select LIBUKSCHED_RUNQ_LIST
+
+	if LIBUKSCHED_THREAD_PRIORITY
+		config LIBUKSCHED_PRIORITY_LEVEL
+			int "Max priority level for all thread"
+			default 256
+			help
+			  Increase this value will use more resource, espacially for
+			  some wait_q and ready_q algorithm.
+		config LIBUKSCHED_LOWEST_PRIORITY
+			int "Lowest priority number"
+			default 0
+	endif
+
+	choice LIBUKSCHED_RUNQ
+	prompt "Choice runq algorithm"
+	default LIBUKSCHED_RUNQ_TAILQ
+		config LIBUKSCHED_RUNQ_TAILQ
+		bool "Use linked tail queue based algorithm"
+
+		config LIBUKSCHED_RUNQ_LIST
+		bool "Use double linked list based algorithm"
+		depends on LIBUKSCHED_THREAD_PRIORITY
+	endchoice
+
+	choice LIBUKSCHED_WAITQ
+	prompt "Choice waitq algorithm"
+	default LIBUKSCHED_WAITQ_STAILQ
+		config LIBUKSCHED_WAITQ_STAILQ
+		depends on !LIBUKSCHED_THREAD_PRIORITY
+		bool "Use singly-linked tail queue without priority support"
+
+		config LIBUKSCHED_WAITQ_LIST
+		bool "Use priority double linked list based algorithm as wait queue"
+		depends on LIBUKSCHED_THREAD_PRIORITY
+		help
+		  Support thread priority scheduler.
+	endchoice
+
+	config LIBUKSCHED_DEBUG
+		bool "Enable debug messages"
+		default n
+	config LIBUKSCHED_TEST
+  		bool "Enable unit tests"
+  		default n
+	config LIBUKSCHED_TRACE
+  		bool "Enable trace"
+  		default n
+endif

@@ -1,0 +1,39 @@
+{
+  "source_commits": {
+    "tenon": "756aa1ca78a3d4c21b99580482aeead4041b0ab1",
+    "board-support-package": "757734df33e8fdf5584680dcc0c19c39ae25ad48",
+    "apps/app-helloworld": "1add85d53193c5cfc8d9285cbd6905a85ffcc309",
+    "apps/app-rtos-benchmark": "fc52f0965e600a3eef75490590210db69180013c",
+    "apps/app-rtos-benchmark-current": "0b71b8e722acfab4733eb99b07b67fbe8472c31d",
+    "libs/lib-tlsf": "dddc46c14a31c0e9dd1b9ba5a19fbb1e384370d3",
+    "kernel_patch": {
+      "path": "lib/tntimer/tntimer.c",
+      "original_sha256": "b0e13d9eb887a5e38e3a5f1991a88e2b73fb87f31e4a4e813f617882d1a5a89c",
+      "patched_sha256": "666b26dd5f542b00928bd95105301e813a454f9bba2b3fbfc6af21c58ca368aa",
+      "change": "one empty statement after the label; periodic/tickless selection unchanged"
+    },
+    "rtos_adapter_patch": {
+      "commit": "0b71b8e722acfab4733eb99b07b67fbe8472c31d",
+      "files": {
+        "adapter/os/tenonos/rst_isr.c": "738792173125d862712cf17d40640a3f1c3488a761d2ac321cfe537982d1a707",
+        "adapter/os/tenonos/rst_task.c": "71c41a94f0ccdf644b0afb0f266afe072e3048df42816bf2a8893dcece304bed"
+      },
+      "change": "Typed IRQ callback and registration status; save full extended task context and reject failed allocations; original test bodies unchanged"
+    }
+  },
+  "source_worktrees_unchanged": true,
+  "upstream_sources_unmodified": false,
+  "c11_timer_fix": true,
+  "application": "app-rtos-benchmark-abi",
+  "image": "/dev/shm/iotos-tenon-v4-tenonos-resource-history-campaign-v1-H2-graph-R1/evaluation/build/build/app-rtos-benchmark-abi_qemu-arm64",
+  "image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+  "retained_image": "runtime-image",
+  "image_bytes": 479296,
+  "input_defconfig_sha256": "3bdaeb0bffcd8fe73df4bb9e8664d757a8b7c8642df5c9a05ea287b66c2f4b48",
+  "config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+  "generator_invoked": false,
+  "compiler": "gcc",
+  "compiler_version_stdout_sha256": "e189bf5fc762d073dc1f8cfb2f53646b805e92308207dffb941fe19ace226482",
+  "ranking_eligible": false,
+  "purpose": "upstream example build and functional deployment probe"
+}

@@ -1,0 +1,44 @@
+ esets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6952
+load:0x40078000,len:15488
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3752
+entry 0x40080648
+[0;32mI (30) boot: ESP-IDF v5.1-dev-3972-g1559b6309f 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Mar 15 2023 12:14:05[0m
+[0;32mI (32) boot: chip revision: v1.1[0m
+[0;32mI (36) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (59) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (66) boot:  0 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (74) boot: End of partition table[0m
+[0;32mI (78) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=02890h ( 10384) map[0m
+[0;32mI (90) esp_image: segment 1: paddr=000128b8 vaddr=3ffb1540 size=001a8h (   424) load[0m
+[0;32mI (95) esp_image: segment 2: paddr=00012a68 vaddr=40080000 size=01604h (  5636) load[0m
+[0;32mI (105) esp_image: segment 3: paddr=00014074 vaddr=00000000 size=0bfa4h ( 49060) [0m
+[0;32mI (129) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=11c20h ( 72736) map[0m
+[0;32mI (156) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (156) boot: Disabling RNG early entropy source...[0m
+
+NuttShell (NSH)
+nsh> [Kiotosbench
+Thread-Metric NuttX ESP32 boot
+Thread-Metric queue self-check PASS
+**** Thread-Metric Message Processing Test **** Relative Time: 30
+Time Period Total:  5950837
+
+**** Thread-Metric Message Processing Test **** Relative Time: 60
+Time Period Total:  5950859
+
+**** Thread-Metric Message Processing Test **** Relative Time: 90
+Time Period Total:  5950890
+

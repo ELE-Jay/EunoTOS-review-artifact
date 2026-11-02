@@ -1,0 +1,45 @@
+config LIBUKINTCTLR_GIC
+    select LIBUKINTCTLR
+    bool
+
+config LIBUKINTCTLR_GICV2
+    bool "Arm Generic Interrupt Controller (GICv2)"
+    depends on (HAVE_INTCTLR && ARCH_ARM_64)
+    select LIBUKINTCTLR_GIC
+    default n
+
+config LIBUKINTCTLR_GICV3
+    bool "Arm Generic Interrupt Controller (GICv3)"
+    depends on (HAVE_INTCTLR && ARCH_ARM_64)
+    select LIBUKINTCTLR_GIC
+    default n
+
+if LIBUKINTCTLR_GICV3 || LIBUKINTCTLR_GICV2
+choice
+    prompt "GIC max priority level"
+    help
+        Numbers of interrupt priorities supported in non-secure mode
+        choose from 16/32/64/128
+
+config PRIORITY_MAX_16
+    bool "16 non-secure priority levels"
+    help
+        The available interrupt priority is [0..15]
+
+config PRIORITY_MAX_32
+    bool "32 non-secure priority levels"
+    help
+        The available interrupt priority is [0..31]
+
+config PRIORITY_MAX_64
+    bool "64 non-secure priority levels"
+    help
+        The available interrupt priority is [0..63]
+
+config PRIORITY_MAX_128
+    bool "128 non-secure priority levels"
+    help
+        The available interrupt priority is [0..127]
+
+endchoice
+endif

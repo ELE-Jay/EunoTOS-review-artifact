@@ -1,0 +1,5 @@
+$(eval $(call addlib_s,arm_generic_timer,$(CONFIG_ARM_GENERIC_TIMER)))
+
+ARM_GENERIC_TIMER_CINCLUDES-y += -I$(CONFIG_UK_BASE)/plat/common/include
+
+ARM_GENERIC_TIMER_SRCS-$(CONFIG_ARM_GENERIC_TIMER) += $(ARM_GENERIC_TIMER_BASE)/arm_generic_timer.c

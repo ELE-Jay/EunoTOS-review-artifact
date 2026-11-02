@@ -1,0 +1,39 @@
+/*
+ *
+ * Automatically generated file; DO NOT EDIT.
+ * test
+ *
+ */
+#define AUTOCONF_TIMESTAMP
+#define CONFIG_HEX 0x1000
+#define ENABLE_HEX 1
+#ifdef MAKE_SUID
+# define IF_HEX(...) __VA_ARGS__ "CONFIG_HEX"
+#else
+# define IF_HEX(...) __VA_ARGS__
+#endif
+#undef CONFIG_BOOL_N
+#define ENABLE_BOOL_N 0
+#define IF_BOOL_N(...)
+#define IF_NOT_BOOL_N(...) __VA_ARGS__
+#define CONFIG_STRING "This is a test string."
+#define ENABLE_STRING 1
+#ifdef MAKE_SUID
+# define IF_STRING(...) __VA_ARGS__ "CONFIG_STRING"
+#else
+# define IF_STRING(...) __VA_ARGS__
+#endif
+#define CONFIG_BOOL_Y 1
+#define ENABLE_BOOL_Y 1
+#ifdef MAKE_SUID
+# define IF_BOOL_Y(...) __VA_ARGS__ "CONFIG_BOOL_Y"
+#else
+# define IF_BOOL_Y(...) __VA_ARGS__
+#endif
+#define CONFIG_INT 8
+#define ENABLE_INT 1
+#ifdef MAKE_SUID
+# define IF_INT(...) __VA_ARGS__ "CONFIG_INT"
+#else
+# define IF_INT(...) __VA_ARGS__
+#endif

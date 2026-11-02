@@ -1,0 +1,10 @@
+{
+  "id": "reviewer-new-cohort-example",
+  "board_id": "UNMEASURED-REPLACEMENT",
+  "serial_identity": "TO-BE-REGISTERED",
+  "source_build_profile": "TO-BE-REVIEWED",
+  "workload_contract": "Thread-Metric message-processing / payload-copy queue",
+  "image_map": {},
+  "acquisition_enabled": false,
+  "status": "declaration_only"
+}

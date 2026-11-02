@@ -1,0 +1,5 @@
+$(eval $(call addlib_s,libtntrace,$(CONFIG_LIBTNTRACE)))
+
+CINCLUDES-$(CONFIG_LIBTNTRACE)     += -I$(LIBTNTRACE_BASE)/include
+
+CXXINCLUDES-$(CONFIG_LIBTNTRACE)   += -I$(LIBTNTRACE_BASE)/include

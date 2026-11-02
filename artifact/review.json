@@ -1,0 +1,74 @@
+{
+  "policy": "tenon-reviewed-resource-v2",
+  "reviewed_date": "2026-10-31",
+  "timing": "Post-hoc offline review; not a historical online check or latency component",
+  "permits": [
+    {
+      "review_id": "F5-20261031-2096873f7dde-derived-path-redaction",
+      "identity": "06c01945566afdd8761c9a76a04840011af4a5338366126c32b65cd12431f8df",
+      "build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+      "build_files": {
+        ".config": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+        "runtime-image": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "compiler.stdout": "e189bf5fc762d073dc1f8cfb2f53646b805e92308207dffb941fe19ace226482",
+        "build-result.json": "c4327ca294c1f6cc6ee86223a61afe3c1403c3fee9f70c584728ac2c79e8cfad",
+        "build.json": "fb8320573223f8a5b17931514445d5a6045670f6721a99502bc80dcba041bea4",
+        "build.stdout": "57c5eca4269bbb70403ce285da0e1d4372b9c69a40f41aa0c59476ac0bc58618"
+      },
+      "context_sha256": "31e6fd1f9ff24e7efa97f081202981db3ac35a7bd0fa36c40d8cde6d69ae240d",
+      "context": {
+        "observer": {
+          "source_proof_sha256": "9512c3c7b5942241fe44430c7443643269f92934fa74a6d055c97a892bf5d5bc",
+          "code_sha256": "39a3ae3ac3333945463598bd5a69e86ccac4c5858f9f198e0cc77602e8e764d1",
+          "protocol_sha256": "9b264caad712bdd7fdc42dcc8ee1a7b66985d4739b19561128d87b2047a6336a"
+        },
+        "workload": {
+          "original_body_sha256": {
+            "include/rst_cfg.h": "f9a369c58594ba1a7ac2cd2b57c7b420c9c7606ef35bce80028bd38b37a1aab0",
+            "src/rst_interrupt_latency.c": "64d0574e7136151c1788ba30875410eda99a0c89713740d449564e2fd3a1bfbd",
+            "src/rst_semaphore_shuffle.c": "859e9ba346a1de3bbdf7226bc0a4500753e39a9d94e6235ada529720d3555917",
+            "src/rst_set_timer_offset.c": "4f61fe82f0e578515cb4627e95be1c7ae1673560aa25866e38390885e0b8fb24",
+            "src/rst_task_preempt.c": "4027de5aed118d7b3de91d2f84b336b3ea364b1f25787d8a4c3b32732ad34e21",
+            "src/rst_task_switch.c": "2a685dc583eb27eb1de032968c3dd88ae6a0673d28e1d3ad5ea026c4e24728aa",
+            "src/rst_task_switch_multi_threaded.c": "9b5b35ef9259700d9548eb349d33f66b5e20270cc54a08308501ab67cffc6d95"
+          },
+          "suite": "six unchanged RTOS cases",
+          "iterations": 500
+        },
+        "guest": {
+          "architecture": "ARM64",
+          "accelerator": "KVM",
+          "vcpus": 1,
+          "memory_bytes": 134217728
+        },
+        "boundary": {
+          "metric": "observer-inclusive peak allocated guest capacity",
+          "lifecycle": "native entry through termination entry",
+          "definition_sha256": "fd9803958946171bd9450eb28d84bb0ef39b2eb9f283a9ce5ca774db5fa0d1ec"
+        },
+        "recipe": {
+          "make_arguments": [
+            "-C",
+            "/home/pi/tenonos-benchmark-v1/tenon-c11",
+            "-j2"
+          ],
+          "variables": {
+            "A": "/home/pi/tenonos-benchmark-v1/apps/app-rtos-benchmark-abi",
+            "CROSS_COMPILE": "",
+            "COMPILER": "gcc",
+            "L": "/home/pi/tenonos-benchmark-v1/libs"
+          }
+        }
+      },
+      "memory_sha256": "ac665e259e3f3482faa22e718a21795e53b1243acfda62b2e7498e16d20f818f",
+      "support": {
+        "artifacts/reports/tenonos-native-threads-rpi4-v2/initial-tlsf/source-proof.json": "9512c3c7b5942241fe44430c7443643269f92934fa74a6d055c97a892bf5d5bc",
+        "artifacts/reports/tenonos-native-threads-rpi4-v2/initial-tlsf/input.config": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+        "artifacts/reports/tenonos-native-threads-rpi4-v2/initial-tlsf/build/build.json": "bdeef7b190de4442d6136003d1f4964e16cbc58ded89ee8cc4fd1fbe147f3fec",
+        "artifacts/reports/tenonos-native-threads-rpi4-v2/initial-tlsf/build/linked-inputs.json": "2a267028cdc24f7bafa5c029a9517a7bc1a794a669516a287799ae999f37b525",
+        "artifacts/reports/tenonos-native-threads-rpi4-v2/protocol.json": "9b264caad712bdd7fdc42dcc8ee1a7b66985d4739b19561128d87b2047a6336a",
+        "artifacts/reports/tenonos-allocated-occupancy-rpi4-v1.json": "ac665e259e3f3482faa22e718a21795e53b1243acfda62b2e7498e16d20f818f"
+      }
+    }
+  ]
+}

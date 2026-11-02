@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "timeout",
+    "--kill-after=10",
+    "900",
+    "make",
+    "-C",
+    "/home/pi/tenonos-benchmark-v1/tenon-c11",
+    "A=/home/pi/tenonos-benchmark-v1/apps/app-rtos-benchmark-abi",
+    "O=/dev/shm/iotos-tenon-v4-tenonos-resource-history-campaign-v1-H3-direct-R2/evaluation/build/build",
+    "C=/dev/shm/iotos-tenon-v4-tenonos-resource-history-campaign-v1-H3-direct-R2/evaluation/build/.config",
+    "CROSS_COMPILE=",
+    "COMPILER=gcc",
+    "L=/home/pi/tenonos-benchmark-v1/libs",
+    "-j2"
+  ],
+  "started_utc": "2026-10-28T21:21:21.120053+00:00",
+  "state": "finished",
+  "recorder_sha256": "6baeebd9cb75a812114799358a33fb83e5de21600810da0ffd032faa2c920c86",
+  "returncode": 0,
+  "finished_utc": "2026-10-28T21:21:41.801696+00:00",
+  "elapsed_seconds": 20.681124777009245,
+  "stdout_sha256": "57c5eca4269bbb70403ce285da0e1d4372b9c69a40f41aa0c59476ac0bc58618",
+  "stderr_sha256": "03f0b9ac443728ab0d58c6e4cb38c6d3c055c8a0da72a6e4f42135a4c3a1291c"
+}

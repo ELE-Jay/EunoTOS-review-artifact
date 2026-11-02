@@ -1,0 +1,14 @@
+/*
+ *
+ * Automatically generated file; DO NOT EDIT.
+ * test
+ *
+ */
+#define CONFIG_TEST_HEX 0x10
+#define CONFIG_EXTENDTEST_HEX 0x1000
+#define CONFIG_TEST_INT 8
+#define CONFIG_EXTENDTEST_STRING "This is a test string."
+#define CONFIG_TEST_BOOL_Y 1
+#define CONFIG_TEST_STRING "This is a test string."
+#define CONFIG_EXTENDTEST_BOOL_Y 1
+#define CONFIG_EXTENDTEST_INT 8

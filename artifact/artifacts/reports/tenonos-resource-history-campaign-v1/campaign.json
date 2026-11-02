@@ -1,0 +1,1571 @@
+{
+  "status": "collection_complete",
+  "started_utc": "2026-10-28T21:07:52.055442+00:00",
+  "histories": [
+    {
+      "id": "H1-direct",
+      "method": "direct",
+      "rounds": [
+        {
+          "round": 1,
+          "started_utc": "2026-10-28T21:08:31.330996+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+          "feedback": {
+            "accepted": null,
+            "gates": null,
+            "required_configuration": []
+          },
+          "accepted": false,
+          "gates": {
+            "generated": false,
+            "built": false,
+            "booted": false,
+            "functional": false,
+            "constraints": false
+          },
+          "generation_wall_s": 4.930374866933562,
+          "preflight_wall_s": 0.2825821730075404,
+          "model_calls": 1,
+          "completion_tokens": 188,
+          "failure": {
+            "type": "ValueError",
+            "message": "All proposed configurations failed native dependency validation"
+          },
+          "decision_wall_s": 5.270561675075442,
+          "recovery": {
+            "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 38.89979606401175,
+          "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "observed_wall_s": 44.17213962005917,
+          "finished_utc": "2026-10-28T21:09:15.501131+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          }
+        },
+        {
+          "round": 2,
+          "started_utc": "2026-10-28T21:09:15.521487+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": null,
+          "feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          },
+          "accepted": true,
+          "gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "generation_wall_s": 4.834450315916911,
+          "preflight_wall_s": 0.23133474693167955,
+          "model_calls": 1,
+          "completion_tokens": 188,
+          "raw_gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "decision_wall_s": 84.30959311593324,
+          "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H1-direct/R2/evaluation/build",
+          "retained_image_sha256": "cd4a81e8e340e107e63a7372007e6db8d2e085207959ab17f068c4c53860f3aa",
+          "retained_config_sha256": "86888292ba723f1fc4e78edc57f433e835588047ec9fb39031be4abc1e70a488",
+          "observed_wall_s": 84.31053582101595,
+          "finished_utc": "2026-10-28T21:10:39.830543+00:00",
+          "policy_changed": true,
+          "next_feedback": {
+            "accepted": true,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": true
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          }
+        }
+      ],
+      "initial_check": {
+        "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "fresh_guest_boots": 3,
+        "passed": true
+      },
+      "initialization_wall_s": 39.23184844199568,
+      "initial_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_image_sha256": "cd4a81e8e340e107e63a7372007e6db8d2e085207959ab17f068c4c53860f3aa",
+      "final_config_sha256": "86888292ba723f1fc4e78edc57f433e835588047ec9fb39031be4abc1e70a488",
+      "total_round_wall_s": 128.54016789910384,
+      "within_history_budget": true
+    },
+    {
+      "id": "H1-graph",
+      "method": "graph",
+      "rounds": [
+        {
+          "round": 1,
+          "started_utc": "2026-10-28T21:11:18.369535+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+          "feedback": {
+            "accepted": null,
+            "gates": null,
+            "required_configuration": []
+          },
+          "accepted": false,
+          "gates": {
+            "generated": false,
+            "built": false,
+            "booted": false,
+            "functional": false,
+            "constraints": false
+          },
+          "generation_wall_s": 5.294346437091008,
+          "preflight_wall_s": 0.24304917000699788,
+          "model_calls": 2,
+          "completion_tokens": 166,
+          "failure": {
+            "type": "ValueError",
+            "message": "Selected paths contain no permitted configuration controls"
+          },
+          "decision_wall_s": 5.5955184400081635,
+          "recovery": {
+            "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 39.455720538971946,
+          "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "observed_wall_s": 45.05668288201559,
+          "finished_utc": "2026-10-28T21:12:03.424812+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          }
+        },
+        {
+          "round": 2,
+          "started_utc": "2026-10-28T21:12:03.467214+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": null,
+          "feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          },
+          "accepted": false,
+          "gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": false
+          },
+          "generation_wall_s": 8.5185711880913,
+          "preflight_wall_s": 0.19478830497246236,
+          "model_calls": 3,
+          "completion_tokens": 295,
+          "raw_gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": false
+          },
+          "decision_wall_s": 85.22585108294152,
+          "recovery": {
+            "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 40.263701876974665,
+          "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "observed_wall_s": 125.4913086569868,
+          "finished_utc": "2026-10-28T21:14:08.956919+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": false
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          }
+        }
+      ],
+      "initial_check": {
+        "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "fresh_guest_boots": 3,
+        "passed": true
+      },
+      "initialization_wall_s": 38.5168545889901,
+      "initial_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+      "total_round_wall_s": 170.6099458510289,
+      "within_history_budget": true
+    },
+    {
+      "id": "H2-graph",
+      "method": "graph",
+      "rounds": [
+        {
+          "round": 1,
+          "started_utc": "2026-10-28T21:14:48.457634+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+          "feedback": {
+            "accepted": null,
+            "gates": null,
+            "required_configuration": []
+          },
+          "accepted": true,
+          "gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "generation_wall_s": 8.448476794990711,
+          "preflight_wall_s": 0.26112093694973737,
+          "model_calls": 3,
+          "completion_tokens": 269,
+          "raw_gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "decision_wall_s": 85.25588956102729,
+          "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H2-graph/R1/evaluation/build",
+          "retained_image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+          "retained_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+          "observed_wall_s": 85.25684126804117,
+          "finished_utc": "2026-10-28T21:16:13.712826+00:00",
+          "policy_changed": true,
+          "next_feedback": {
+            "accepted": true,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": true
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITBBUDDY",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITTLSF",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          }
+        },
+        {
+          "round": 2,
+          "started_utc": "2026-10-28T21:16:13.723234+00:00",
+          "parent_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H2-graph/R1/evaluation/build",
+          "parent_image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+          "parent_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+          "target_allocator_option": null,
+          "feedback": {
+            "accepted": true,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": true
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITBBUDDY",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITTLSF",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          },
+          "accepted": false,
+          "gates": {
+            "generated": false,
+            "built": false,
+            "booted": false,
+            "functional": false,
+            "constraints": false
+          },
+          "generation_wall_s": 5.4453028230927885,
+          "preflight_wall_s": 0.20011106098536402,
+          "model_calls": 2,
+          "completion_tokens": 155,
+          "failure": {
+            "type": "ValueError",
+            "message": "Selected paths contain no permitted configuration controls"
+          },
+          "decision_wall_s": 5.672258736914955,
+          "recovery": {
+            "image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 40.13199408201035,
+          "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H2-graph/R1/evaluation/build",
+          "retained_image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+          "retained_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+          "observed_wall_s": 45.80608220992144,
+          "finished_utc": "2026-10-28T21:16:59.528596+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          }
+        }
+      ],
+      "initial_check": {
+        "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "fresh_guest_boots": 3,
+        "passed": true
+      },
+      "initialization_wall_s": 39.451501428033225,
+      "initial_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+      "final_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+      "total_round_wall_s": 131.11449953494594,
+      "within_history_budget": true
+    },
+    {
+      "id": "H2-direct",
+      "method": "direct",
+      "rounds": [
+        {
+          "round": 1,
+          "started_utc": "2026-10-28T21:17:40.370862+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+          "feedback": {
+            "accepted": null,
+            "gates": null,
+            "required_configuration": []
+          },
+          "accepted": false,
+          "gates": {
+            "generated": false,
+            "built": false,
+            "booted": false,
+            "functional": false,
+            "constraints": false
+          },
+          "generation_wall_s": 2.9458327130414546,
+          "preflight_wall_s": 0.36840137699618936,
+          "model_calls": 1,
+          "completion_tokens": 99,
+          "failure": {
+            "type": "ValueError",
+            "message": "All proposed configurations failed native dependency validation"
+          },
+          "decision_wall_s": 3.370680046034977,
+          "recovery": {
+            "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 42.16748354502488,
+          "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "observed_wall_s": 45.543549217050895,
+          "finished_utc": "2026-10-28T21:18:25.912857+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          }
+        },
+        {
+          "round": 2,
+          "started_utc": "2026-10-28T21:18:25.954744+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": null,
+          "feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          },
+          "accepted": true,
+          "gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "generation_wall_s": 5.234740432002582,
+          "preflight_wall_s": 0.3021623060340062,
+          "model_calls": 1,
+          "completion_tokens": 188,
+          "raw_gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "decision_wall_s": 84.81275267305318,
+          "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H2-direct/R2/evaluation/build",
+          "retained_image_sha256": "7152e42a0f07abf0e29f10c665bfc0477066280e28073f9565c31b5425c59667",
+          "retained_config_sha256": "86888292ba723f1fc4e78edc57f433e835588047ec9fb39031be4abc1e70a488",
+          "observed_wall_s": 84.81370133103337,
+          "finished_utc": "2026-10-28T21:19:50.767093+00:00",
+          "policy_changed": true,
+          "next_feedback": {
+            "accepted": true,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": true
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          }
+        }
+      ],
+      "initial_check": {
+        "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "fresh_guest_boots": 3,
+        "passed": true
+      },
+      "initialization_wall_s": 40.791681881062686,
+      "initial_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_image_sha256": "7152e42a0f07abf0e29f10c665bfc0477066280e28073f9565c31b5425c59667",
+      "final_config_sha256": "86888292ba723f1fc4e78edc57f433e835588047ec9fb39031be4abc1e70a488",
+      "total_round_wall_s": 130.4382773670368,
+      "within_history_budget": true
+    },
+    {
+      "id": "H3-direct",
+      "method": "direct",
+      "rounds": [
+        {
+          "round": 1,
+          "started_utc": "2026-10-28T21:20:29.995814+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+          "feedback": {
+            "accepted": null,
+            "gates": null,
+            "required_configuration": []
+          },
+          "accepted": false,
+          "gates": {
+            "generated": false,
+            "built": false,
+            "booted": false,
+            "functional": false,
+            "constraints": false
+          },
+          "generation_wall_s": 2.5545663089724258,
+          "preflight_wall_s": 0.25494015507865697,
+          "model_calls": 1,
+          "completion_tokens": 99,
+          "failure": {
+            "type": "ValueError",
+            "message": "All proposed configurations failed native dependency validation"
+          },
+          "decision_wall_s": 2.8631652559852228,
+          "recovery": {
+            "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 37.92302782996558,
+          "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "observed_wall_s": 40.78801737399772,
+          "finished_utc": "2026-10-28T21:21:10.782375+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          }
+        },
+        {
+          "round": 2,
+          "started_utc": "2026-10-28T21:21:10.805203+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": null,
+          "feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          },
+          "accepted": false,
+          "gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": false
+          },
+          "generation_wall_s": 5.296689446084201,
+          "preflight_wall_s": 0.2802019310183823,
+          "model_calls": 1,
+          "completion_tokens": 188,
+          "raw_gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": false
+          },
+          "decision_wall_s": 84.75585709197912,
+          "recovery": {
+            "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 39.31646678899415,
+          "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "observed_wall_s": 124.07629008800723,
+          "finished_utc": "2026-10-28T21:23:14.880040+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": false
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          }
+        }
+      ],
+      "initial_check": {
+        "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "fresh_guest_boots": 3,
+        "passed": true
+      },
+      "initialization_wall_s": 39.2050948649412,
+      "initial_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+      "total_round_wall_s": 164.91840679000597,
+      "within_history_budget": true
+    },
+    {
+      "id": "H3-graph",
+      "method": "graph",
+      "rounds": [
+        {
+          "round": 1,
+          "started_utc": "2026-10-28T21:23:54.064714+00:00",
+          "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+          "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+          "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+          "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+          "feedback": {
+            "accepted": null,
+            "gates": null,
+            "required_configuration": []
+          },
+          "accepted": true,
+          "gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "generation_wall_s": 7.816634263028391,
+          "preflight_wall_s": 0.259078428032808,
+          "model_calls": 3,
+          "completion_tokens": 240,
+          "raw_gates": {
+            "generated": true,
+            "built": true,
+            "booted": true,
+            "functional": true,
+            "constraints": true
+          },
+          "decision_wall_s": 84.70044218096882,
+          "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H3-graph/R1/evaluation/build",
+          "retained_image_sha256": "53b4e18e281aaa126da8f2dabdb6a3cc1d1ed4b8d4c5440682d53b89f5d04c00",
+          "retained_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+          "observed_wall_s": 84.70142587192822,
+          "finished_utc": "2026-10-28T21:25:18.764516+00:00",
+          "policy_changed": true,
+          "next_feedback": {
+            "accepted": true,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": true
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITBBUDDY",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITTLSF",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          }
+        },
+        {
+          "round": 2,
+          "started_utc": "2026-10-28T21:25:18.775836+00:00",
+          "parent_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H3-graph/R1/evaluation/build",
+          "parent_image_sha256": "53b4e18e281aaa126da8f2dabdb6a3cc1d1ed4b8d4c5440682d53b89f5d04c00",
+          "parent_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+          "target_allocator_option": null,
+          "feedback": {
+            "accepted": true,
+            "gates": {
+              "generated": true,
+              "built": true,
+              "booted": true,
+              "functional": true,
+              "constraints": true
+            },
+            "required_configuration": [
+              {
+                "option": "ARCH_ARM_64",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "MCPU_ARM64_CORTEX_A72",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_858921",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_835769",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "ARM64_ERRATUM_843419",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "PLAT_KVM",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "FPSIMD",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+                "required": "0x8000000",
+                "actual": "0x8000000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_MUTEX",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBUKLOCK_RWLOCK",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSYSTICK_FREQ",
+                "required": "1000",
+                "actual": "1000",
+                "pass": true
+              },
+              {
+                "option": "LIBUKDEBUG_ENABLE_ASSERT",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITSCHEDPRIO",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITBBUDDY",
+                "required": "y",
+                "actual": "y",
+                "pass": true
+              },
+              {
+                "option": "LIBUKBOOT_INITTLSF",
+                "required": "n",
+                "actual": "n",
+                "pass": true
+              }
+            ],
+            "preserved_unrelated_configuration": true
+          },
+          "accepted": false,
+          "gates": {
+            "generated": false,
+            "built": false,
+            "booted": false,
+            "functional": false,
+            "constraints": false
+          },
+          "generation_wall_s": 5.311003089998849,
+          "preflight_wall_s": 0.2836467479355633,
+          "model_calls": 2,
+          "completion_tokens": 296,
+          "failure": {
+            "type": "ValueError",
+            "message": "Selected paths contain no permitted configuration controls"
+          },
+          "decision_wall_s": 5.6487658499972895,
+          "recovery": {
+            "image_sha256": "53b4e18e281aaa126da8f2dabdb6a3cc1d1ed4b8d4c5440682d53b89f5d04c00",
+            "fresh_guest_boots": 3,
+            "passed": true
+          },
+          "recovery_wall_s": 37.41181411698926,
+          "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H3-graph/R1/evaluation/build",
+          "retained_image_sha256": "53b4e18e281aaa126da8f2dabdb6a3cc1d1ed4b8d4c5440682d53b89f5d04c00",
+          "retained_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+          "observed_wall_s": 43.066016943892464,
+          "finished_utc": "2026-10-28T21:26:01.841184+00:00",
+          "policy_changed": false,
+          "next_feedback": {
+            "accepted": false,
+            "gates": {
+              "generated": false,
+              "built": false,
+              "booted": false,
+              "functional": false,
+              "constraints": false
+            },
+            "required_configuration": [],
+            "preserved_unrelated_configuration": null
+          }
+        }
+      ],
+      "initial_check": {
+        "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+        "fresh_guest_boots": 3,
+        "passed": true
+      },
+      "initialization_wall_s": 39.11743993498385,
+      "initial_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+      "final_image_sha256": "53b4e18e281aaa126da8f2dabdb6a3cc1d1ed4b8d4c5440682d53b89f5d04c00",
+      "final_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+      "total_round_wall_s": 127.8340248989407,
+      "within_history_budget": true
+    }
+  ],
+  "model_calls": 21,
+  "completion_tokens": 2371,
+  "completed_utc": "2026-10-28T21:26:01.866796+00:00"
+}

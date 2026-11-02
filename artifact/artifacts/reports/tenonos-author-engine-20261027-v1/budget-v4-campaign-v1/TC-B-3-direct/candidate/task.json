@@ -1,0 +1,114 @@
+{
+  "id": "TC-B",
+  "family": "constraint_satisfaction",
+  "objective": "Configure the existing six-case RTOS suite with the priority scheduler, same-priority preemption and TLSF initialized as default allocator. Optimize for size, not performance or no optimization. The uncompressed executable image must fit a declared 448-KiB deployment envelope. Preserve all six original cases and the fixed periodic 1000-Hz tick. Do not modify source code or adapters.",
+  "required_options": {
+    "ARCH_ARM_64": "y",
+    "MCPU_ARM64_CORTEX_A72": "y",
+    "ARM64_ERRATUM_858921": "n",
+    "ARM64_ERRATUM_835769": "n",
+    "ARM64_ERRATUM_843419": "n",
+    "PLAT_KVM": "y",
+    "FPSIMD": "y",
+    "VIRTUALIZE_PLAT_MEM_SIZE": "0x8000000",
+    "LIBUKLOCK": "y",
+    "LIBUKLOCK_MUTEX": "n",
+    "LIBUKLOCK_RWLOCK": "n",
+    "LIBTNSYSTICK_FREQ": "1000",
+    "LIBUKDEBUG_ENABLE_ASSERT": "y",
+    "LIBUKBOOT_INITSCHEDPRIO": "y",
+    "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE": "y",
+    "LIBUKBOOT_INITTLSF": "y",
+    "OPTIMIZE_SIZE": "y"
+  },
+  "maximum_image_bytes": 458752,
+  "budget_provenance": "Task-level deployment envelope chosen from fixed references before candidate generation. Not a physical Raspberry Pi Flash partition, a standard benchmark score or an exact RAM constraint.",
+  "reference_family": "constraints",
+  "application": "app-rtos-benchmark-abi",
+  "generation_budget_s": 180,
+  "maximum_attempts": 1,
+  "fixed_options": {
+    "ARCH_ARM_64": "y",
+    "MCPU_ARM64_CORTEX_A72": "y",
+    "ARM64_ERRATUM_858921": "n",
+    "ARM64_ERRATUM_835769": "n",
+    "ARM64_ERRATUM_843419": "n",
+    "PLAT_KVM": "y",
+    "FPSIMD": "y",
+    "VIRTUALIZE_PLAT_MEM_SIZE": "0x8000000",
+    "LIBUKLOCK": "y",
+    "LIBUKLOCK_MUTEX": "n",
+    "LIBUKLOCK_RWLOCK": "n",
+    "LIBTNSYSTICK_FREQ": "1000",
+    "LIBUKDEBUG_ENABLE_ASSERT": "y"
+  },
+  "candidate_controls": [
+    "LIBUKBOOT_INITSCHEDCOOP",
+    "LIBUKBOOT_INITSCHEDPRIO",
+    "LIBUKBOOT_NOSCHED",
+    "LIBUKBOOT_INITBBUDDY",
+    "LIBUKBOOT_INITTLSF",
+    "LIBUKBOOT_INITREGION",
+    "LIBUKBOOT_NOALLOC",
+    "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+    "OPTIMIZE_SIZE",
+    "OPTIMIZE_PERF",
+    "OPTIMIZE_NONE"
+  ],
+  "reference_files": [
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/build/.config",
+      "sha256": "643421c4550bcb46b4f324974d914291b7db646d0d19cac7ac27dd782a4a6605"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/build/runtime-image",
+      "sha256": "e516cba97da551683d0d17a1448ee4e3e0865554d47316cf5fdb11d37f00dab2"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/build/build-result.json",
+      "sha256": "76b8f5f4ff2d345e4c643267e2ca62c98f85a5afdf44901d4241dd225c696b69"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot-result.json",
+      "sha256": "82b600b617a50e55c9cbd4c658c30a83dedf02aafc7eba81853c19fe0b41c342"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot1.json",
+      "sha256": "b3c7445154a7d189f9a5b945d8d8bd95e256b3b120449583c50b76042374a2ab"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot1.stdout",
+      "sha256": "922004fd37f8677939c37cade5a3264fdfdfa36ef69561ed998ad3680b5983a5"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot2.json",
+      "sha256": "e1b021dd718667f57b7daf7f5864bd020ac5a7b2c6f7e328be48bc000c31883e"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot2.stdout",
+      "sha256": "239745d9b34609bc75acbefcf71559a1e811872d94bb4dd8fdb4a7a1095e1c22"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot3.json",
+      "sha256": "6b9987b816d91dbf7b0db62ac0d6b828f9a6608061fe00f930edcf9e9a7d6d86"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot3.stdout",
+      "sha256": "520bb2880c15dde7c6b759068091c6e2e4f86b7de18781c68a45dae5e3e57ac4"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/constraints/boots/boot3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protocol_id": "tenon-paper-v4-equal-budget-v1",
+  "bank_sha256": "aa2d254bab8a61c9818e346967f9b88de764bac8bcf1545f330449cf0b70c234"
+}

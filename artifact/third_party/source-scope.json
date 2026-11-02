@@ -1,0 +1,17 @@
+{
+  "kernel_commit": "756aa1ca78a3d4c21b99580482aeead4041b0ab1",
+  "application_commit": "0b71b8e722acfab4733eb99b07b67fbe8472c31d",
+  "documented_compatibility_sha256": {
+    "kernel_timer": "666b26dd5f542b00928bd95105301e813a454f9bba2b3fbfc6af21c58ca368aa",
+    "rst_task.c": "71c41a94f0ccdf644b0afb0f266afe072e3048df42816bf2a8893dcece304bed",
+    "rst_isr.c": "738792173125d862712cf17d40640a3f1c3488a761d2ac321cfe537982d1a707"
+  },
+  "library_archive_sha256": "43fa1f8e468d39723616b2954dc35c4cc7860fcb05565906fbe6887423a18c74",
+  "library_patches_reproduced": true,
+  "relinked_executable_tested": false,
+  "runtime_image_bytes_modified": false,
+  "full_OS_build_reproduction_claimed": false,
+  "excluded_unused_upstream_submodules": [
+    "tenon-c11/lib/ukrust/src"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "round": 1,
+  "started_utc": "2026-10-28T21:17:40.370862+00:00",
+  "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+  "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+  "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+  "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+  "feedback": {
+    "accepted": null,
+    "gates": null,
+    "required_configuration": []
+  },
+  "accepted": false,
+  "gates": {
+    "generated": false,
+    "built": false,
+    "booted": false,
+    "functional": false,
+    "constraints": false
+  },
+  "generation_wall_s": 2.9458327130414546,
+  "preflight_wall_s": 0.36840137699618936,
+  "model_calls": 1,
+  "completion_tokens": 99,
+  "failure": {
+    "type": "ValueError",
+    "message": "All proposed configurations failed native dependency validation"
+  },
+  "decision_wall_s": 3.370680046034977,
+  "recovery": {
+    "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+    "fresh_guest_boots": 3,
+    "passed": true
+  },
+  "recovery_wall_s": 42.16748354502488,
+  "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+  "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+  "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+  "observed_wall_s": 45.543549217050895,
+  "finished_utc": "2026-10-28T21:18:25.912857+00:00",
+  "policy_changed": false,
+  "next_feedback": {
+    "accepted": false,
+    "gates": {
+      "generated": false,
+      "built": false,
+      "booted": false,
+      "functional": false,
+      "constraints": false
+    },
+    "required_configuration": [],
+    "preserved_unrelated_configuration": null
+  }
+}

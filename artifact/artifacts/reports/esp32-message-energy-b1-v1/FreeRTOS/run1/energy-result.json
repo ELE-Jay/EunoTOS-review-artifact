@@ -1,0 +1,176 @@
+{
+  "os": "FreeRTOS",
+  "case": "message_processing",
+  "original_workload": {
+    "audit": "pass",
+    "os": "FreeRTOS",
+    "case": "message_processing",
+    "original_window_totals": [
+      12176156,
+      12177769,
+      12177780
+    ],
+    "host_window_seconds": [
+      30.558,
+      60.558,
+      90.559
+    ]
+  },
+  "paired": {
+    "paired_intervals": [
+      {
+        "start_s": 30.558034456102178,
+        "end_s": 60.55849893298,
+        "duration_s": 30.000464476877823,
+        "source_sample_count": 922,
+        "sample_count": 294,
+        "energy_j": 7.397088563245931,
+        "average_power_w": 0.2465658013044121,
+        "min_power_w": 0.23872816435199998,
+        "max_power_w": 0.261864778618,
+        "integration": "trapezoidal",
+        "max_observed_gap_s": 0.10321603016927838,
+        "gap_check": "verified",
+        "window_source": "metadata",
+        "completed_original_counts": 12177769,
+        "joules_per_original_count": 6.074255935751394e-07
+      },
+      {
+        "start_s": 60.55849893298,
+        "end_s": 90.55902670999058,
+        "duration_s": 30.000527777010575,
+        "source_sample_count": 922,
+        "sample_count": 293,
+        "energy_j": 7.4047136950127275,
+        "average_power_w": 0.24681944764608324,
+        "min_power_w": 0.23916290361599998,
+        "max_power_w": 0.259139159862,
+        "integration": "trapezoidal",
+        "max_observed_gap_s": 0.10315696545876563,
+        "gap_check": "verified",
+        "window_source": "metadata",
+        "completed_original_counts": 12177780,
+        "joules_per_original_count": 6.080511961139656e-07
+      }
+    ],
+    "steady_energy_j": 14.801802258258657,
+    "steady_duration_s": 60.0009922538884,
+    "steady_average_power_w": 0.24669262460904418,
+    "completed_original_counts": 24355549,
+    "original_counts_per_s": 405919.1037531821,
+    "joules_per_original_count": 6.077383949858268e-07,
+    "energy_per_original_count_uj": 0.6077383949858268
+  },
+  "power_audit": {
+    "audit": "pass",
+    "sample_count": 922,
+    "observed_samples_per_s": 9.704741668632103,
+    "max_sample_gap_s": 0.25196772161871195,
+    "max_query_span_s": 0.0008082250133156776,
+    "voltage_v": {
+      "min": 5.057558,
+      "max": 5.132753
+    },
+    "signed_current_a": {
+      "min": -0.053726,
+      "mean": -0.048611134490238614,
+      "max": -0.014909
+    },
+    "negative_current_samples": 922,
+    "measurement_boundary": "meter branch; capture-bound operator confirmation audited separately",
+    "timestamp_semantics": "host query/response midpoint and UART line receipt, one monotonic origin; not sensor conversion time",
+    "calibration": "instrument default; external calibration not verified",
+    "sha256": {
+      "metadata.json": "9ab12f4d5cc9c07ca3572242e691f0ecc8c87f269d4fe049f73aae27f8978180",
+      "power.csv": "b525334af52c38a1f93ccd8d1bef33d2371009b657c451bb2a3393f8fb06cd9f",
+      "meter.jsonl": "d11fe9afb3d7fc767d8ba36015b8216d6045bd10afe93bdc511d8341452161d1",
+      "uart.jsonl": "b3889915004dde4bc9412b6b3e721e5997e4e5df6d88963c18336fba4884a4fa"
+    },
+    "ranking_eligible": false,
+    "whole_board_eligible": false,
+    "energy_status": "branch_trace_integrated_not_ranked",
+    "polarity": -1,
+    "verified_boundary_note": "\u662f\uff0c\u5168\u90e8\u4f9b\u7535\u7ecf\u8fc7 POWER-Z",
+    "whole_trace": {
+      "source_sample_count": 922,
+      "sample_count": 922,
+      "start_s": 0.0009555784054100513,
+      "end_s": 94.90301803895272,
+      "duration_s": 94.90206246054731,
+      "energy_j": 23.357008445883977,
+      "average_power_w": 0.24611697407096872,
+      "min_power_w": 0.076524214477,
+      "max_power_w": 0.271722361108,
+      "integration": "trapezoidal",
+      "max_observed_gap_s": 0.25196772161871195,
+      "gap_check": "verified",
+      "window_source": "whole_file"
+    },
+    "original_workload": {
+      "audit": "pass",
+      "os": "FreeRTOS",
+      "case": "message_processing",
+      "original_window_totals": [
+        12176156,
+        12177769,
+        12177780
+      ],
+      "host_window_seconds": [
+        30.558,
+        60.558,
+        90.559
+      ]
+    },
+    "steady_report_intervals": [
+      {
+        "start_s": 30.558034456102178,
+        "end_s": 60.55849893298,
+        "duration_s": 30.000464476877823,
+        "source_sample_count": 922,
+        "sample_count": 294,
+        "energy_j": 7.397088563245931,
+        "average_power_w": 0.2465658013044121,
+        "min_power_w": 0.23872816435199998,
+        "max_power_w": 0.261864778618,
+        "integration": "trapezoidal",
+        "max_observed_gap_s": 0.10321603016927838,
+        "gap_check": "verified",
+        "window_source": "metadata"
+      },
+      {
+        "start_s": 60.55849893298,
+        "end_s": 90.55902670999058,
+        "duration_s": 30.000527777010575,
+        "source_sample_count": 922,
+        "sample_count": 293,
+        "energy_j": 7.4047136950127275,
+        "average_power_w": 0.24681944764608324,
+        "min_power_w": 0.23916290361599998,
+        "max_power_w": 0.259139159862,
+        "integration": "trapezoidal",
+        "max_observed_gap_s": 0.10315696545876563,
+        "gap_check": "verified",
+        "window_source": "metadata"
+      }
+    ],
+    "phase_definition": "original 30->60 and 60->90 report intervals, including reporting overhead",
+    "timing_limit": "host UART receipt and USB query midpoint; device conversion delay not calibrated"
+  },
+  "source_proof": {
+    "source": "tm-freertos-native-aligned-v1/message_processing",
+    "images": {
+      "iotosbench_tm.elf": "9e9010c68d9503cb8bbc7aa3594e69cdc85b79ac08b11c1d348c3c2f6ce93e36",
+      "iotosbench_tm.bin": "7eac4619148f198ae35d4934f163d9843329826a01bac0fd165c530fa4ce2a63",
+      "bootloader.bin": "0e1323b06fcd49b0700d7201e15aa9a7ac88ac32025471bcf8e8b3c4ccee83ca",
+      "partition-table.bin": "7f00b6c042a89b15b0cac534f82ed988caf29278ff5700b0c511eb1b5bb7c820"
+    },
+    "config_sha256": "dff62037ee6e0004496fa847f22be71af7ce61009d75ceff233b0784c8206dd2",
+    "case": "message_processing"
+  },
+  "operator_setup_sha256": "db96b0861196455f7f22bf87ba934d725e3d91f9a805664b172340474aa2d2a1",
+  "whole_board_path": "operator confirmed all B1 supply passes through meter; no independent electrical isolation test",
+  "board_mac": "34:98:7a:a2:85:28",
+  "ranking_eligible": false,
+  "old_performance_replaced": false,
+  "timing_limit": "host UART receipt and USB query midpoint; sensor conversion delay uncalibrated"
+}

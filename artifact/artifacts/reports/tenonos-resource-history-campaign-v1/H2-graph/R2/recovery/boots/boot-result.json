@@ -1,0 +1,180 @@
+{
+  "image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+  "accelerator": "kvm",
+  "guest_memory_bytes": 134217728,
+  "reused_boot_indices": [],
+  "runs": [
+    {
+      "index": 1,
+      "format_profile": "app-rtos-benchmark-0b71b8e",
+      "original_result_counts": {
+        "average_task_switch_time, in cpu cycles": 1,
+        "average_multi_task_switch_time, in cpu cycles": 1,
+        "average_task_preempt_time, in cpu cycles": 1,
+        "average_semaphore_shuffle_time, in cpu cycles": 1,
+        "interrupt_latency_time, in cpu cycles": 1,
+        "timer_deviation_under_interrupt_interference, in count of generic timer": 1
+      },
+      "original_printed_values": {
+        "average_task_switch_time, in cpu cycles": [
+          {
+            "value": 694,
+            "unit": "cycle"
+          }
+        ],
+        "average_multi_task_switch_time, in cpu cycles": [
+          {
+            "value": 2511,
+            "unit": "cycle"
+          }
+        ],
+        "average_task_preempt_time, in cpu cycles": [
+          {
+            "value": 1753,
+            "unit": "cycle"
+          }
+        ],
+        "average_semaphore_shuffle_time, in cpu cycles": [
+          {
+            "value": 2477,
+            "unit": "cycle"
+          }
+        ],
+        "interrupt_latency_time, in cpu cycles": [
+          {
+            "value": 1707,
+            "unit": "cycle"
+          }
+        ],
+        "timer_deviation_under_interrupt_interference, in count of generic timer": [
+          {
+            "value": 300030,
+            "unit": "count"
+          }
+        ]
+      },
+      "original_output_complete": true,
+      "clean_guest_exit": true,
+      "error_marker": false,
+      "functional_probe_pass": true,
+      "runtime_semantic_admission": false,
+      "boundary": "Output completeness only; counter fidelity, actual task/IRQ semantics and correctness require separate audit."
+    },
+    {
+      "index": 2,
+      "format_profile": "app-rtos-benchmark-0b71b8e",
+      "original_result_counts": {
+        "average_task_switch_time, in cpu cycles": 1,
+        "average_multi_task_switch_time, in cpu cycles": 1,
+        "average_task_preempt_time, in cpu cycles": 1,
+        "average_semaphore_shuffle_time, in cpu cycles": 1,
+        "interrupt_latency_time, in cpu cycles": 1,
+        "timer_deviation_under_interrupt_interference, in count of generic timer": 1
+      },
+      "original_printed_values": {
+        "average_task_switch_time, in cpu cycles": [
+          {
+            "value": 722,
+            "unit": "cycle"
+          }
+        ],
+        "average_multi_task_switch_time, in cpu cycles": [
+          {
+            "value": 2539,
+            "unit": "cycle"
+          }
+        ],
+        "average_task_preempt_time, in cpu cycles": [
+          {
+            "value": 1652,
+            "unit": "cycle"
+          }
+        ],
+        "average_semaphore_shuffle_time, in cpu cycles": [
+          {
+            "value": 2477,
+            "unit": "cycle"
+          }
+        ],
+        "interrupt_latency_time, in cpu cycles": [
+          {
+            "value": 1747,
+            "unit": "cycle"
+          }
+        ],
+        "timer_deviation_under_interrupt_interference, in count of generic timer": [
+          {
+            "value": 300027,
+            "unit": "count"
+          }
+        ]
+      },
+      "original_output_complete": true,
+      "clean_guest_exit": true,
+      "error_marker": false,
+      "functional_probe_pass": true,
+      "runtime_semantic_admission": false,
+      "boundary": "Output completeness only; counter fidelity, actual task/IRQ semantics and correctness require separate audit."
+    },
+    {
+      "index": 3,
+      "format_profile": "app-rtos-benchmark-0b71b8e",
+      "original_result_counts": {
+        "average_task_switch_time, in cpu cycles": 1,
+        "average_multi_task_switch_time, in cpu cycles": 1,
+        "average_task_preempt_time, in cpu cycles": 1,
+        "average_semaphore_shuffle_time, in cpu cycles": 1,
+        "interrupt_latency_time, in cpu cycles": 1,
+        "timer_deviation_under_interrupt_interference, in count of generic timer": 1
+      },
+      "original_printed_values": {
+        "average_task_switch_time, in cpu cycles": [
+          {
+            "value": 684,
+            "unit": "cycle"
+          }
+        ],
+        "average_multi_task_switch_time, in cpu cycles": [
+          {
+            "value": 2517,
+            "unit": "cycle"
+          }
+        ],
+        "average_task_preempt_time, in cpu cycles": [
+          {
+            "value": 1671,
+            "unit": "cycle"
+          }
+        ],
+        "average_semaphore_shuffle_time, in cpu cycles": [
+          {
+            "value": 2469,
+            "unit": "cycle"
+          }
+        ],
+        "interrupt_latency_time, in cpu cycles": [
+          {
+            "value": 1420,
+            "unit": "cycle"
+          }
+        ],
+        "timer_deviation_under_interrupt_interference, in count of generic timer": [
+          {
+            "value": 300025,
+            "unit": "count"
+          }
+        ]
+      },
+      "original_output_complete": true,
+      "clean_guest_exit": true,
+      "error_marker": false,
+      "functional_probe_pass": true,
+      "runtime_semantic_admission": false,
+      "boundary": "Output completeness only; counter fidelity, actual task/IRQ semantics and correctness require separate audit."
+    }
+  ],
+  "all_three_pass": true,
+  "generator_invoked": false,
+  "ranking_eligible": false,
+  "boundary": "Fresh virtual guests on the Raspberry Pi Linux host; not native bare-metal or performance/energy evidence."
+}

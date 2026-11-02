@@ -1,0 +1,30 @@
+{
+  "id": "TC-A-3-direct",
+  "task_id": "TC-A",
+  "method": "direct",
+  "family": "configuration_composition",
+  "started_utc": "2026-10-27T14:38:28.451286+00:00",
+  "applicable": true,
+  "infrastructure_invalid": false,
+  "timed_out": false,
+  "budget_wall_s": 1800,
+  "gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": true
+  },
+  "raw_gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": true
+  },
+  "external_check_sha256": "5a110cafb974ca337d959f1593198a168bb10d5d57ec4fb642526f9c89b98a84",
+  "finished_utc": "2026-10-27T14:39:37.225930+00:00",
+  "observed_wall_s": 68.774678546004,
+  "benchmark_trial": true,
+  "end_to_end_pass": true
+}

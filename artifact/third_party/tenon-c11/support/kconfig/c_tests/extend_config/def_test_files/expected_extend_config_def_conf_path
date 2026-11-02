@@ -1,0 +1,9 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# test
+#
+CONFIG_HEX=0x1000
+# CONFIG_BOOL_N is not set
+CONFIG_STRING="This is a test string."
+CONFIG_BOOL_Y=y
+CONFIG_INT=8

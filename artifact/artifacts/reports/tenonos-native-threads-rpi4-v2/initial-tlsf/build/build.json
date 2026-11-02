@@ -1,0 +1,28 @@
+{
+  "argv": [
+    "timeout",
+    "--kill-after=10",
+    "900",
+    "make",
+    "-C",
+    "/home/pi/tenonos-benchmark-v1/tenon-c11",
+    "A=/dev/shm/iotos-tenon-v4-memory-tenonos-native-threads-rpi4-v2-initial-tlsf/source/app-rtos-benchmark-memory",
+    "O=/dev/shm/iotos-tenon-v4-memory-tenonos-native-threads-rpi4-v2-initial-tlsf/build/build",
+    "C=/dev/shm/iotos-tenon-v4-memory-tenonos-native-threads-rpi4-v2-initial-tlsf/build/.config",
+    "L=/home/pi/tenonos-benchmark-v1/libs",
+    "CROSS_COMPILE=",
+    "COMPILER=gcc",
+    "UK_LDFLAGS=-Wl,--wrap=uk_alloc_register -Wl,--wrap=uk_thread_create_bare -Wl,--wrap=uk_thread_create_fn0 -Wl,--wrap=uk_thread_create_fn1 -Wl,--wrap=uk_thread_create_prio_fn1 -Wl,--wrap=uk_thread_create_fn2 -Wl,--wrap=uk_thread_release",
+    "LIBTLSF_CFLAGS-y=-DTLSF_STATISTIC=1",
+    "LIBTLSF_PATCHDIR=/dev/shm/iotos-tenon-v4-memory-tenonos-native-threads-rpi4-v2-initial-tlsf/source/tlsf-patches",
+    "-j2"
+  ],
+  "started_utc": "2026-10-27T22:14:10.206798+00:00",
+  "state": "finished",
+  "recorder_sha256": "6baeebd9cb75a812114799358a33fb83e5de21600810da0ffd032faa2c920c86",
+  "returncode": 0,
+  "finished_utc": "2026-10-27T22:14:30.812373+00:00",
+  "elapsed_seconds": 20.60504313599813,
+  "stdout_sha256": "a104de723926c6e7c358ba4381613ef3649add439e5e737f94425cb89adc4ef7",
+  "stderr_sha256": "0e219aefc404ddafe0b37862af3f90c3ac0e9be1737142866221c5d6ac351aa1"
+}

@@ -1,0 +1,10 @@
+tn_systick_get_tick
+tn_systick_init
+tn_systick_start
+tn_systick_set_timeout
+tn_systick_get_irq
+tn_systick_register
+tn_systick_block_until
+tn_systick_get_monotonic
+ticks_to_ns
+ns_to_ticks

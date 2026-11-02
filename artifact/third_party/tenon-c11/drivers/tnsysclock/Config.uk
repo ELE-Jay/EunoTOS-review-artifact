@@ -1,0 +1,21 @@
+menuconfig SYSCLOCK
+	bool "Systerm timer"
+	default y
+	depends on HAVE_SYSTICK
+
+config ARM_GENERIC_TIMER
+	bool "arm_generic_timer(used in arm cortex-a/cortex-r)"
+	default n
+	depends on SYSCLOCK
+	depends on ARCH_ARM_64
+
+config TSC_I8254
+	bool "tsc_i8254(used in x86)"
+	default n
+	depends on SYSCLOCK
+	depends on ARCH_X86_64
+
+config SYSCLOCK_TEST
+	bool "Enable unit tests"
+	depends on (SYSCLOCK && LIBUKTEST)
+	default n

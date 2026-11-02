@@ -1,0 +1,30 @@
+{
+  "id": "TC-A-3-graph",
+  "task_id": "TC-A",
+  "method": "graph",
+  "family": "configuration_composition",
+  "started_utc": "2026-10-27T14:39:37.267845+00:00",
+  "applicable": true,
+  "infrastructure_invalid": false,
+  "timed_out": false,
+  "budget_wall_s": 1800,
+  "gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": false
+  },
+  "raw_gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": false
+  },
+  "external_check_sha256": "3ce4f215fa9a5bff1af9cb81fbfd14f38188326f94fdd9663be2d91544fcbdc7",
+  "finished_utc": "2026-10-27T14:40:44.893834+00:00",
+  "observed_wall_s": 67.62602401297772,
+  "benchmark_trial": true,
+  "end_to_end_pass": false
+}

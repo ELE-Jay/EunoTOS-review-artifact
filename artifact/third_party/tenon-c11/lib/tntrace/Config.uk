@@ -1,0 +1,22 @@
+menuconfig LIBTNTRACE
+	bool "tntrace: enable trace service"
+	default n
+	select LIBNOLIBC if !HAVE_LIBC
+
+if LIBTNTRACE
+
+choice LIBTNTRACE_OUTPUT
+	prompt "Chooce output method for tracing"
+	default LIBTNTRACE_FORMAT
+		config LIBTNTRACE_FORMAT
+		bool "Use format output"
+
+		config LIBTNTRACE_CUSTOM
+		bool "Use custome function"
+endchoice
+
+config LIBTNTRACE_ALL
+	bool "Enable all trace across all libraries"
+	default y
+
+endif

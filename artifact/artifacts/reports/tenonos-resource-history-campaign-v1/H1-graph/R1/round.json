@@ -1,0 +1,54 @@
+{
+  "round": 1,
+  "started_utc": "2026-10-28T21:11:18.369535+00:00",
+  "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+  "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+  "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+  "target_allocator_option": "LIBUKBOOT_INITBBUDDY",
+  "feedback": {
+    "accepted": null,
+    "gates": null,
+    "required_configuration": []
+  },
+  "accepted": false,
+  "gates": {
+    "generated": false,
+    "built": false,
+    "booted": false,
+    "functional": false,
+    "constraints": false
+  },
+  "generation_wall_s": 5.294346437091008,
+  "preflight_wall_s": 0.24304917000699788,
+  "model_calls": 2,
+  "completion_tokens": 166,
+  "failure": {
+    "type": "ValueError",
+    "message": "Selected paths contain no permitted configuration controls"
+  },
+  "decision_wall_s": 5.5955184400081635,
+  "recovery": {
+    "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+    "fresh_guest_boots": 3,
+    "passed": true
+  },
+  "recovery_wall_s": 39.455720538971946,
+  "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+  "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+  "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+  "observed_wall_s": 45.05668288201559,
+  "finished_utc": "2026-10-28T21:12:03.424812+00:00",
+  "policy_changed": false,
+  "next_feedback": {
+    "accepted": false,
+    "gates": {
+      "generated": false,
+      "built": false,
+      "booted": false,
+      "functional": false,
+      "constraints": false
+    },
+    "required_configuration": [],
+    "preserved_unrelated_configuration": null
+  }
+}

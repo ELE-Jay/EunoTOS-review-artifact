@@ -1,0 +1,139 @@
+{
+  "subject": "TenonOS-paper-pipeline-independent-reconstruction",
+  "task_id": "TC-A",
+  "author_orchestrator": false,
+  "generated": true,
+  "built": true,
+  "booted": true,
+  "functional": true,
+  "constraints": true,
+  "required_checks": [
+    {
+      "option": "ARCH_ARM_64",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "MCPU_ARM64_CORTEX_A72",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "ARM64_ERRATUM_858921",
+      "required": "n",
+      "actual": "n",
+      "pass": true
+    },
+    {
+      "option": "ARM64_ERRATUM_835769",
+      "required": "n",
+      "actual": "n",
+      "pass": true
+    },
+    {
+      "option": "ARM64_ERRATUM_843419",
+      "required": "n",
+      "actual": "n",
+      "pass": true
+    },
+    {
+      "option": "PLAT_KVM",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "FPSIMD",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+      "required": "0x8000000",
+      "actual": "0x8000000",
+      "pass": true
+    },
+    {
+      "option": "LIBUKLOCK",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "LIBUKLOCK_MUTEX",
+      "required": "n",
+      "actual": "n",
+      "pass": true
+    },
+    {
+      "option": "LIBUKLOCK_RWLOCK",
+      "required": "n",
+      "actual": "n",
+      "pass": true
+    },
+    {
+      "option": "LIBTNSYSTICK_FREQ",
+      "required": "1000",
+      "actual": "1000",
+      "pass": true
+    },
+    {
+      "option": "LIBUKDEBUG_ENABLE_ASSERT",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "LIBUKBOOT_INITSCHEDPRIO",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "LIBUKBOOT_INITTLSF",
+      "required": "y",
+      "actual": "y",
+      "pass": true
+    }
+  ],
+  "requested_configuration_checks": [
+    {
+      "option": "LIBUKBOOT_INITSCHEDPRIO",
+      "requested": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+      "requested": "y",
+      "actual": "y",
+      "pass": true
+    },
+    {
+      "option": "LIBUKBOOT_INITTLSF",
+      "requested": "y",
+      "actual": "y",
+      "pass": true
+    }
+  ],
+  "runtime_checks": [],
+  "checker_sha256": "6880b8faf2a709557b603561d9075cfd0e11662bf8c5e6ca6c1b473cbbcc142a",
+  "all_requested_options_preserved": true,
+  "candidate_sha256": "1fa49b30b552153cebcfe856986fa1ca8ce8fd2393d405b3ac80c00e0c79bb50",
+  "image_sha256": "605b67ab1a1667d6a74f50a0caf6ceca1a721b903a29bdb0fceca0fba38dfa1c",
+  "execution_group": "Raspberry Pi 4B Linux-hosted ARM64 KVM guest",
+  "ranking_eligible": false,
+  "formal_task_bank_member": false,
+  "experiment_protocol": "tenon-paper-v4-equal-budget-v1",
+  "boundary": "Independent Tenon-Kconfig baseline; original RTOS output gates or hello probe as declared by the task. Not author TenonOS generator results or ESP32 scores.",
+  "end_to_end_pass": true
+}

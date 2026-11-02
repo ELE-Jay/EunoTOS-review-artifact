@@ -1,0 +1,155 @@
+{
+  "round": 2,
+  "started_utc": "2026-10-28T21:12:03.467214+00:00",
+  "parent_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+  "parent_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+  "parent_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+  "target_allocator_option": null,
+  "feedback": {
+    "accepted": false,
+    "gates": {
+      "generated": false,
+      "built": false,
+      "booted": false,
+      "functional": false,
+      "constraints": false
+    },
+    "required_configuration": [],
+    "preserved_unrelated_configuration": null
+  },
+  "accepted": false,
+  "gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": false
+  },
+  "generation_wall_s": 8.5185711880913,
+  "preflight_wall_s": 0.19478830497246236,
+  "model_calls": 3,
+  "completion_tokens": 295,
+  "raw_gates": {
+    "generated": true,
+    "built": true,
+    "booted": true,
+    "functional": true,
+    "constraints": false
+  },
+  "decision_wall_s": 85.22585108294152,
+  "recovery": {
+    "image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+    "fresh_guest_boots": 3,
+    "passed": true
+  },
+  "recovery_wall_s": 40.263701876974665,
+  "retained_build": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+  "retained_image_sha256": "ca827f0c3a5250955b9635704a8da01fd80c986532f07513bb4971b772c82bf9",
+  "retained_config_sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+  "observed_wall_s": 125.4913086569868,
+  "finished_utc": "2026-10-28T21:14:08.956919+00:00",
+  "policy_changed": false,
+  "next_feedback": {
+    "accepted": false,
+    "gates": {
+      "generated": true,
+      "built": true,
+      "booted": true,
+      "functional": true,
+      "constraints": false
+    },
+    "required_configuration": [
+      {
+        "option": "ARCH_ARM_64",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "MCPU_ARM64_CORTEX_A72",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "ARM64_ERRATUM_858921",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "ARM64_ERRATUM_835769",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "ARM64_ERRATUM_843419",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "PLAT_KVM",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "FPSIMD",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+        "required": "0x8000000",
+        "actual": "0x8000000",
+        "pass": true
+      },
+      {
+        "option": "LIBUKLOCK",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBUKLOCK_MUTEX",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "LIBUKLOCK_RWLOCK",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "LIBTNSYSTICK_FREQ",
+        "required": "1000",
+        "actual": "1000",
+        "pass": true
+      },
+      {
+        "option": "LIBUKDEBUG_ENABLE_ASSERT",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBUKBOOT_INITSCHEDPRIO",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      }
+    ],
+    "preserved_unrelated_configuration": true
+  }
+}

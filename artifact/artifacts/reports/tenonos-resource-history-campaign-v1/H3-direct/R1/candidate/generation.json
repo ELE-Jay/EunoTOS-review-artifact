@@ -1,0 +1,56 @@
+{
+  "subject": "TenonOS-paper-pipeline-independent-reconstruction",
+  "author_orchestrator": false,
+  "method": "direct",
+  "generator_invoked": true,
+  "valid_candidate": false,
+  "model_response_received": true,
+  "benchmark_trial": false,
+  "ranking_eligible": false,
+  "task_sha256": "3923844f1988fa49b02c52a95c3c95bdf031cfeb525ebed549858af5744975b0",
+  "graph_sha256": "e19bd1395fdcd5013459ff93cdacdcd677f3958023c5c4c8fe000baa5d973d7b",
+  "generator_code_sha256": "d04f01b06f6c5f4db9fd6ac030498624a700ad864167751288839552a781e6cc",
+  "source_sha256": {
+    "tenonos_paper_orchestrator.py": "d04f01b06f6c5f4db9fd6ac030498624a700ad864167751288839552a781e6cc",
+    "tenonos_config_validation.py": "16654f841a97fef30a33045cacef6628ffd318673a270419d8fc9cc61f7c0536",
+    "tenonos_lib_graph.py": "890299e50ecb457a05b8b8195df0d902f9608939e1329bbf1ecd559cff29afd2",
+    "tenonos_lightrag_runtime.py": "20f2da702c6c885e8fbf90f760cbd30c9d6ff1846189b6b306c55cb8795f4b4a",
+    "tenonos_model_service.py": "41c9a04bdb1b7226ac70f55fa064fea1f1e88e288c376da412ef33791717d817",
+    "tenonos_orchestrator.py": "410f27ff52fd83731ea556793aece867562b509270f6594f0c658c8df6917216",
+    "tenonos_kvm_reproduce.py": "6baeebd9cb75a812114799358a33fb83e5de21600810da0ffd032faa2c920c86",
+    "import_iotos_subjects.py": "6366af9170e369f77f7b69ad055ba4fe9b0b0eae7739b78635edac29b9b20dac"
+  },
+  "started_utc": "2026-10-28T21:20:30.303890+00:00",
+  "model": "deepseek-v4-pro",
+  "service": "deepseek",
+  "preflight_wall_s": 0.25494015507865697,
+  "failure": {
+    "type": "ValueError",
+    "message": "All proposed configurations failed native dependency validation"
+  },
+  "generation_wall_s": 2.5545663089724258,
+  "completion_tokens": 99,
+  "model_calls": [
+    {
+      "stage": "configurations",
+      "attempted": true,
+      "response_received": true,
+      "max_tokens": 1152,
+      "usage": {
+        "prompt_tokens": 1414,
+        "completion_tokens": 99,
+        "total_tokens": 1513,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 6
+      },
+      "returned_model": "deepseek-v4-pro",
+      "system_fingerprint": "a307abda487cd1b463329ccb945ce396",
+      "finish_reason": "stop",
+      "wall_s": 0.8961358590750024
+    }
+  ],
+  "finished_utc": "2026-10-28T21:20:32.856911+00:00"
+}

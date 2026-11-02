@@ -1,0 +1,10 @@
+/*
+ *
+ * Automatically generated file; DO NOT EDIT.
+ * test
+ *
+ */
+#define CONFIG_HEX 0x1000
+#define CONFIG_STRING "This is a test string."
+#define CONFIG_BOOL_Y 1
+#define CONFIG_INT 8

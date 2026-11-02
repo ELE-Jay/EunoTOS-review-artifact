@@ -1,0 +1,35 @@
+{
+  "schema": "eunotos-adoption-v1",
+  "g1_trials": [
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-A-1-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-A-1-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-B-1-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-B-1-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-C-1-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-C-1-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-A-2-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-A-2-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-B-2-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-B-2-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-C-2-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-C-2-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-A-3-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-A-3-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-B-3-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-B-3-graph",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-C-3-direct",
+    "artifacts/reports/tenonos-author-engine-20261027-v1/budget-v4-campaign-v1/TC-C-3-graph"
+  ],
+  "energy_campaign": "artifacts/reports/esp32-message-energy-b1-v1",
+  "history_campaign": "artifacts/reports/tenonos-resource-history-campaign-v1",
+  "history_plan": "artifacts/reports/tenonos-resource-history-plan-v1",
+  "scope": "Three-OS message-energy arithmetic, G1 output/request checks and resource-history decisions. Preflight classification and measured RAM catalog remain archived inputs, not remeasured values.",
+  "excluded": [
+    "40-cell overall score",
+    "ESP32 firmware byte revalidation",
+    "raw RAM lifecycle reconstruction",
+    "model/Kconfig preflight rerun",
+    "new hardware acquisition",
+    "independent human adoption"
+  ]
+}

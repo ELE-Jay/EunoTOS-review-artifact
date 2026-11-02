@@ -1,0 +1,20 @@
+/*
+ *
+ * Automatically generated file; DO NOT EDIT.
+ * Main menu
+ *
+ */
+#define CONFIG_BUILDIN_COMMAND_KILL 1
+#define ENABLE_BUILDIN_COMMAND_KILL 1
+#ifdef MAKE_SUID
+# define IF_BUILDIN_COMMAND_KILL(...) __VA_ARGS__ "CONFIG_BUILDIN_COMMAND_KILL"
+#else
+# define IF_BUILDIN_COMMAND_KILL(...) __VA_ARGS__
+#endif
+#define CONFIG_BUILDIN_COMMAND_PS 1
+#define ENABLE_BUILDIN_COMMAND_PS 1
+#ifdef MAKE_SUID
+# define IF_BUILDIN_COMMAND_PS(...) __VA_ARGS__ "CONFIG_BUILDIN_COMMAND_PS"
+#else
+# define IF_BUILDIN_COMMAND_PS(...) __VA_ARGS__
+#endif

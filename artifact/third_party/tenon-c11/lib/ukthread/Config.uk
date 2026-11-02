@@ -1,0 +1,14 @@
+config LIBUKTHREAD
+	bool "ukthread: Thread lifecycle management library"
+	default y
+
+if LIBUKSCHED
+	config LIBUKTHREAD_TEST
+		bool "Enable unit tests"
+		default n
+
+	# Invisible symbol to enable TCB initialization
+	config LIBUKSCHED_TCB_INIT
+		bool
+		default n
+endif

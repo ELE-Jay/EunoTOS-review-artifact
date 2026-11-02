@@ -1,0 +1,23 @@
+
+ __          __  _                            _       _______                      ____   _____
+ \ \        / / | |                          | |     |__   __|                    / __ \ / ____|
+  \ \  /\  / /__| | ___ ___  _ __ ___   ___  | |_ ___   | | ___ _ __   ___  _ __ | |  | | (___  
+   \ \/  \/ / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \  | |/ _ \ '_ \ / _ \| '_ \| |  | |\___ \ 
+    \  /\  /  __/ | (_| (_) | | | | | |  __/ | || (_) | | |  __/ | | | (_) | | | | |__| |____) |
+     \/  \/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/  |_|\___|_| |_|\___/|_| |_|\____/|_____/ 
+                                                       Powered by TenonOS (0.1.0~756aa1c-custom)
+
+
+Rhealstone Benchmark Start
+RST: task switch benchmark
+[32;22mR-Rhealstone: average_task_switch_time, in cpu cycles - 710 cycle[0m
+RST: 50 task switch benchmark
+[32;22mR-Rhealstone: average_multi_task_switch_time, in cpu cycles - 2534 cycle[0m
+RST: task preempt benchmark
+[32;22mR-Rhealstone: average_task_preempt_time, in cpu cycles - 1652 cycle[0m
+RST: semaphore shuffle benchmark
+[32;22mR-Rhealstone: average_semaphore_shuffle_time, in cpu cycles - 2473 cycle[0m
+RST: interrupt latency benchmark
+[32;22mR-Rhealstone: interrupt_latency_time, in cpu cycles - 2018 cycle[0m
+RST: timer deviation under interrupt interference
+[32;22mR-Rhealstone: timer_deviation_under_interrupt_interference, in count of generic timer - 300053 count[0m

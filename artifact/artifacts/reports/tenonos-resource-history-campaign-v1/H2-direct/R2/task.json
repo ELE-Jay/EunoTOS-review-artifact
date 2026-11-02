@@ -1,0 +1,149 @@
+{
+  "id": "R2",
+  "family": "system_modification",
+  "objective": "Reduce the retained runtime allocation capacity to meet the new RAM limit. No particular allocator is required. Keep priority scheduling, same-priority preemption, the periodic 1000-Hz tick, optimization and all unrelated options. All six original RTOS cases and external behavioral checks must pass. Peak allocated guest RAM, including its matched observer, must not exceed 6291456 bytes; the image must not exceed 524288 bytes. Only change the permitted allocator options; do not change application or adapter source. Prior configuration-check feedback: {\"accepted\": false, \"gates\": {\"booted\": false, \"built\": false, \"constraints\": false, \"functional\": false, \"generated\": false}, \"preserved_unrelated_configuration\": null, \"required_configuration\": []}",
+  "required_options": {
+    "ARCH_ARM_64": "y",
+    "MCPU_ARM64_CORTEX_A72": "y",
+    "ARM64_ERRATUM_858921": "n",
+    "ARM64_ERRATUM_835769": "n",
+    "ARM64_ERRATUM_843419": "n",
+    "PLAT_KVM": "y",
+    "FPSIMD": "y",
+    "VIRTUALIZE_PLAT_MEM_SIZE": "0x8000000",
+    "LIBUKLOCK": "y",
+    "LIBUKLOCK_MUTEX": "n",
+    "LIBUKLOCK_RWLOCK": "n",
+    "LIBTNSYSTICK_FREQ": "1000",
+    "LIBUKDEBUG_ENABLE_ASSERT": "y",
+    "LIBUKBOOT_INITSCHEDPRIO": "y",
+    "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE": "y"
+  },
+  "candidate_controls": [
+    "LIBUKBOOT_INITBBUDDY",
+    "LIBUKBOOT_INITTLSF",
+    "LIBUKBOOT_INITREGION",
+    "LIBUKBOOT_NOALLOC",
+    "TLSF_LOG2_SLI"
+  ],
+  "reference_family": "modification",
+  "application": "app-rtos-benchmark-abi",
+  "generation_budget_s": 180,
+  "maximum_attempts": 1,
+  "fixed_options": {
+    "ARCH_ARM_64": "y",
+    "MCPU_ARM64_CORTEX_A72": "y",
+    "ARM64_ERRATUM_858921": "n",
+    "ARM64_ERRATUM_835769": "n",
+    "ARM64_ERRATUM_843419": "n",
+    "PLAT_KVM": "y",
+    "FPSIMD": "y",
+    "VIRTUALIZE_PLAT_MEM_SIZE": "0x8000000",
+    "LIBUKLOCK": "y",
+    "LIBUKLOCK_MUTEX": "n",
+    "LIBUKLOCK_RWLOCK": "n",
+    "LIBTNSYSTICK_FREQ": "1000",
+    "LIBUKDEBUG_ENABLE_ASSERT": "y"
+  },
+  "reference_files": [
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/build/.config",
+      "sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/build/runtime-image",
+      "sha256": "7c1b5fe1bb54e52cad16a1f3dfb1445ae5ab8b5e90aaeca2b3a00621a0aad9d0"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/build/build-result.json",
+      "sha256": "7ad93ac2121df73a3c8bf9629db6c421274a66733ff22044072b2c4d31ed022a"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot-result.json",
+      "sha256": "6511b556806990464434bae0862df6a4fa2e9b6171711b592b1bea1f24c57464"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot1.json",
+      "sha256": "8c7f941a97673ae5e6889a74aae7e423da4cbad82c273591dad2d79b6a480008"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot1.stdout",
+      "sha256": "9a77b08eadf948424f77e5c848e69aa95e57eaf2edf97e449419c94f90796e25"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot1.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot2.json",
+      "sha256": "d599eef68f617342487b6821bcf102e80af586b324c4eb5d83f6b27ed17ad402"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot2.stdout",
+      "sha256": "7104d5601d980a87313d2fca356130e6020a3146adef865f30b6f6efb99725d3"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot3.json",
+      "sha256": "53302f38e147e23dde2a1468f3cdb58dd3c25684b3f1201f0fcacc83893aee37"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot3.stdout",
+      "sha256": "b41d3700e55ae762dfb3f644bca699582102d4e8f6cda6571c8e0068cffffd03"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/modification/boots/boot3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "artifacts/reports/tenonos-rpi4-v1/references/composition/build/.config",
+      "sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f"
+    }
+  ],
+  "starting_options": {
+    "ARCH_ARM_64": "y",
+    "ARM64_ERRATUM_835769": "n",
+    "ARM64_ERRATUM_843419": "n",
+    "ARM64_ERRATUM_858921": "n",
+    "FPSIMD": "y",
+    "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE": "y",
+    "LIBTNSYSTICK_FREQ": "1000",
+    "LIBUKBOOT_INITBBUDDY": "n",
+    "LIBUKBOOT_INITREGION": "n",
+    "LIBUKBOOT_INITSCHEDPRIO": "y",
+    "LIBUKBOOT_INITTLSF": "y",
+    "LIBUKBOOT_NOALLOC": "n",
+    "LIBUKDEBUG_ENABLE_ASSERT": "y",
+    "LIBUKLOCK": "y",
+    "LIBUKLOCK_MUTEX": "n",
+    "LIBUKLOCK_RWLOCK": "n",
+    "MCPU_ARM64_CORTEX_A72": "y",
+    "PLAT_KVM": "y",
+    "TLSF_LOG2_SLI": "2",
+    "VIRTUALIZE_PLAT_MEM_SIZE": "0x8000000"
+  },
+  "starting_reference_file": "artifacts/reports/tenonos-rpi4-v1/references/composition/build/.config",
+  "preserve_reference": {
+    "config": "starting-reference.config",
+    "sha256": "11be50b5ddbec0b99f426b9da6d2bca384f174ae93123330c2f2fd0ccd7c897f",
+    "allowed_changes": [
+      "LIBTLSF",
+      "LIBUKALLOCBBUDDY",
+      "LIBUKALLOC_IFMALLOC",
+      "LIBUKBOOT_INITBBUDDY",
+      "LIBUKBOOT_INITTLSF",
+      "TLSF_LOG2_SLI"
+    ]
+  },
+  "sequence_round": 2,
+  "target_allocator_option": null,
+  "maximum_image_bytes": 524288,
+  "external_resource_requirements": {
+    "metric": "peak allocated guest RAM occupancy",
+    "maximum_bytes": 6291456,
+    "observer_included": true
+  }
+}

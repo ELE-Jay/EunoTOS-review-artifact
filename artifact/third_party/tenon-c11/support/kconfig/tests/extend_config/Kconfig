@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: GPL-2.0
+
+menu "Command selection"
+config EXTEND_BUILDIN_COMMAND_KILL
+	bool "kill"
+	default y
+	help
+	  This is a symbol,default y.
+	  Provide to testconfig as a test case.
+	  Verify that the generated extend file meets the requirements
+	  Is not a true config.uk
+	  configuration item
+
+config EXTEND_BUILDIN_COMMAND_PS
+	bool "ps"
+	default n
+	help
+	  This is a symbol,default n.
+	  Provide to testconfig as a test case.
+	  Verify that the generated extend file meets the requirements
+	  Is not a true config.uk
+	  configuration item
+endmenu

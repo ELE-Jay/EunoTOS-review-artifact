@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-21T07:42:06.450028+00:00",
+  "host_monotonic_start_s": 1355646.803616846,
+  "duration_requested_s": 95,
+  "interval_requested_s": 0.1,
+  "port": "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0",
+  "meter": "POWER-Z KM003C",
+  "usb_id": "5fc9:0063",
+  "usb_bus": 1,
+  "usb_address": 34,
+  "meter_serial": "086477",
+  "powerz_backend_sha256": "bf4991ec5ac160eac1820310c064a3aca8ca9097cd419bec9e031c864a629a7d",
+  "timestamp_semantics": "host query/response midpoint and UART line receipt, one monotonic origin; not sensor conversion time",
+  "measurement_boundary": "meter branch; capture-bound operator confirmation audited separately",
+  "calibration": "instrument default; external calibration not verified",
+  "reset_release_s": 0.2525789770297706,
+  "sample_count": 922,
+  "duration_actual_s": 95.00146708497778,
+  "uart_unterminated_bytes": 0
+}

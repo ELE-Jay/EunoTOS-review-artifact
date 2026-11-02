@@ -1,0 +1,5 @@
+$(eval $(call addlib_s,libtnsysclock_tsc_i8254,$(CONFIG_TSC_I8254)))
+
+LIBTNSYSCLOCK_TSC_I8254_CINCLUDES-y += -I$(CONFIG_UK_BASE)/plat/common/include
+
+LIBTNSYSCLOCK_TSC_I8254_SRCS-$(CONFIG_TSC_I8254) += $(LIBTNSYSCLOCK_TSC_I8254_BASE)/tsc_i8254.c

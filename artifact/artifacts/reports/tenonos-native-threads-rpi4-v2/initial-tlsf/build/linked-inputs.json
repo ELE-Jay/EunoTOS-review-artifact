@@ -1,0 +1,9 @@
+{
+  "files": {
+    "linked-symbols.elf": "06b009d8acafdc8b96634ae5989fd337798d67f56f6c83a6ede61023ea14b460",
+    "mkbootinfo.py": "f46bee2557c4a3aa9bf81a2dfb72072d3bfdef58b27b124094b6210245da0585",
+    "mklinux.py": "2ba117194a0eee71c5fa9bc70f849e9813a7f2b9d915f38de81113fb5cb8116b"
+  },
+  "measured_image_sha256": "ef20b7f845854b614303903f79fbe319e98af57519847273574b45dce556575c",
+  "retained_before_guest_execution": true
+}

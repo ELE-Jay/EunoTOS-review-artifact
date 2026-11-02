@@ -1,0 +1,27 @@
+config HAVE_INTCTLR
+	bool
+
+menuconfig LIBUKINTCTLR
+	bool "ukintctlr: Interrupt Controller API"
+	depends on HAVE_INTCTLR
+
+if LIBUKINTCTLR
+
+config LIBUKINTCTLR_MAX_HANDLERS_PER_IRQ
+	int "Maximum number of handlers per IRQ"
+	default 8
+
+config LIBUKINTCTLR_ISR_ECTX_ASSERTIONS
+	bool "Check for unmodified ECTX in interrupt handlers"
+	depends on ARCH_X86_64
+
+config LIBUKINTCTLR_TEST
+	bool "Enable unit tests"
+	default n
+	select LIBUKTEST
+
+config LIBUKINTCTLR_TRACE
+	bool "Enable isr trace"
+  	default n
+
+endif

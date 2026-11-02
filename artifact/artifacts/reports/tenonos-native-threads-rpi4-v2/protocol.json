@@ -1,0 +1,18 @@
+{
+  "id": "tenon-rpi4-native-thread-storage-v1",
+  "reference_registry": "registry/tenonos_energy_rpi4_v1.json",
+  "profiles": ["initial-tlsf", "accepted-buddy", "accepted-tlsf"],
+  "fresh_guests_per_profile": 3,
+  "original_suite": "Unchanged six original bodies and ABI adapter, 500 iterations. Reuse the native leaf lifecycle recorder, adding only native thread constructor/release observation.",
+  "observation": "Record all external native thread create_bare/fn0/fn1/prio_fn1/fn2 results and release entry/return; correlate TCB, allocated main/auxiliary stack and TLS with native leaf allocation generations from allocator registration. Fixed original 4096-event buffer. Reject overflow, unmatched or premature release, allocation overlap and external direct-call bypass in the linked image.",
+  "coverage": "Includes native startup and scheduler threads before the test suite as well as original and finite validation tasks. An inherited startup stack is explicitly non-heap-owned, not assigned a fictitious allocation. Recording ends before main returns and before final guest teardown.",
+  "validation": "Preserve original 65536-byte allocation check and four finite task create/delete/reclaim validations. Recompute the earlier lifecycle oracle from the exact legacy event projection, and independently bind every native thread to live native allocation generations and later actual frees.",
+  "native_statistics": "Same TLSF statistics-only repair and buddy IFSTATS controls as the existing lifecycle campaign. No allocation policy, task body, priority or iteration-count change.",
+  "scope": "Native thread storage ownership and lifetime, including pre-suite threads. Not continuous SP, exact live-stack depth, pre-allocator boot memory, final shutdown, performance ranking or energy.",
+  "guest": {"accelerator": "kvm", "vcpus": 1, "memory_bytes": 134217728},
+  "host": "Pi4B serial 10000000c1b4a936; performance governor during collection and restore after; reject competing guests and reported throttling",
+  "model_calls": 0,
+  "full_live_ram_peak_bytes": null,
+  "ranking_eligible": false,
+  "storage": "Raw results, binaries, audits and reproduction material persist only on leon; temporary Pi files are hash-verified before removal. All failures retained."
+}

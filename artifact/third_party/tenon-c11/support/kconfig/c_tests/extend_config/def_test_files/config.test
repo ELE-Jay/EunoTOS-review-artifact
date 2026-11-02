@@ -1,0 +1,45 @@
+#
+# For a description of the syntax of this configuration file,
+# see https://www.kernel.org/doc/Documentation/kbuild/Config.in-language.txt.
+#
+mainmenu "Unikraft/$(UK_FULLVERSION) Configuration"
+
+config TEST_BOOL_Y
+	bool "bool y"
+	default y
+
+config TEST_BOOL_N
+	bool "bool n"
+	default n
+
+config TEST_STRING
+	string "string"
+	default "This is a test string."
+
+config TEST_INT
+	int "int"
+	default 8
+
+config TEST_HEX
+	hex "hex"
+	default 0x10
+
+config EXTENDTEST_BOOL_Y
+	bool "bool y"
+	default y
+
+config EXTENDTEST_BOOL_N
+	bool "bool n"
+	default n
+
+config EXTENDTEST_STRING
+	string "string"
+	default "This is a test string."
+
+config EXTENDTEST_INT
+	int "int"
+	default 8
+
+config EXTENDTEST_HEX
+	hex "hex"
+	default 0x1000

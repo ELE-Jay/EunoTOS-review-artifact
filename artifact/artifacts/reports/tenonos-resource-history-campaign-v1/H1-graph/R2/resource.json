@@ -1,0 +1,22 @@
+{
+  "identity": "bcba98f980c63851f13a835bb04f25156e6457c34f2a2fff4ed759e2fe9c2433",
+  "profile": {
+    "identity": "bcba98f980c63851f13a835bb04f25156e6457c34f2a2fff4ed759e2fe9c2433",
+    "profile": "accepted-buddy",
+    "provider": "premeasured",
+    "peak_bytes": 9777152,
+    "behavior_pass": true,
+    "build": "artifacts/reports/tenonos-rpi4-v1/references/modification/build",
+    "memory_evidence": "artifacts/reports/tenonos-allocated-occupancy-rpi4-v1.json",
+    "memory_sha256": "ac665e259e3f3482faa22e718a21795e53b1243acfda62b2e7498e16d20f818f",
+    "behavior_evidence": "artifacts/reports/tenonos-runtime-oracle-rpi4-v6/audit.json",
+    "behavior_sha256": "d99ae9a2e21a98985d9777d1e459d4e20e8d543c7f3396c137af015d88c908e3"
+  },
+  "profile_reused": true,
+  "maximum_bytes": 6291456,
+  "status": "constraint_failed",
+  "fresh_resource_guests": 0,
+  "energy_inherited": false,
+  "native_end_s": 538451.133395343,
+  "qualification_end_s": 538471.087051297
+}

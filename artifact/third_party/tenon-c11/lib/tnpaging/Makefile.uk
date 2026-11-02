@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2024 The TenonOS Authors
+
+$(eval $(call addlib_s,libtnpaging,$(CONFIG_LIBTNPAGING)))
+
+ifeq ($(CONFIG_STATIC_PGTABLE),y)
+STATIC_PAGE_TOOLS_DIR    = $(BUILD_DIR)/static_page
+STATIC_PAGE_DIR         := $(LIBTNPAGING_BASE)/static
+STATIC_PAGE_INCLUDES    := -I$(LIBTNPAGING_BASE)/include
+
+STATIC_PAGE_SRC         := $(STATIC_PAGE_DIR)/staticpg.c
+
+STATIC_PAGE_TOOLS		= static_page
+STATIC_PAGE_TOOLS		:= $(addprefix $(STATIC_PAGE_TOOLS_DIR)/,$(STATIC_PAGE_TOOLS))
+endif

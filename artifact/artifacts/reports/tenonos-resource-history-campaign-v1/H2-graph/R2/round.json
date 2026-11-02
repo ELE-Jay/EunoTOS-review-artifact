@@ -1,0 +1,164 @@
+{
+  "round": 2,
+  "started_utc": "2026-10-28T21:16:13.723234+00:00",
+  "parent_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H2-graph/R1/evaluation/build",
+  "parent_image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+  "parent_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+  "target_allocator_option": null,
+  "feedback": {
+    "accepted": true,
+    "gates": {
+      "generated": true,
+      "built": true,
+      "booted": true,
+      "functional": true,
+      "constraints": true
+    },
+    "required_configuration": [
+      {
+        "option": "ARCH_ARM_64",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "MCPU_ARM64_CORTEX_A72",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "ARM64_ERRATUM_858921",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "ARM64_ERRATUM_835769",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "ARM64_ERRATUM_843419",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "PLAT_KVM",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "FPSIMD",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "VIRTUALIZE_PLAT_MEM_SIZE",
+        "required": "0x8000000",
+        "actual": "0x8000000",
+        "pass": true
+      },
+      {
+        "option": "LIBUKLOCK",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBUKLOCK_MUTEX",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "LIBUKLOCK_RWLOCK",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      },
+      {
+        "option": "LIBTNSYSTICK_FREQ",
+        "required": "1000",
+        "actual": "1000",
+        "pass": true
+      },
+      {
+        "option": "LIBUKDEBUG_ENABLE_ASSERT",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBUKBOOT_INITSCHEDPRIO",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBTNSCHEDPRIO_ENABLE_PREEMTIVE",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBUKBOOT_INITBBUDDY",
+        "required": "y",
+        "actual": "y",
+        "pass": true
+      },
+      {
+        "option": "LIBUKBOOT_INITTLSF",
+        "required": "n",
+        "actual": "n",
+        "pass": true
+      }
+    ],
+    "preserved_unrelated_configuration": true
+  },
+  "accepted": false,
+  "gates": {
+    "generated": false,
+    "built": false,
+    "booted": false,
+    "functional": false,
+    "constraints": false
+  },
+  "generation_wall_s": 5.4453028230927885,
+  "preflight_wall_s": 0.20011106098536402,
+  "model_calls": 2,
+  "completion_tokens": 155,
+  "failure": {
+    "type": "ValueError",
+    "message": "Selected paths contain no permitted configuration controls"
+  },
+  "decision_wall_s": 5.672258736914955,
+  "recovery": {
+    "image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+    "fresh_guest_boots": 3,
+    "passed": true
+  },
+  "recovery_wall_s": 40.13199408201035,
+  "retained_build": "artifacts/reports/tenonos-resource-history-campaign-v1/H2-graph/R1/evaluation/build",
+  "retained_image_sha256": "46cf169cc52a7f29a11e5bdf978dbcf3de613018382369f39ab2622cb95f9e38",
+  "retained_config_sha256": "583646bf294e003c27d149194d0be9e5add4fe76fa170b3222ecdfc7dd7cb556",
+  "observed_wall_s": 45.80608220992144,
+  "finished_utc": "2026-10-28T21:16:59.528596+00:00",
+  "policy_changed": false,
+  "next_feedback": {
+    "accepted": false,
+    "gates": {
+      "generated": false,
+      "built": false,
+      "booted": false,
+      "functional": false,
+      "constraints": false
+    },
+    "required_configuration": [],
+    "preserved_unrelated_configuration": null
+  }
+}

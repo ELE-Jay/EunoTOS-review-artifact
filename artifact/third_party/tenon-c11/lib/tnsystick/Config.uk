@@ -1,0 +1,16 @@
+menuconfig LIBTNSYSTICK
+	bool "tnsystick: Kernel systick configuration"
+	default y if !(PLAT_LINUXU || PLAT_XEN)
+	select HAVE_SYSTICK
+
+if LIBTNSYSTICK
+
+config LIBTNSYSTICK_TICKLESS
+	bool "Trigger kernel systick interrupt in tickless mode"
+	default n
+
+config LIBTNSYSTICK_FREQ
+	int "Frequency of triggering kernel systick"
+	default 1000
+
+endif

@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2024 The TenonOS Authors
+
+menuconfig LIBTNPAGING
+	bool "tnpaging: provide uniform paging api"
+	default y
+	select STATIC_PGTABLE
+
+if LIBTNPAGING
+
+config STATIC_PGTABLE
+	bool "using static page table generated at compile time"
+	default y
+	depends on ARCH_ARM_64
+	help
+		Write the page table static in the kernel image before
+		the kernel runs, and increase the boot speed.
+
+if VIRTUALIZE_PLAT
+
+config VIRTUALIZE_PLAT_MEM_SIZE
+	hex "memory size for virtualization plat"
+	default 0x8000000
+	depends on VIRTUALIZE_PLAT
+	help
+		Specifies the memory size to align with the VMM configuration.
+		This ensures the static page table does not define invalid RAM
+		regions. Default to using 128MB of RAM. Ensure that appropriate
+		memory is provided when starting with VMM.
+
+endif
+
+endif

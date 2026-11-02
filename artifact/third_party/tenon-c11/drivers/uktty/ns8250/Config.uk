@@ -1,0 +1,12 @@
+menuconfig LIBTNTTY_NS8250
+	bool "NS8250"
+	default n
+	depends on ARCH_ARM_64
+
+if LIBTNTTY_NS8250
+config LIBTNTTY_EARLY_PRINT_NS8250_CONSOLE_NAME
+	string "Description of serial in alisas node in device tree"
+	default "serial4"
+	help
+		uart used for kernel output
+endif

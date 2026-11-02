@@ -1,0 +1,36 @@
+{
+  "id": "tenon-resource-modification-v1",
+  "history_pipeline": "artifacts/reports/tenonos-author-engine-20261027-v1/policy-choice-pipeline-v1",
+  "backend_pipeline": "artifacts/reports/tenonos-joint-resource-pipeline-v1",
+  "base_protocol": "registry/tenonos_policy_budget_v1.json",
+  "graph_specification": "registry/tenonos_joint_constraints_v1.json",
+  "histories_per_branch": 3,
+  "rounds_per_history": 2,
+  "attempts_per_round": 1,
+  "maximum_model_calls": 24,
+  "maximum_output_tokens": 13824,
+  "per_round_output_tokens": 1152,
+  "graph_stage_caps": {"objective": 288, "paths": 288},
+  "per_round_deadline_s": 1800,
+  "per_history_deadline_s": 3600,
+  "maximum_image_bytes": 524288,
+  "rounds": [
+    {"round": 1, "required_allocator": "buddy", "maximum_ram_bytes": 12582912},
+    {"round": 2, "required_allocator": null, "maximum_ram_bytes": 6291456}
+  ],
+  "additional_public_control": "TLSF_LOG2_SLI",
+  "reference_builds": {
+    "initial-tlsf": "artifacts/reports/tenonos-rpi4-v1/references/composition/build",
+    "accepted-buddy": "artifacts/reports/tenonos-rpi4-v1/references/modification/build",
+    "accepted-tlsf": "artifacts/reports/tenonos-author-engine-20261027-v1/policy-choice-campaign-v1/H1-direct/R2/evaluation/build"
+  },
+  "references": "Before registration replay all three complete allocated-occupancy profiles, behavioral evidence, exact configuration/source/adapter/compiler-version bindings and original reference guest outputs. Round 1 has the buddy witness; round 2 has the accepted TLSF witness. The initial TLSF profile exceeds the second budget, so retaining the initial configuration is not sufficient after an earlier rejection.",
+  "method": "Use the current numeric-interface, serialization-repaired, equal-output-budget Tenon paper-flow reconstruction unchanged. Reuse the existing state-linked two-round runner; add task requirements, online external behavioral/RAM admission and monotonic clock records. Do not modify generation, retrieval, selection, prompts or model algorithms.",
+  "admission": "Retain a candidate only after native validity, build, three original-suite guests, preservation checks, full behavior/allocated-RAM qualification, image limit and decision deadline all pass. Otherwise keep the actual parent and verify it in three fresh guests. Stop on infrastructure errors instead of assigning OS failure.",
+  "resource_reuse": "Freeze known profiles before model calls. Reuse only exact complete configuration, source/adapter and recorded compiler-version matches, re-audited online. Unmatched configurations acquire the same three behavior, three lifecycle and four supporting guests. Reuse adds no independent RAM sample; energy is never inherited.",
+  "feedback": "Existing acceptance, stage booleans and configuration checks only. No raw captures, measured RAM values, paper, credentials or future task are supplied to the generator. The current task includes its prospective RAM/image limits.",
+  "clock": "One leon monotonic clock per round includes generation, build, runtime, external resource qualification and failed-candidate recovery. Successful completion and failed termination remain separate. Initial parent checks and preparation are outside cumulative round cost and separately retained.",
+  "scope": "Prescribed configuration changes and build/reboot lineage on Pi4B ARM64/KVM, not hot update, autonomous optimization, author engine or RSI. Allocated RAM includes the observer; actual stack use remains separate. No inferred cloud/host energy or cross-hardware ranking.",
+  "statistics": "Three histories per branch, two fixed rounds each; preserve all failures, individual trajectories and observed median/range. Do not pool prior cohorts or estimate P95. Configuration aliases are not independent memory measurements.",
+  "storage": "All real task inputs, API responses, builds, clocks, guests, audits and private packages remain on leon. Mac retains maintained code, paper and display summaries. No public release or submission."
+}

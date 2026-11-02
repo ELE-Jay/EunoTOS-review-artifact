@@ -1,0 +1,15 @@
+menuconfig LIBTNTIMER
+	bool "timer: Kernel timer configuration"
+	select LIBTNSYSTICK
+	default n
+
+
+if LIBTNTIMER
+	config LIBTNTIMER_TEST
+		bool "Enable unit tests"
+		default n
+		select LIBUKTEST
+	config LIBTNTIMER_TRACE
+  		bool "Enable timer trace"
+  		default n
+endif
