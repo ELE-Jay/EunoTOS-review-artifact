@@ -1,0 +1,32 @@
+{
+  "release": "2026-11-06-current-v1",
+  "paper_source_commit": "aba9fb7",
+  "table_sha256": "ef943575a6d871577b93c7bc2a99281e16e1b7fb3d418e30bceb85294d33791c",
+  "archive_sha256": "f4de8d5c63ca6a00bab0375675975fbd4edd425ea419385bc1be55ce463c13e8",
+  "remaining_coverage_cells": 10,
+  "offline_checks": [
+    {
+      "name": "current",
+      "returncode": 0,
+      "pass": true
+    },
+    {
+      "name": "legacy",
+      "returncode": 0,
+      "pass": true
+    },
+    {
+      "name": "missing",
+      "returncode": 1,
+      "pass": true
+    },
+    {
+      "name": "changed",
+      "returncode": 1,
+      "pass": true
+    }
+  ],
+  "new_measurements_by_this_export": 0,
+  "new_model_calls": 0,
+  "public_scope": "Bounded redacted copy; current eight-configuration score summaries and coverage index plus preserved historical raw subset"
+}

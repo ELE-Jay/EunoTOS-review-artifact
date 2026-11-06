@@ -1,0 +1,11 @@
+{
+  "production_scorer": {
+    "source": "tools/score_esp32_common_leaderboard.py",
+    "sha256": "029d68adc48f479abcc570e7130f4f1a0220eae5a282a98a708e2ea68afa4cd7"
+  },
+  "score_summary_sha256": "a4dfe1d959a6bd013d3538cb6a2c64a07b146f7d5149d8c5df278703c66c9811",
+  "coverage_index_sha256": "2e3d6ec6ff2d7082a1ac8438fc96707c34f681d57b0d9be2750458264881ad15",
+  "table_sha256": "ef943575a6d871577b93c7bc2a99281e16e1b7fb3d418e30bceb85294d33791c",
+  "coverage_verification": "Qualified on the private host; public hashes are commitments, not access to raw evidence.",
+  "historical_raw_subset": "Unchanged v7 measured records; new arithmetic extension does not add independent resets."
+}

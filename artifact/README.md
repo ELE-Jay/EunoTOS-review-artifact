@@ -1,3 +1,9 @@
+# EunoBench Review Artifact — 2026-11-06
+
+The current extension in `current/` reproduces the eight-configuration score arithmetic (48 measured scalars, FreeRTOS = 1, 235 preference profiles) and Table 1 coverage status. Run `python3.11 -S -B tools/replay_current.py --output ../current-results`. These are archived measurement summaries and coverage commitments, not a new raw-data replay. New coverage captures and full resource evidence remain private.
+
+The following historical subset and its replay are preserved. Its 40-input exclusion refers to the former mechanism leaderboard, not the current 48-input common-task score.
+
 # EunoTOS Minimal Review Artifact
 
 ## Scope

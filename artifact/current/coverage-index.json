@@ -1,0 +1,2780 @@
+{
+  "schema": "eunotos-coverage-paper-index-v1",
+  "created_utc": "2026-11-06T13:55:21.804835+00:00",
+  "columns": [
+    "FreeRTOS",
+    "Zephyr",
+    "NuttX",
+    "RIOT",
+    "AliOS Things",
+    "Contiki-NG",
+    "Pi KVM"
+  ],
+  "evidence": {
+    "tm-replay": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/sealed-thread-metric.json",
+      "sha256": "5040f90b4d129eeb8e287ff47a418a71dcde0f9c001c299f61ab68e17768a539",
+      "bytes": 24995,
+      "scope": "25 OS/case cells, 75 original resets; 1199 sealed files and raw UART/count/IRQ/power arithmetic"
+    },
+    "qwen-tm": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/qwen-thread-metric.json",
+      "sha256": "c3d35ae416988a25057677513dd9de5f4d52546e5f84eeee4e52f9db960aec74",
+      "bytes": 5818,
+      "scope": "Frozen C2-1 images; all five Thread-Metric cases"
+    },
+    "zperf-tcp": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/zperf-tcp.json",
+      "sha256": "a7694032dacec1fe40c96150ee763e452f2a325cd636a941d2f4342de09fc0a1",
+      "bytes": 8091,
+      "scope": "Five independent resets/OS; common unchanged v3.7 synchronous TCP core"
+    },
+    "zperf-udp": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/zperf-udp.json",
+      "sha256": "53db9833fa5bbf102a3660ab6666ad7db81358c97a78e0187e08b677d9ab6a7a",
+      "bytes": 25877,
+      "scope": "Successful v3 cohort, not the incomplete v1/v2 cohorts; five resets/OS"
+    },
+    "semaphore": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/semaphore.json",
+      "sha256": "ab206092119a8908eea93c97cefb26b81d1af98dcbb44ea9a8f61d6a7175ac55",
+      "bytes": 12874,
+      "scope": "24 original kernel-mode cases; baseline and C2 wait/ready policies; ten resets"
+    },
+    "pi-six": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/pi-six-case.json",
+      "sha256": "1bff950b67a1698402b058684832deb19857728639ff8c7e9cf8358cc71e8cf0",
+      "bytes": 4934,
+      "scope": "Pinned six test bodies; three profiles, three fresh guests each, 2000 iterations"
+    },
+    "pi-energy": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/pi-activation-energy.json",
+      "sha256": "a1c1493e0ac3cb097da019601788e46250b915e0e58bb96a382b9ad36e52c190",
+      "bytes": 4682,
+      "scope": "Pi whole-board activation and validation, including host; not ESP32 energy/job"
+    },
+    "pi-build-energy": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/pi-build-energy.json",
+      "sha256": "92945ac73ecefabb95faf170268ac3cf6dcbf238eacaa5d79413236c3edfcc81",
+      "bytes": 7460,
+      "scope": "Pi whole-board build and validation, including host"
+    },
+    "pi-ram": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/pi-allocated-ram.json",
+      "sha256": "ac665e259e3f3482faa22e718a21795e53b1243acfda62b2e7498e16d20f818f",
+      "bytes": 2966068,
+      "scope": "Three instrumented guest profiles; native entry through termination; host excluded"
+    },
+    "common-score": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-ratio-indices-20261106-v1/regenerated/common-mainboard-ratios.json",
+      "sha256": "a4dfe1d959a6bd013d3538cb6a2c64a07b146f7d5149d8c5df278703c66c9811",
+      "bytes": 59044,
+      "scope": "Official eight-configuration B1 task, UDP, energy and allocated-RAM inputs"
+    },
+    "common-score-replay": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-ratio-indices-20261106-v1/regenerated/receipt.json",
+      "sha256": "9b49c0743cbb566eba286bbd8c6ef242070b162adcf19df11293e7df1b2a8583",
+      "bytes": 1864,
+      "scope": "Existing full raw replay, 48 inputs, unchanged original records and 235 preference profiles"
+    },
+    "zperf-tcp-source-proof": {
+      "path": "[private-evidence]/artifacts/reports/esp32-common-original-tcp-b1-v1/proofs.json",
+      "sha256": "a7ee7aeebdd3a43f3eba6f6c802723e3748a85c13d397ffebab1f54cd180503d",
+      "bytes": 2250,
+      "scope": "Exact upstream core hashes, installed images and native wrapper identities for each TCP target"
+    },
+    "zperf-udp-source-proof": {
+      "path": "[private-evidence]/artifacts/reports/esp32-common-original-udp-b1-v3/proofs.json",
+      "sha256": "375b62bee3032a720f802e5b412adcef998aa8fc4e3bf813b28a33947a2a0dc7",
+      "bytes": 2426,
+      "scope": "Exact upstream UDP core, pacing and completion protocol plus native target images"
+    },
+    "validator-replay_eunotos_coverage_inputs.py": {
+      "path": "[private-evidence]/tools/replay_eunotos_coverage_inputs.py",
+      "sha256": "c47ae6d328b5b0acc851fb91c873e4678bda81560aaac269cfc3ef6555163c7b",
+      "bytes": 5893,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-audit_tenonos_scale_validation.py": {
+      "path": "[private-evidence]/tools/audit_tenonos_scale_validation.py",
+      "sha256": "327552690f0617b20d756ddac25d46dc2a8b423b325439d1f38f300edd01d70e",
+      "bytes": 10272,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-audit_esp32_report.py": {
+      "path": "[private-evidence]/tools/audit_esp32_report.py",
+      "sha256": "de5db543f5837fc64361344ecce5412f853d0e740b7a2adba5ceb35b49ec44dc",
+      "bytes": 46523,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-audit_esp32_riot_hartstone.py": {
+      "path": "[private-evidence]/tools/audit_esp32_riot_hartstone.py",
+      "sha256": "52c36b047c91a0179b0fb4e0de596276d4c6557b39669a1a894682b8291cfb9b",
+      "bytes": 5888,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-audit_esp32_alios_hartstone.py": {
+      "path": "[private-evidence]/tools/audit_esp32_alios_hartstone.py",
+      "sha256": "caa1bf63a37aee68d12415a940103d0e2d15c37f596aca65716dcfa28e52b355",
+      "bytes": 7912,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-esp32_waitq_oracle.py": {
+      "path": "[private-evidence]/tools/esp32_waitq_oracle.py",
+      "sha256": "0e2bee5daa941a028965e930de8b331b1ad9bc3272deeb2c478013301082669c",
+      "bytes": 16075,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-run_esp32_common_tcp.py": {
+      "path": "[private-evidence]/tools/run_esp32_common_tcp.py",
+      "sha256": "4bd120845ae4a841be4f28392a77ec8a8963ddef2910d5de0f456d811838139a",
+      "bytes": 18832,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "validator-run_esp32_common_udp.py": {
+      "path": "[private-evidence]/tools/run_esp32_common_udp.py",
+      "sha256": "d517a15aed9166d0f6881fde6dd15de9de300d8138d15c3f0c7d948a1d36c584",
+      "bytes": 9360,
+      "scope": "Maintained offline audit entrypoint used for this coverage check"
+    },
+    "common-ram-0": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-all-rounds-replay.json",
+      "sha256": "1d83aff31476a747adc530b34481300ad1132a788f29d4a2c1d2ae2f59f2ca2d",
+      "bytes": 5363,
+      "scope": "Formal RAM capture replay used by the official score"
+    },
+    "common-ram-1": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-single-leaderboard-20261103-v1/continuation-registered-u35-v1/native-ram-raw-replay.json",
+      "sha256": "08ba8261dbceddda303cfb198a70f0a8ad813db556e8cfc1960422609ca72aaa",
+      "bytes": 4547,
+      "scope": "Formal RAM capture replay used by the official score"
+    },
+    "cmrx-results": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/cmrx-results.html",
+      "sha256": "7a5f5e64fdbf8774dca5d22514016cdd638fab316c11a2abffee909c36f7063e",
+      "bytes": 15927,
+      "scope": "Complete published target/case matrix: FreeRTOS, Zephyr, NuttX and CMRX; five non-IRQ cases"
+    },
+    "cmrx-scope": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/cmrx-scope.html",
+      "sha256": "6a4046d872d07eda8d93179bb262e615376b4d133755bdd2c2554a489174b161",
+      "bytes": 11171,
+      "scope": "Explicit exclusion of interrupt tests from the published CMRX reference subset"
+    },
+    "iotj2019": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/iotj2019.pdf",
+      "sha256": "eca25cbc75e2e6e2b4f8e221682fcf3968d4b8f211c1b686e36f3583c528b822",
+      "bytes": 1528745,
+      "scope": "Table II: eight cases, RIOT, Zephyr and modified Contiki-NG, four network states"
+    },
+    "sei90": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/sei90.pdf",
+      "sha256": "d0552078c62db91913cdc4ace6cae4301958f43084023be39864913f085cdfe1",
+      "bytes": 119660,
+      "scope": "CMU/SEI-90-UG-1: full Ada PH reference; Appendix A host/target and all four sample experiments; Appendix D source"
+    },
+    "tenon-app": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/tenon-fixed/README.md",
+      "sha256": "eaf438504b596b6692aa49cc3b382343a40d62f89ddcedb952b7995c96e3c461",
+      "bytes": 9005,
+      "scope": "App commit 0b71b8e722acfab4733eb99b07b67fbe8472c31d: declared results and targets are RK3568"
+    },
+    "tenon-build": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/tenon-fixed/Makefile.uk",
+      "sha256": "8d808e196aacfdc2e10027a5a5d4426154affe9f464224a404388cb897cfba2f",
+      "bytes": 1550,
+      "scope": "Pinned app native adapter selection"
+    },
+    "bsp-kvm": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/bsp-fixed/kvm/README.md",
+      "sha256": "b0de8488501547dc22252b04a44d58adf8d26878432bc208951e19e5655db312",
+      "bytes": 1313,
+      "scope": "BSP 757734df33e8fdf5584680dcc0c19c39ae25ad48 already contains generic KVM; banner is not six-case Pi4B output"
+    },
+    "bsp-targets": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/bsp-tree.txt",
+      "sha256": "9393b73fedb9be71e751232dce3d395fe058ade5e12de1cad8c21d78502d3a59",
+      "bytes": 918,
+      "scope": "Complete pinned BSP target tree, including generic KVM and Raspberry Pi 3B+"
+    },
+    "alios-app": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/alios-app-tree.json",
+      "sha256": "8664a476dbf517f7dca0cfd958dc40eedcc0e32b5b85dc79c5080f0b1663f819",
+      "bytes": 101358,
+      "scope": "Complete 422-node app tree at bacc144bdc5df8fe8e302e3732675a920aa40bc5, no Thread-Metric app"
+    },
+    "alios-kernel": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/alios-kernel-tree.json",
+      "sha256": "d4048082377e7bf11d97ee29a71811f75b5abc3de8f88f06a5055eefeb62ceff",
+      "bytes": 98682,
+      "scope": "Complete 418-node kernel tree at the same fixed AliOS revision"
+    },
+    "alios-tests": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/alios-test-tree.json",
+      "sha256": "77f96868dc4087069f8065b0bbcdbc4e2f7339dd47d91ccf66793baca03ad137",
+      "bytes": 68900,
+      "scope": "Complete 280-node test tree at the same fixed AliOS revision"
+    },
+    "neneco-tree": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/neneco-tree.json",
+      "sha256": "de685c3c1ed513cde7a09e9418b628fab670bce3698369658dcb01e084be01fc",
+      "bytes": 26342,
+      "scope": "Existing external FreeRTOS Hartstone port aa3243c96dabdab6fc283ae4b166448507d974d8; acknowledged, not a first-port claim"
+    },
+    "neneco-ph3": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/upstream/neneco-hartstone_hartstone.c",
+      "sha256": "4724114c600fbf8e73aca431a31a4215765b6875e19acc8c11d56a5f39ed0ba1",
+      "bytes": 8689,
+      "scope": "Existing PH3 increment_workload implementation; does not provide this study's ESP32 captures"
+    },
+    "alios-adapter": {
+      "path": "[private-evidence]/firmware/bsp/esp32/alios_thread_metric/port.c",
+      "sha256": "fb6e10c1352f932f3c2e856c2945aa8b6badb58c142831a0336fd1f0cec5667c",
+      "bytes": 6700,
+      "scope": "Maintained native adapter; implementation is distinct from the upstream workload body"
+    },
+    "alios-irq-adapter": {
+      "path": "[private-evidence]/firmware/bsp/esp32/alios_thread_metric_irq/port.c",
+      "sha256": "23947f7f87dcbb207054d23b15e9ef540bdc7a33c810a6d65d16e0fc597aefe2",
+      "bytes": 6647,
+      "scope": "Maintained native adapter; implementation is distinct from the upstream workload body"
+    },
+    "tcp-adapter": {
+      "path": "[private-evidence]/firmware/bsp/esp32/zperf_common/port.c",
+      "sha256": "cf89dba49bbeb8c53400d6f4fef129fc774812da1a1530061d2773109cd9e681",
+      "bytes": 3818,
+      "scope": "Maintained native adapter; implementation is distinct from the upstream workload body"
+    },
+    "udp-adapter": {
+      "path": "[private-evidence]/firmware/bsp/esp32/zperf_udp_common/port.c",
+      "sha256": "603ecdee743458e3fd2bc28f5c0a0cffab1149d452fcf339fe44e994b09fa503",
+      "bytes": 5455,
+      "scope": "Maintained native adapter; implementation is distinct from the upstream workload body"
+    },
+    "alios-import": {
+      "path": "[private-host]/esp32-pilot/build_esp32_alios_tm.sh",
+      "sha256": "c1bea6355315e539d0ff112d559a2e1937391e10344292c8d00a9990f8c70f75",
+      "bytes": 3492,
+      "scope": "Imports ThreadX benchmark sources into AliOS app/example/thread_metric and supplies native Rhino bindings"
+    },
+    "alios-early-port": {
+      "path": "[private-evidence]/artifacts/reports/alios-native-gcc5-v3/preemptive_scheduling/port.c",
+      "sha256": "fb6e10c1352f932f3c2e856c2945aa8b6badb58c142831a0336fd1f0cec5667c",
+      "bytes": 6700,
+      "scope": "Earliest retained preemption adapter snapshot, not a fabricated import commit"
+    },
+    "alios-early-run": {
+      "path": "[private-evidence]/artifacts/reports/alios-native-gcc5-v3/preemptive_scheduling/reset1.jsonl",
+      "sha256": "7350dd43a2b45e1b30bae77d48bdc9c5847255134ec3dc1d131210795810f62c",
+      "bytes": 4160,
+      "scope": "Actual 2026-10-08 run, separate from current B1 full five-case coverage"
+    },
+    "pi-adapter-rst_isr.c": {
+      "path": "[private-evidence]/artifacts/reports/tenonos-rpi4-scale-validation-v2/initial-tlsf/source/app-rtos-benchmark-scale/adapter/os/tenonos/rst_isr.c",
+      "sha256": "738792173125d862712cf17d40640a3f1c3488a761d2ac321cfe537982d1a707",
+      "bytes": 1295,
+      "scope": "Executed ABI correction; unchanged six test bodies and separate 500-to-2000 iteration control"
+    },
+    "pi-adapter-rst_task.c": {
+      "path": "[private-evidence]/artifacts/reports/tenonos-rpi4-scale-validation-v2/initial-tlsf/source/app-rtos-benchmark-scale/adapter/os/tenonos/rst_task.c",
+      "sha256": "71c41a94f0ccdf644b0afb0f266afe072e3048df42816bf2a8893dcece304bed",
+      "bytes": 1341,
+      "scope": "Executed ABI correction; unchanged six test bodies and separate 500-to-2000 iteration control"
+    },
+    "hartstone-freertos": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/hartstone-freertos.json",
+      "sha256": "edc7e0dc1ade985281b888eb7187a66e2cb5204699182cc11bf5fe266e6a7409",
+      "bytes": 1892,
+      "scope": "Three independent native PH3 first-loss sequences, image and flash replay"
+    },
+    "hartstone-freertos-reset1": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-fifo-v1/freertos/ph3/reset1.jsonl",
+      "sha256": "9a20979403544d1badaf2af5b14ad3693e2ef1b29f633fe45f3f038afe1dea18",
+      "bytes": 732798,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-freertos-reset2": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-fifo-v1/freertos/ph3/reset2.jsonl",
+      "sha256": "728f958d2d450928ab97b6c7ee7b96a83c7f35b7b4d41ae26227a1bc65dd8d1b",
+      "bytes": 732773,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-freertos-reset3": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-fifo-v1/freertos/ph3/reset3.jsonl",
+      "sha256": "46e923446629830765728fbabfef4733e9f49c335b8360d033d985675422cecc",
+      "bytes": 732737,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-zephyr": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/hartstone-zephyr.json",
+      "sha256": "1b1397bc06d80d6b918fedbb9f9d71df70b5ea46829ea15d59037e5559ae9107",
+      "bytes": 1890,
+      "scope": "Three independent native PH3 first-loss sequences, image and flash replay"
+    },
+    "hartstone-zephyr-reset1": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-v1/zephyr/ph3/reset1.jsonl",
+      "sha256": "15900d96434e4d14c445292ec3cc2c86971939bbd349571e79cc015996b652e5",
+      "bytes": 580251,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-zephyr-reset2": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-v1/zephyr/ph3/reset2.jsonl",
+      "sha256": "48f37fd698b6cf19f9b404d9bb03b3d8533651e8106a0c34686597584b575f49",
+      "bytes": 580216,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-zephyr-reset3": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-v1/zephyr/ph3/reset3.jsonl",
+      "sha256": "e3bdb831f7618125a75915f439437fa31d04e5a1391a0c90b377f07d33a38109",
+      "bytes": 580237,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-nuttx": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/hartstone-nuttx.json",
+      "sha256": "7e0994374e7cf2445f7bff42506217e6c8d53eeeaf1f3ee822a0c9c6e2bb38f8",
+      "bytes": 1881,
+      "scope": "Three independent native PH3 first-loss sequences, image and flash replay"
+    },
+    "hartstone-nuttx-reset1": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-v1/nuttx/ph3/reset1.jsonl",
+      "sha256": "bc47896ea7b7fe36b5f59c0936dbc5dc68fce47bd0fd2776053aecfcc5b166cc",
+      "bytes": 725159,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-nuttx-reset2": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-v1/nuttx/ph3/reset2.jsonl",
+      "sha256": "7e2617e38900e1f65b5f779b9c2e861285c4f472a3790431f12f2d6d4b33eeb1",
+      "bytes": 725154,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-nuttx-reset3": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-native-us-v1/nuttx/ph3/reset3.jsonl",
+      "sha256": "73e98dde4d98fffa26b66732464697032e0e449c2fe46d071887debb1f0d8b07",
+      "bytes": 725137,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-riot": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/hartstone-riot.json",
+      "sha256": "9957cb630d040dc5d31cd50bdc8a0eb3552651b1de5ec105d9d002bb4ae9dcfd",
+      "bytes": 2399,
+      "scope": "Three independent native PH3 first-loss sequences, image and flash replay"
+    },
+    "hartstone-riot-reset1": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-riot-native-v4/ph3/reset1.jsonl",
+      "sha256": "ff68b7930538fcd16af438124bd42ea401aa51745c5211f15d8b2cf1a1130ffb",
+      "bytes": 654631,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-riot-reset2": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-riot-native-v4/ph3/reset2.jsonl",
+      "sha256": "5ef0f0f269ff805b8b969dd9ec815bfd260ad0a246e0b8e34051775f52eebe2b",
+      "bytes": 654612,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-riot-reset3": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-riot-native-v4/ph3/reset3.jsonl",
+      "sha256": "a2ecb9990d20192a41c337b915c5363356ca38581371e922f7cac1ede2478334",
+      "bytes": 654575,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-alios": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-integration-20261106-v1/final-replay/hartstone-alios.json",
+      "sha256": "f8afa9e767f737c9654f7df2e5f27fc2164dc0fe924f2dbbc6c2c5cc8a912723",
+      "bytes": 3216,
+      "scope": "Three independent native PH3 first-loss sequences, image and flash replay"
+    },
+    "hartstone-alios-reset1": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-alios-native-v4/ph3/reset1.jsonl",
+      "sha256": "657c5ae117b5019cbe13fc39f611e29bb7ac780795c05fba8da32bb9b7a38063",
+      "bytes": 641849,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-alios-reset2": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-alios-native-v4/ph3/reset2.jsonl",
+      "sha256": "945d3fec1f25fb541eba79c14e93a5c248dfa302bcb5f794fc00fe70f9a5ebc9",
+      "bytes": 641779,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "hartstone-alios-reset3": {
+      "path": "[private-evidence]/artifacts/reports/hartstone-alios-native-v4/ph3/reset3.jsonl",
+      "sha256": "96e246d024d8234ce9330e3032b5e8c3e9b6bf92bfe611e3d01bffb40dcd2d07",
+      "bytes": 641766,
+      "scope": "Original independent B0 capture, MAC 84:1f:e8:8f:55:dc witnessed in flash log"
+    },
+    "coverage-addition-0": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v1/qualified-copy-Pi-KVM.json",
+      "sha256": "aeafc6ff4daaa769d5684148886b961615fcc7cad5d3327de353aa34a176efc2",
+      "bytes": 3326,
+      "scope": "Three fresh guests; same 256-byte owned copies, 16 slots, eight FNV rounds, 10-ms releases, 3000/24000 foreground and 3000 background completions; no cross-platform timing or score."
+    },
+    "coverage-addition-1": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v1/qualified-pi-six-FreeRTOS.json",
+      "sha256": "4520832bc58ede0315adc74b395a8ffc19fca613af7b1b863987f37cfcb55395",
+      "bytes": 2501,
+      "scope": "All six pinned app-rtos-benchmark bodies, one complete independent coverage reset, 500 iterations; native task/semaphore, real CPU_FROM_CPU2 IRQ, CCOUNT and interrupt masking. Logging ABI and target configuration are adapted; not a precision estimate or leaderboard input."
+    },
+    "coverage-addition-2": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v1/qualified-zperf-AliOS-Things.json",
+      "sha256": "6e160177c1065344cdb154f461746899c1beebd0e0ddbf316c36af23c9a13f9c",
+      "bytes": 10256,
+      "scope": "Three independent TCP and three UDP uploads of unchanged Zephyr 3.7 bodies. Post-run startup review verifies registered EN reset followed by one application initialization before each command; ROM marker absent in UDP resets 2/3. Original stricter online failures and timings remain unchanged. Not an ESP32 overall-score input."
+    },
+    "coverage-addition-3": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v2/qualified-udp-Pi-KVM.json",
+      "sha256": "8912f2738d9a7a01e2ea62422f63fc9da275db30e2dfc2ef779b629aa193a159",
+      "bytes": 3216,
+      "scope": "Three fresh guests, 256-byte request and 260-byte checked reply, eight FNV rounds, capacity 16, 5-s warmup and 30-s measurement, one outstanding request and 100-ms timeout. Native queue/semaphore worker performs all work. Host bridge and driver repair declared; all deadline misses retained. Execution coverage only; not native TCP/IP or B1 score."
+    },
+    "coverage-addition-4": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v2/qualified-pi-six-Zephyr.json",
+      "sha256": "4fb32a6b3c27d7cabce9de217cd9babfe0b24e6f37eeedd6e22846c232d2bc8f",
+      "bytes": 2453,
+      "scope": "All six unchanged author test bodies at fixed 0b71b8e722ac; one complete independent reset, 500 internal iterations, native task/semaphore/timer and real CPU_FROM_CPU2 IRQ. Target stack, logging ABI and service adapters recorded. Coverage only, not precision estimate or ranking input."
+    },
+    "coverage-addition-5": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v2/qualified-pi-six-AliOS-Things.json",
+      "sha256": "2604d37b50f1a2bfe413899de1108d72c28a70376b204ea125a0b70f96b8a06d",
+      "bytes": 2451,
+      "scope": "All six unchanged author test bodies at fixed 0b71b8e722ac; one complete independent reset, 500 internal iterations, native task/semaphore/timer and real CPU_FROM_CPU2 IRQ. Target stack, logging ABI and service adapters recorded. Coverage only, not precision estimate or ranking input."
+    },
+    "coverage-addition-6": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v3/qualified-pi-six-RIOT.json",
+      "sha256": "0787b1506c1cd38031b5205a67d10c71c871c813689648b25776d0c5a43cfb63",
+      "bytes": 2720,
+      "scope": "All six fixed author bodies, 500 iterations in iterative cases and one real peripheral IRQ; one independent reset is execution coverage, not a precision estimate or leaderboard input. RIOT native priority threads and tickless ztimer64 in 10-ms API units"
+    },
+    "coverage-addition-7": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v3/qualified-pi-six-NuttX.json",
+      "sha256": "2585a1737b19dd459d6aab3f28eb897fa243a108c7838c626f3ea4887adeb4d1",
+      "bytes": 2722,
+      "scope": "All six fixed author bodies, 500 iterations in iterative cases and one real peripheral IRQ; one independent reset is execution coverage, not a precision estimate or leaderboard input. NuttX native task groups and SIGSTOP/SIGCONT with 100-Hz native tick"
+    },
+    "coverage-addition-8": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v3/qualified-tm-core-Pi-KVM.json",
+      "sha256": "c256f6cccefa4938fed2f3608501c86e9c726bb6292a1382b023f9b27405a3f4",
+      "bytes": 1539,
+      "scope": "Three unchanged Thread-Metric core bodies, three fresh KVM guests each and one original 30-s window per guest. Native Tenon priority threads and semaphore; bounded FIFO copies four native unsigned-long words (32 B). Pi coverage only; not the ESP32 four-word/16-B ranking input."
+    },
+    "coverage-addition-9": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v3/qualified-tm-irq-Pi-KVM.json",
+      "sha256": "2b91444c4d58370a67e27d56e931a646c84eee74c97eb9d6af9dc368b65bc54d",
+      "bytes": 1299,
+      "scope": "Two unchanged original Thread-Metric IRQ bodies, three fresh KVM guests each, one 30-s window each. Hardware GICv2 SGI 1 via the native trap and registered dispatcher; ISACTIVER0 bit 1 witnesses an active interrupt before native EOI. Native IRQ nesting retained; original task/handler count invariants pass. Pi coverage only; no ESP32 ranking input."
+    },
+    "coverage-addition-10": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v4/qualified-zperf-Contiki-NG.json",
+      "sha256": "d2e0239a2edc89f7fa89d65704b78e96f279508d01ff693265774b1077b033dd",
+      "bytes": 8510,
+      "scope": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. Contiki process executes both uploaders with actual context checks; ESP-IDF 5.2.5/FreeRTOS provides hosting, sockets, clock and radio. Deployment coverage, not native Contiki TCP/IP."
+    },
+    "coverage-addition-11": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v4/qualified-zperf-RIOT.json",
+      "sha256": "dfd2082de2e40e89b4fff707017f6f4111d4d2e8afdfe547d678de1a3d5be51b",
+      "bytes": 10550,
+      "scope": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. RIOT native priority threads, POSIX/lwIP, 65536-byte network heap and tickless native clock with 10-ms statistic grid; separate matched native-select timeout control. UDP maps blocking send to repeated native send calls only on transient buffer exhaustion, with a 2-s per-call guard and explicit wait accounting included in the original duration. TCP keeps its previously acquired firmware and one prior sample; UDP uses its separately bound adapter image. This is adapter-inclusive execution coverage, not an unmodified native-API performance score."
+    },
+    "coverage-addition-12": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-zperf-Pi-KVM.json",
+      "sha256": "d570030f7b5e9826c4c4cb2dd1ddc733fcd8f2a907c26c8f2b04c65f260bd321",
+      "bytes": 421127,
+      "scope": "Unchanged Zephyr 3.7 synchronous TCP/UDP upload cores, 3 fresh one-vCPU Pi4B KVM guests/protocol, 60 s, 16384/1024-byte payloads. Native Tenon workload and clock; Linux host sockets over declared PL011 bridge, all bridge overhead included. Real LAN receiver and UDP packet/finish/statistics replay. Deployment execution coverage, not native Tenon TCP/IP or B1 scores."
+    },
+    "coverage-addition-13": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-FreeRTOS.json",
+      "sha256": "0271f6c11400d2445c4acfbdd6c5501fba630128eb284a7d1ea7ff1de91873d0",
+      "bytes": 3328,
+      "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native FreeRTOS counting semaphores, priority/FIFO waits and ISR operations; reset uses native abort-delay, byte pipe uses native queues plus writer mutex, actual worker stacks 4096 B. Native conditions 240 MHz, one core, 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+    }
+  },
+  "five_verdicts": [
+    {
+      "combination": "Thread-Metric / AliOS Things",
+      "symbol": "cross-to-check (both subsets)",
+      "original_evidence": [
+        "alios-app",
+        "alios-kernel",
+        "alios-tests",
+        "cmrx-results",
+        "iotj2019"
+      ],
+      "eunotos_evidence": [
+        "alios-import",
+        "alios-early-port",
+        "alios-early-run",
+        "alios-adapter",
+        "alios-irq-adapter",
+        "tm-replay"
+      ],
+      "added_work": "Imports original test bodies; Rhino task, copied buffer-queue, semaphore and CPU_FROM_CPU2 IRQ adapters; 5 cases x 3 B1 resets. Earliest retained preemption record is 2026-10-08; no import commit survives, so no global first-port date is asserted."
+    },
+    {
+      "combination": "Hartstone PH3 / FreeRTOS",
+      "symbol": "cross-to-check",
+      "original_evidence": [
+        "sei90",
+        "neneco-tree",
+        "neneco-ph3"
+      ],
+      "eunotos_evidence": [
+        "hartstone-freertos",
+        "hartstone-freertos-reset1",
+        "hartstone-freertos-reset2",
+        "hartstone-freertos-reset3"
+      ],
+      "added_work": "SEI-derived C workload, native timed periodic workers, increasing load at fixed periods, deadline/skip detection and first-loss termination; three complete B0 resets. Not a claim of the first Hartstone port; external FreeRTOS PH3 code predates this work."
+    },
+    {
+      "combination": "Hartstone PH3 / Zephyr",
+      "symbol": "cross-to-check",
+      "original_evidence": [
+        "sei90",
+        "neneco-tree",
+        "neneco-ph3"
+      ],
+      "eunotos_evidence": [
+        "hartstone-zephyr",
+        "hartstone-zephyr-reset1",
+        "hartstone-zephyr-reset2",
+        "hartstone-zephyr-reset3"
+      ],
+      "added_work": "SEI-derived C workload, native timed periodic workers, increasing load at fixed periods, deadline/skip detection and first-loss termination; three complete B0 resets. Not a claim of the first Hartstone port; external FreeRTOS PH3 code predates this work."
+    },
+    {
+      "combination": "Hartstone PH3 / NuttX",
+      "symbol": "cross-to-check",
+      "original_evidence": [
+        "sei90",
+        "neneco-tree",
+        "neneco-ph3"
+      ],
+      "eunotos_evidence": [
+        "hartstone-nuttx",
+        "hartstone-nuttx-reset1",
+        "hartstone-nuttx-reset2",
+        "hartstone-nuttx-reset3"
+      ],
+      "added_work": "SEI-derived C workload, native timed periodic workers, increasing load at fixed periods, deadline/skip detection and first-loss termination; three complete B0 resets. Not a claim of the first Hartstone port; external FreeRTOS PH3 code predates this work."
+    },
+    {
+      "combination": "app-rtos-benchmark six cases / Pi4B KVM",
+      "symbol": "cross-to-check",
+      "original_evidence": [
+        "tenon-app",
+        "tenon-build",
+        "bsp-kvm",
+        "bsp-targets"
+      ],
+      "eunotos_evidence": [
+        "pi-six",
+        "pi-adapter-rst_isr.c",
+        "pi-adapter-rst_task.c"
+      ],
+      "added_work": "Reuse pre-existing generic KVM BSP; correct app IRQ callback and full task-context ABI; validate all six bodies on Pi4B across three retained profiles and nine fresh guests. RK3568 results and generic KVM boot banner are not Pi4B benchmark runs."
+    }
+  ],
+  "fixed_references": {
+    "thread_metric": "ThreadX v6.2.1_rel; original-state result corpus is CMRX published matrix frozen 2026-11-06 and IoTJ 2019 Table II",
+    "hartstone": "CMU/SEI-90-UG-1 Version 1.0 Ada PH source and Appendix A sample results; external Neneco FreeRTOS source separately acknowledged",
+    "alios_vendor": "bacc144bdc5df8fe8e302e3732675a920aa40bc5; complete app/kernel/test subtrees",
+    "zephyr_suites": "v3.7.0 synchronous TCP/UDP uploads and tests/kernel/semaphore/semaphore (24 kernel-mode cases only)",
+    "tenon_app": "0b71b8e722acfab4733eb99b07b67fbe8472c31d",
+    "tenon_bsp": "757734df33e8fdf5584680dcc0c19c39ae25ad48",
+    "tenon_kernel": "756aa1ca78a3d4c21b99580482aeead4041b0ab1"
+  },
+  "pending_original_states": [],
+  "original_policy": "Explicit row-specific fixed reference corpus: published CMRX/IoTJ results, SEI Ada PH reference, pinned Tenon app/BSP; not a universal port-absence claim. zperf and semaphore use separately identified unchanged-source reproduction, not historical upstream runs.",
+  "custom_policy": "No upstream counterpart claimed for starred rows; right-side execution marks only; no port delta counted.",
+  "scope": "Historical coverage audit plus explicitly bound coverage additions when supplied; no model calls or changes to frozen scoring inputs.",
+  "symbol_legend": {
+    "existing": "check-to-check",
+    "added": "cross-to-check within fixed reference",
+    "reproduced": "check-r-to-check (unchanged-source reproduction)",
+    "measured": "right-side check only",
+    "unmeasured": "right-side cross only"
+  },
+  "full_private_index": {
+    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v2/coverage-evidence.json",
+    "sha256": "091533674a9fc1bd00201fa0d45a7ca134ecfa2568a9610688fdbcafccc68d45"
+  },
+  "entries": [
+    {
+      "id": "tm-core",
+      "name": "Thread-Metric: task and IPC (3)",
+      "category": "Kernel",
+      "cases": [
+        "preemptive_scheduling",
+        "message_processing",
+        "synchronization_processing"
+      ],
+      "custom": false,
+      "cells": {
+        "FreeRTOS": {
+          "display": "existing",
+          "original": {
+            "state": "tested",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "FreeRTOS"
+            ],
+            "evidence": [
+              "tm-replay"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "Zephyr": {
+          "display": "existing",
+          "original": {
+            "state": "tested",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "Zephyr",
+              "Zephyr-Qwen-C2-1"
+            ],
+            "evidence": [
+              "tm-replay",
+              "qwen-tm"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "NuttX": {
+          "display": "existing",
+          "original": {
+            "state": "tested",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "NuttX"
+            ],
+            "evidence": [
+              "tm-replay"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "RIOT": {
+          "display": "existing",
+          "original": {
+            "state": "tested",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "RIOT"
+            ],
+            "evidence": [
+              "tm-replay"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "AliOS Things": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "AliOS-Rhino"
+            ],
+            "evidence": [
+              "tm-replay",
+              "alios-adapter",
+              "alios-irq-adapter",
+              "alios-import",
+              "alios-early-port",
+              "alios-early-run"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "Contiki-NG": {
+          "display": "unmeasured",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "Pi KVM": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "iotj2019",
+              "alios-app",
+              "alios-kernel",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 9,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "Tenon Pi KVM native Thread-Metric adapter"
+            ],
+            "platform": "Pi4B one-vCPU KVM",
+            "evidence": [
+              "coverage-addition-8"
+            ],
+            "boundary": "Three unchanged Thread-Metric core bodies, three fresh KVM guests each and one original 30-s window per guest. Native Tenon priority threads and semaphore; bounded FIFO copies four native unsigned-long words (32 B). Pi coverage only; not the ESP32 four-word/16-B ranking input."
+          }
+        }
+      }
+    },
+    {
+      "id": "tm-irq",
+      "name": "Thread-Metric: interrupts (2)",
+      "category": "Kernel",
+      "cases": [
+        "interrupt_processing",
+        "interrupt_preemption_processing"
+      ],
+      "custom": false,
+      "cells": {
+        "FreeRTOS": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "interrupt_processing",
+              "interrupt_preemption_processing"
+            ],
+            "configurations": [
+              "FreeRTOS"
+            ],
+            "evidence": [
+              "tm-replay"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "Zephyr": {
+          "display": "existing",
+          "original": {
+            "state": "tested",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "interrupt_processing",
+              "interrupt_preemption_processing"
+            ],
+            "configurations": [
+              "Zephyr",
+              "Zephyr-Qwen-C2-1"
+            ],
+            "evidence": [
+              "tm-replay",
+              "qwen-tm"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "NuttX": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "interrupt_processing",
+              "interrupt_preemption_processing"
+            ],
+            "configurations": [
+              "NuttX"
+            ],
+            "evidence": [
+              "tm-replay"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "RIOT": {
+          "display": "existing",
+          "original": {
+            "state": "tested",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "interrupt_processing",
+              "interrupt_preemption_processing"
+            ],
+            "configurations": [
+              "RIOT"
+            ],
+            "evidence": [
+              "tm-replay"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "AliOS Things": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "interrupt_processing",
+              "interrupt_preemption_processing"
+            ],
+            "configurations": [
+              "AliOS-Rhino"
+            ],
+            "evidence": [
+              "tm-replay",
+              "alios-adapter",
+              "alios-irq-adapter",
+              "alios-import",
+              "alios-early-port",
+              "alios-early-run"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "Contiki-NG": {
+          "display": "unmeasured",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "Pi KVM": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "cmrx-results",
+              "cmrx-scope",
+              "iotj2019",
+              "alios-app",
+              "alios-tests"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 6,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "interrupt_processing",
+              "interrupt_preemption_processing"
+            ],
+            "configurations": [
+              "Tenon Pi KVM native Thread-Metric adapter"
+            ],
+            "platform": "Pi4B one-vCPU KVM",
+            "evidence": [
+              "coverage-addition-9"
+            ],
+            "boundary": "Two unchanged original Thread-Metric IRQ bodies, three fresh KVM guests each, one 30-s window each. Hardware GICv2 SGI 1 via the native trap and registered dispatcher; ISACTIVER0 bit 1 witnesses an active interrupt before native EOI. Native IRQ nesting retained; original task/handler count invariants pass. Pi coverage only; no ESP32 ranking input."
+          }
+        }
+      }
+    },
+    {
+      "id": "hartstone-ph3",
+      "name": "Hartstone PH3",
+      "category": "Real-time",
+      "cases": [
+        "PH3"
+      ],
+      "custom": false,
+      "cells": {
+        "FreeRTOS": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "FreeRTOS native PH3"
+            ],
+            "evidence": [
+              "hartstone-freertos",
+              "hartstone-freertos-reset1",
+              "hartstone-freertos-reset2",
+              "hartstone-freertos-reset3"
+            ],
+            "platform": "ESP32 B0 (84:1f:e8:8f:55:dc)",
+            "first_loss_steps": [
+              572,
+              572,
+              572
+            ],
+            "boundary": "SEI-derived C PH3; native timer/compiler profiles differ; execution coverage, not B1 scores"
+          }
+        },
+        "Zephyr": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "Zephyr native PH3"
+            ],
+            "evidence": [
+              "hartstone-zephyr",
+              "hartstone-zephyr-reset1",
+              "hartstone-zephyr-reset2",
+              "hartstone-zephyr-reset3"
+            ],
+            "platform": "ESP32 B0 (84:1f:e8:8f:55:dc)",
+            "first_loss_steps": [
+              452,
+              452,
+              452
+            ],
+            "boundary": "SEI-derived C PH3; native timer/compiler profiles differ; execution coverage, not B1 scores"
+          }
+        },
+        "NuttX": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "NuttX native PH3"
+            ],
+            "evidence": [
+              "hartstone-nuttx",
+              "hartstone-nuttx-reset1",
+              "hartstone-nuttx-reset2",
+              "hartstone-nuttx-reset3"
+            ],
+            "platform": "ESP32 B0 (84:1f:e8:8f:55:dc)",
+            "first_loss_steps": [
+              566,
+              566,
+              566
+            ],
+            "boundary": "SEI-derived C PH3; native timer/compiler profiles differ; execution coverage, not B1 scores"
+          }
+        },
+        "RIOT": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "RIOT native PH3"
+            ],
+            "evidence": [
+              "hartstone-riot",
+              "hartstone-riot-reset1",
+              "hartstone-riot-reset2",
+              "hartstone-riot-reset3"
+            ],
+            "platform": "ESP32 B0 (84:1f:e8:8f:55:dc)",
+            "first_loss_steps": [
+              514,
+              514,
+              514
+            ],
+            "boundary": "SEI-derived C PH3; native timer/compiler profiles differ; execution coverage, not B1 scores"
+          }
+        },
+        "AliOS Things": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "AliOS-Rhino native PH3"
+            ],
+            "evidence": [
+              "hartstone-alios",
+              "hartstone-alios-reset1",
+              "hartstone-alios-reset2",
+              "hartstone-alios-reset3"
+            ],
+            "platform": "ESP32 B0 (84:1f:e8:8f:55:dc)",
+            "first_loss_steps": [
+              502,
+              502,
+              502
+            ],
+            "boundary": "SEI-derived C PH3; native timer/compiler profiles differ; execution coverage, not B1 scores"
+          }
+        },
+        "Contiki-NG": {
+          "display": "unmeasured",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "Pi KVM": {
+          "display": "unmeasured",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "sei90",
+              "neneco-tree",
+              "neneco-ph3"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        }
+      }
+    },
+    {
+      "id": "zperf",
+      "name": "zperf: TCP and UDP upload",
+      "category": "Network",
+      "cases": [
+        "sync_tcp_upload",
+        "sync_udp_upload"
+      ],
+      "custom": false,
+      "cells": {
+        "FreeRTOS": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "FreeRTOS synchronous zperf native image"
+            ],
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "zperf-tcp-source-proof",
+              "zperf-udp-source-proof",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "Zephyr": {
+          "display": "reproduced",
+          "original": {
+            "state": "fixed_source_reproduction",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "Zephyr synchronous zperf native image"
+            ],
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "zperf-tcp-source-proof",
+              "zperf-udp-source-proof",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "NuttX": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "NuttX synchronous zperf native image"
+            ],
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "zperf-tcp-source-proof",
+              "zperf-udp-source-proof",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "platform": "ESP32 B1"
+          }
+        },
+        "RIOT": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 5,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "RIOT original upload deployment"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-11"
+            ],
+            "boundary": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. RIOT native priority threads, POSIX/lwIP, 65536-byte network heap and tickless native clock with 10-ms statistic grid; separate matched native-select timeout control. UDP maps blocking send to repeated native send calls only on transient buffer exhaustion, with a 2-s per-call guard and explicit wait accounting included in the original duration. TCP keeps its previously acquired firmware and one prior sample; UDP uses its separately bound adapter image. This is adapter-inclusive execution coverage, not an unmodified native-API performance score."
+          }
+        },
+        "AliOS Things": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 6,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "AliOS-Rhino native synchronous upload"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-2"
+            ],
+            "boundary": "Three independent TCP and three UDP uploads of unchanged Zephyr 3.7 bodies. Post-run startup review verifies registered EN reset followed by one application initialization before each command; ROM marker absent in UDP resets 2/3. Original stricter online failures and timings remain unchanged. Not an ESP32 overall-score input."
+          }
+        },
+        "Contiki-NG": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 6,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "Contiki-NG original upload deployment"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-10"
+            ],
+            "boundary": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. Contiki process executes both uploaders with actual context checks; ESP-IDF 5.2.5/FreeRTOS provides hosting, sockets, clock and radio. Deployment coverage, not native Contiki TCP/IP."
+          }
+        },
+        "Pi KVM": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "zperf-tcp",
+              "zperf-udp",
+              "tcp-adapter",
+              "udp-adapter"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 6,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "Native Tenon Pi4B KVM zperf with Linux/PL011 socket provider"
+            ],
+            "platform": "Raspberry Pi 4B one-vCPU KVM guest and Linux host",
+            "evidence": [
+              "coverage-addition-12"
+            ],
+            "boundary": "Unchanged Zephyr 3.7 synchronous TCP/UDP upload cores, 3 fresh one-vCPU Pi4B KVM guests/protocol, 60 s, 16384/1024-byte payloads. Native Tenon workload and clock; Linux host sockets over declared PL011 bridge, all bridge overhead included. Real LAN receiver and UDP packet/finish/statistics replay. Deployment execution coverage, not native Tenon TCP/IP or B1 scores."
+          }
+        }
+      }
+    },
+    {
+      "id": "semaphore",
+      "name": "Zephyr semaphore (24 cases)",
+      "category": "Correctness",
+      "cases": [
+        "test_k_sem_define",
+        "test_sem_thread2thread",
+        "test_sem_thread2isr",
+        "test_k_sem_init",
+        "test_sem_reset",
+        "test_sem_reset_waiting",
+        "test_sem_count_get",
+        "test_sem_give_from_isr",
+        "test_sem_give_from_thread",
+        "test_sem_take_no_wait",
+        "test_sem_take_no_wait_fails",
+        "test_sem_take_timeout_fails",
+        "test_sem_take_timeout",
+        "test_sem_take_timeout_forever",
+        "test_sem_take_timeout_isr",
+        "test_sem_take_multiple",
+        "test_k_sem_correct_count_limit",
+        "test_sem_give_take_from_isr",
+        "test_sem_multiple_threads_wait",
+        "test_sem_measure_timeouts",
+        "test_sem_measure_timeout_from_thread",
+        "test_sem_multiple_take_and_timeouts",
+        "test_sem_multi_take_timeout_diff_sem",
+        "test_sem_queue_mutual_exclusion"
+      ],
+      "custom": false,
+      "cells": {
+        "FreeRTOS": {
+          "display": "added",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 1,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "test_k_sem_define",
+              "test_sem_thread2thread",
+              "test_sem_thread2isr",
+              "test_k_sem_init",
+              "test_sem_reset",
+              "test_sem_reset_waiting",
+              "test_sem_count_get",
+              "test_sem_give_from_isr",
+              "test_sem_give_from_thread",
+              "test_sem_take_no_wait",
+              "test_sem_take_no_wait_fails",
+              "test_sem_take_timeout_fails",
+              "test_sem_take_timeout",
+              "test_sem_take_timeout_forever",
+              "test_sem_take_timeout_isr",
+              "test_sem_take_multiple",
+              "test_k_sem_correct_count_limit",
+              "test_sem_give_take_from_isr",
+              "test_sem_multiple_threads_wait",
+              "test_sem_measure_timeouts",
+              "test_sem_measure_timeout_from_thread",
+              "test_sem_multiple_take_and_timeouts",
+              "test_sem_multi_take_timeout_diff_sem",
+              "test_sem_queue_mutual_exclusion"
+            ],
+            "configurations": [
+              "FreeRTOS B1 native counting-semaphore compatibility port"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-13"
+            ],
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native FreeRTOS counting semaphores, priority/FIFO waits and ISR operations; reset uses native abort-delay, byte pipe uses native queues plus writer mutex, actual worker stacks 4096 B. Native conditions 240 MHz, one core, 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+          }
+        },
+        "Zephyr": {
+          "display": "reproduced",
+          "original": {
+            "state": "fixed_source_reproduction",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "test_k_sem_define",
+              "test_sem_thread2thread",
+              "test_sem_thread2isr",
+              "test_k_sem_init",
+              "test_sem_reset",
+              "test_sem_reset_waiting",
+              "test_sem_count_get",
+              "test_sem_give_from_isr",
+              "test_sem_give_from_thread",
+              "test_sem_take_no_wait",
+              "test_sem_take_no_wait_fails",
+              "test_sem_take_timeout_fails",
+              "test_sem_take_timeout",
+              "test_sem_take_timeout_forever",
+              "test_sem_take_timeout_isr",
+              "test_sem_take_multiple",
+              "test_k_sem_correct_count_limit",
+              "test_sem_give_take_from_isr",
+              "test_sem_multiple_threads_wait",
+              "test_sem_measure_timeouts",
+              "test_sem_measure_timeout_from_thread",
+              "test_sem_multiple_take_and_timeouts",
+              "test_sem_multi_take_timeout_diff_sem",
+              "test_sem_queue_mutual_exclusion"
+            ],
+            "configurations": [
+              "Zephyr baseline DUMB/DUMB",
+              "Zephyr C2 MULTIQ/SCALABLE"
+            ],
+            "evidence": [
+              "semaphore"
+            ],
+            "platform": "ESP32 B1",
+            "resets": 10,
+            "cases_per_reset": 24,
+            "passed_case_instances": 240
+          }
+        },
+        "NuttX": {
+          "display": "unmeasured",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "RIOT": {
+          "display": "unmeasured",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "AliOS Things": {
+          "display": "unmeasured",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "Contiki-NG": {
+          "display": "unmeasured",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "Pi KVM": {
+          "display": "unmeasured",
+          "original": {
+            "state": "no_target_path",
+            "evidence": [
+              "semaphore"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        }
+      }
+    },
+    {
+      "id": "pi-six",
+      "name": "Rhealstone and timer (6 cases)",
+      "category": "Kernel",
+      "cases": [
+        "average_task_switch_time, in cpu cycles",
+        "average_multi_task_switch_time, in cpu cycles",
+        "average_task_preempt_time, in cpu cycles",
+        "average_semaphore_shuffle_time, in cpu cycles",
+        "interrupt_latency_time, in cpu cycles",
+        "timer_deviation_under_interrupt_interference, in count of generic timer"
+      ],
+      "custom": false,
+      "cells": {
+        "FreeRTOS": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 1,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "FreeRTOS native six-body adapter"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-1"
+            ],
+            "boundary": "All six pinned app-rtos-benchmark bodies, one complete independent coverage reset, 500 iterations; native task/semaphore, real CPU_FROM_CPU2 IRQ, CCOUNT and interrupt masking. Logging ABI and target configuration are adapted; not a precision estimate or leaderboard input."
+          }
+        },
+        "Zephyr": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 1,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "Zephyr native coverage adapter"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-4"
+            ],
+            "boundary": "All six unchanged author test bodies at fixed 0b71b8e722ac; one complete independent reset, 500 internal iterations, native task/semaphore/timer and real CPU_FROM_CPU2 IRQ. Target stack, logging ABI and service adapters recorded. Coverage only, not precision estimate or ranking input."
+          }
+        },
+        "NuttX": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 1,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "NuttX native full six-body adapter"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-7"
+            ],
+            "boundary": "All six fixed author bodies, 500 iterations in iterative cases and one real peripheral IRQ; one independent reset is execution coverage, not a precision estimate or leaderboard input. NuttX native task groups and SIGSTOP/SIGCONT with 100-Hz native tick"
+          }
+        },
+        "RIOT": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 1,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "RIOT native full six-body adapter"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-6"
+            ],
+            "boundary": "All six fixed author bodies, 500 iterations in iterative cases and one real peripheral IRQ; one independent reset is execution coverage, not a precision estimate or leaderboard input. RIOT native priority threads and tickless ztimer64 in 10-ms API units"
+          }
+        },
+        "AliOS Things": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 1,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "AliOS Things native coverage adapter"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-5"
+            ],
+            "boundary": "All six unchanged author test bodies at fixed 0b71b8e722ac; one complete independent reset, 500 internal iterations, native task/semaphore/timer and real CPU_FROM_CPU2 IRQ. Target stack, logging ABI and service adapters recorded. Coverage only, not precision estimate or ranking input."
+          }
+        },
+        "Contiki-NG": {
+          "display": "unmeasured",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+          }
+        },
+        "Pi KVM": {
+          "display": "added",
+          "original": {
+            "state": "not_in_reference",
+            "evidence": [
+              "tenon-app",
+              "tenon-build",
+              "bsp-kvm",
+              "bsp-targets",
+              "pi-six"
+            ],
+            "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
+          },
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "initial-tlsf",
+              "accepted-buddy",
+              "accepted-tlsf"
+            ],
+            "evidence": [
+              "pi-six",
+              "pi-adapter-rst_isr.c",
+              "pi-adapter-rst_task.c"
+            ],
+            "platform": "Raspberry Pi 4B, one-vCPU 128-MiB KVM guest",
+            "fresh_guest_boots": 9,
+            "added_work": "Reuse existing KVM BSP; typed IRQ callback and extended task context ABI corrections; retained-image validation"
+          }
+        }
+      }
+    },
+    {
+      "id": "copy",
+      "name": "Copy-checksum task$^{*}$",
+      "category": "Task execution",
+      "cases": [
+        "normal",
+        "competition"
+      ],
+      "custom": true,
+      "cells": {
+        "FreeRTOS": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "FreeRTOS",
+                "runtime_build": "FreeRTOS-absolute-v1",
+                "observer_build": "FreeRTOS-ram-absolute-v1"
+              }
+            ]
+          }
+        },
+        "Zephyr": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "Zephyr",
+              "Zephyr C2-1 (Qwen)",
+              "Zephyr (AutoOS-adapted)"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Zephyr",
+                "runtime_build": "Zephyr-absolute-v1",
+                "observer_build": "Zephyr-ram-absolute-v3"
+              },
+              {
+                "os": "Zephyr C2-1 (Qwen)",
+                "runtime_build": "Zephyr-qwen-absolute-v1",
+                "observer_build": "Zephyr-qwen-ram-absolute-v2"
+              },
+              {
+                "os": "Zephyr (AutoOS-adapted)",
+                "runtime_build": "Zephyr-autoos-absolute-v1",
+                "observer_build": "Zephyr-autoos-ram-absolute-v2"
+              }
+            ]
+          }
+        },
+        "NuttX": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "NuttX"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "NuttX",
+                "runtime_build": "NuttX-ap4-absolute-v1",
+                "observer_build": "NuttX-ram-paired-absolute-v1"
+              }
+            ]
+          }
+        },
+        "RIOT": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "RIOT"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "RIOT",
+                "runtime_build": "RIOT-absolute-v1",
+                "observer_build": "RIOT-ram-absolute-v4"
+              }
+            ]
+          }
+        },
+        "AliOS Things": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "AliOS Things"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "AliOS Things",
+                "runtime_build": "AliOS-absolute-v1",
+                "observer_build": "AliOS-ram-paired-absolute-v1"
+              }
+            ]
+          }
+        },
+        "Contiki-NG": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "Contiki-NG + ESP-IDF/FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+                "runtime_build": "Contiki-IDF-absolute-v1",
+                "observer_build": "Contiki-IDF-ram-absolute-v1"
+              }
+            ]
+          }
+        },
+        "Pi KVM": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 3,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "normal",
+              "competition"
+            ],
+            "configurations": [
+              "Tenon native full common task"
+            ],
+            "platform": "Pi4B one-vCPU KVM",
+            "evidence": [
+              "coverage-addition-0"
+            ],
+            "boundary": "Three fresh guests; same 256-byte owned copies, 16 slots, eight FNV rounds, 10-ms releases, 3000/24000 foreground and 3000 background completions; no cross-platform timing or score."
+          }
+        }
+      }
+    },
+    {
+      "id": "udp",
+      "name": "UDP transactions$^{*}$",
+      "category": "Communication",
+      "cases": [
+        "correct_udp_request_response"
+      ],
+      "custom": true,
+      "cells": {
+        "FreeRTOS": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "FreeRTOS",
+                "runtime_build": "FreeRTOS-absolute-v1",
+                "observer_build": "FreeRTOS-ram-absolute-v1"
+              }
+            ]
+          }
+        },
+        "Zephyr": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "Zephyr",
+              "Zephyr C2-1 (Qwen)",
+              "Zephyr (AutoOS-adapted)"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Zephyr",
+                "runtime_build": "Zephyr-absolute-v1",
+                "observer_build": "Zephyr-ram-absolute-v3"
+              },
+              {
+                "os": "Zephyr C2-1 (Qwen)",
+                "runtime_build": "Zephyr-qwen-absolute-v1",
+                "observer_build": "Zephyr-qwen-ram-absolute-v2"
+              },
+              {
+                "os": "Zephyr (AutoOS-adapted)",
+                "runtime_build": "Zephyr-autoos-absolute-v1",
+                "observer_build": "Zephyr-autoos-ram-absolute-v2"
+              }
+            ]
+          }
+        },
+        "NuttX": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "NuttX"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "NuttX",
+                "runtime_build": "NuttX-ap4-absolute-v1",
+                "observer_build": "NuttX-ram-paired-absolute-v1"
+              }
+            ]
+          }
+        },
+        "RIOT": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "RIOT"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "RIOT",
+                "runtime_build": "RIOT-absolute-v1",
+                "observer_build": "RIOT-ram-absolute-v4"
+              }
+            ]
+          }
+        },
+        "AliOS Things": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "AliOS Things"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "AliOS Things",
+                "runtime_build": "AliOS-absolute-v1",
+                "observer_build": "AliOS-ram-paired-absolute-v1"
+              }
+            ]
+          }
+        },
+        "Contiki-NG": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "Contiki-NG + ESP-IDF/FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+                "runtime_build": "Contiki-IDF-absolute-v1",
+                "observer_build": "Contiki-IDF-ram-absolute-v1"
+              }
+            ]
+          }
+        },
+        "Pi KVM": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 3,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "correct_udp_request_response"
+            ],
+            "configurations": [
+              "Pi KVM native coverage adapter"
+            ],
+            "platform": "Pi4B one-vCPU KVM with explicit Linux UDP/PL011 provider",
+            "evidence": [
+              "coverage-addition-3"
+            ],
+            "boundary": "Three fresh guests, 256-byte request and 260-byte checked reply, eight FNV rounds, capacity 16, 5-s warmup and 30-s measurement, one outstanding request and 100-ms timeout. Native queue/semaphore worker performs all work. Host bridge and driver repair declared; all deadline misses retained. Execution coverage only; not native TCP/IP or B1 score."
+          }
+        }
+      }
+    },
+    {
+      "id": "energy",
+      "name": "Board-energy profiling$^{*}$",
+      "category": "Energy",
+      "cases": [
+        "declared_board_input_windows"
+      ],
+      "custom": true,
+      "cells": {
+        "FreeRTOS": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "FreeRTOS",
+                "runtime_build": "FreeRTOS-absolute-v1",
+                "observer_build": "FreeRTOS-ram-absolute-v1"
+              }
+            ],
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+          }
+        },
+        "Zephyr": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "Zephyr",
+              "Zephyr C2-1 (Qwen)",
+              "Zephyr (AutoOS-adapted)"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Zephyr",
+                "runtime_build": "Zephyr-absolute-v1",
+                "observer_build": "Zephyr-ram-absolute-v3"
+              },
+              {
+                "os": "Zephyr C2-1 (Qwen)",
+                "runtime_build": "Zephyr-qwen-absolute-v1",
+                "observer_build": "Zephyr-qwen-ram-absolute-v2"
+              },
+              {
+                "os": "Zephyr (AutoOS-adapted)",
+                "runtime_build": "Zephyr-autoos-absolute-v1",
+                "observer_build": "Zephyr-autoos-ram-absolute-v2"
+              }
+            ],
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+          }
+        },
+        "NuttX": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "NuttX"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "NuttX",
+                "runtime_build": "NuttX-ap4-absolute-v1",
+                "observer_build": "NuttX-ram-paired-absolute-v1"
+              }
+            ],
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+          }
+        },
+        "RIOT": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "RIOT"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "RIOT",
+                "runtime_build": "RIOT-absolute-v1",
+                "observer_build": "RIOT-ram-absolute-v4"
+              }
+            ],
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+          }
+        },
+        "AliOS Things": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "AliOS Things"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "AliOS Things",
+                "runtime_build": "AliOS-absolute-v1",
+                "observer_build": "AliOS-ram-paired-absolute-v1"
+              }
+            ],
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+          }
+        },
+        "Contiki-NG": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "Contiki-NG + ESP-IDF/FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+                "runtime_build": "Contiki-IDF-absolute-v1",
+                "observer_build": "Contiki-IDF-ram-absolute-v1"
+              }
+            ],
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+          }
+        },
+        "Pi KVM": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_board_input_windows"
+            ],
+            "configurations": [
+              "initial-tlsf",
+              "accepted-buddy",
+              "accepted-tlsf"
+            ],
+            "evidence": [
+              "pi-energy",
+              "pi-build-energy"
+            ],
+            "platform": "Raspberry Pi 4B whole board including Linux/KVM host",
+            "boundary": "Activation/build-and-validation intervals, not a common-task ESP32 energy score"
+          }
+        }
+      }
+    },
+    {
+      "id": "ram",
+      "name": "Allocated-RAM profiling$^{*}$",
+      "category": "Memory",
+      "cases": [
+        "declared_instrumented_lifecycle"
+      ],
+      "custom": true,
+      "cells": {
+        "FreeRTOS": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "FreeRTOS",
+                "runtime_build": "FreeRTOS-absolute-v1",
+                "observer_build": "FreeRTOS-ram-absolute-v1"
+              }
+            ],
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+          }
+        },
+        "Zephyr": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "Zephyr",
+              "Zephyr C2-1 (Qwen)",
+              "Zephyr (AutoOS-adapted)"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Zephyr",
+                "runtime_build": "Zephyr-absolute-v1",
+                "observer_build": "Zephyr-ram-absolute-v3"
+              },
+              {
+                "os": "Zephyr C2-1 (Qwen)",
+                "runtime_build": "Zephyr-qwen-absolute-v1",
+                "observer_build": "Zephyr-qwen-ram-absolute-v2"
+              },
+              {
+                "os": "Zephyr (AutoOS-adapted)",
+                "runtime_build": "Zephyr-autoos-absolute-v1",
+                "observer_build": "Zephyr-autoos-ram-absolute-v2"
+              }
+            ],
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+          }
+        },
+        "NuttX": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "NuttX"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "NuttX",
+                "runtime_build": "NuttX-ap4-absolute-v1",
+                "observer_build": "NuttX-ram-paired-absolute-v1"
+              }
+            ],
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+          }
+        },
+        "RIOT": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "RIOT"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "RIOT",
+                "runtime_build": "RIOT-absolute-v1",
+                "observer_build": "RIOT-ram-absolute-v4"
+              }
+            ],
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+          }
+        },
+        "AliOS Things": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "AliOS Things"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "AliOS Things",
+                "runtime_build": "AliOS-absolute-v1",
+                "observer_build": "AliOS-ram-paired-absolute-v1"
+              }
+            ],
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+          }
+        },
+        "Contiki-NG": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "Contiki-NG + ESP-IDF/FreeRTOS"
+            ],
+            "evidence": [
+              "common-score",
+              "common-score-replay"
+            ],
+            "platform": "ESP32 B1",
+            "configuration_bindings": [
+              {
+                "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+                "runtime_build": "Contiki-IDF-absolute-v1",
+                "observer_build": "Contiki-IDF-ram-absolute-v1"
+              }
+            ],
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+          }
+        },
+        "Pi KVM": {
+          "display": "measured",
+          "original": null,
+          "new_hardware_measurements_this_audit": 0,
+          "eunotos": {
+            "tested": true,
+            "cases": [
+              "declared_instrumented_lifecycle"
+            ],
+            "configurations": [
+              "initial-tlsf",
+              "accepted-buddy",
+              "accepted-tlsf"
+            ],
+            "evidence": [
+              "pi-ram"
+            ],
+            "platform": "Raspberry Pi 4B KVM guest, host excluded",
+            "boundary": "Matched one-vCPU 128-MiB Pi4B/KVM observer images, native entry through termination entry; six unchanged original workloads. Separate phase-7 validation does not raise the peak."
+          }
+        }
+      }
+    }
+  ]
+}

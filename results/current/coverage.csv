@@ -1,0 +1,71 @@
+subset,name,system,display,measured
+tm-core,Thread-Metric: task and IPC (3),FreeRTOS,existing,True
+tm-core,Thread-Metric: task and IPC (3),Zephyr,existing,True
+tm-core,Thread-Metric: task and IPC (3),NuttX,existing,True
+tm-core,Thread-Metric: task and IPC (3),RIOT,existing,True
+tm-core,Thread-Metric: task and IPC (3),AliOS Things,added,True
+tm-core,Thread-Metric: task and IPC (3),Contiki-NG,unmeasured,False
+tm-core,Thread-Metric: task and IPC (3),Pi KVM,added,True
+tm-irq,Thread-Metric: interrupts (2),FreeRTOS,added,True
+tm-irq,Thread-Metric: interrupts (2),Zephyr,existing,True
+tm-irq,Thread-Metric: interrupts (2),NuttX,added,True
+tm-irq,Thread-Metric: interrupts (2),RIOT,existing,True
+tm-irq,Thread-Metric: interrupts (2),AliOS Things,added,True
+tm-irq,Thread-Metric: interrupts (2),Contiki-NG,unmeasured,False
+tm-irq,Thread-Metric: interrupts (2),Pi KVM,added,True
+hartstone-ph3,Hartstone PH3,FreeRTOS,added,True
+hartstone-ph3,Hartstone PH3,Zephyr,added,True
+hartstone-ph3,Hartstone PH3,NuttX,added,True
+hartstone-ph3,Hartstone PH3,RIOT,added,True
+hartstone-ph3,Hartstone PH3,AliOS Things,added,True
+hartstone-ph3,Hartstone PH3,Contiki-NG,unmeasured,False
+hartstone-ph3,Hartstone PH3,Pi KVM,unmeasured,False
+zperf,zperf: TCP and UDP upload,FreeRTOS,added,True
+zperf,zperf: TCP and UDP upload,Zephyr,reproduced,True
+zperf,zperf: TCP and UDP upload,NuttX,added,True
+zperf,zperf: TCP and UDP upload,RIOT,added,True
+zperf,zperf: TCP and UDP upload,AliOS Things,added,True
+zperf,zperf: TCP and UDP upload,Contiki-NG,added,True
+zperf,zperf: TCP and UDP upload,Pi KVM,added,True
+semaphore,Zephyr semaphore (24 cases),FreeRTOS,added,True
+semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True
+semaphore,Zephyr semaphore (24 cases),NuttX,unmeasured,False
+semaphore,Zephyr semaphore (24 cases),RIOT,unmeasured,False
+semaphore,Zephyr semaphore (24 cases),AliOS Things,unmeasured,False
+semaphore,Zephyr semaphore (24 cases),Contiki-NG,unmeasured,False
+semaphore,Zephyr semaphore (24 cases),Pi KVM,unmeasured,False
+pi-six,Rhealstone and timer (6 cases),FreeRTOS,added,True
+pi-six,Rhealstone and timer (6 cases),Zephyr,added,True
+pi-six,Rhealstone and timer (6 cases),NuttX,added,True
+pi-six,Rhealstone and timer (6 cases),RIOT,added,True
+pi-six,Rhealstone and timer (6 cases),AliOS Things,added,True
+pi-six,Rhealstone and timer (6 cases),Contiki-NG,unmeasured,False
+pi-six,Rhealstone and timer (6 cases),Pi KVM,added,True
+copy,Copy-checksum task$^{*}$,FreeRTOS,measured,True
+copy,Copy-checksum task$^{*}$,Zephyr,measured,True
+copy,Copy-checksum task$^{*}$,NuttX,measured,True
+copy,Copy-checksum task$^{*}$,RIOT,measured,True
+copy,Copy-checksum task$^{*}$,AliOS Things,measured,True
+copy,Copy-checksum task$^{*}$,Contiki-NG,measured,True
+copy,Copy-checksum task$^{*}$,Pi KVM,measured,True
+udp,UDP transactions$^{*}$,FreeRTOS,measured,True
+udp,UDP transactions$^{*}$,Zephyr,measured,True
+udp,UDP transactions$^{*}$,NuttX,measured,True
+udp,UDP transactions$^{*}$,RIOT,measured,True
+udp,UDP transactions$^{*}$,AliOS Things,measured,True
+udp,UDP transactions$^{*}$,Contiki-NG,measured,True
+udp,UDP transactions$^{*}$,Pi KVM,measured,True
+energy,Board-energy profiling$^{*}$,FreeRTOS,measured,True
+energy,Board-energy profiling$^{*}$,Zephyr,measured,True
+energy,Board-energy profiling$^{*}$,NuttX,measured,True
+energy,Board-energy profiling$^{*}$,RIOT,measured,True
+energy,Board-energy profiling$^{*}$,AliOS Things,measured,True
+energy,Board-energy profiling$^{*}$,Contiki-NG,measured,True
+energy,Board-energy profiling$^{*}$,Pi KVM,measured,True
+ram,Allocated-RAM profiling$^{*}$,FreeRTOS,measured,True
+ram,Allocated-RAM profiling$^{*}$,Zephyr,measured,True
+ram,Allocated-RAM profiling$^{*}$,NuttX,measured,True
+ram,Allocated-RAM profiling$^{*}$,RIOT,measured,True
+ram,Allocated-RAM profiling$^{*}$,AliOS Things,measured,True
+ram,Allocated-RAM profiling$^{*}$,Contiki-NG,measured,True
+ram,Allocated-RAM profiling$^{*}$,Pi KVM,measured,True

@@ -1,44 +1,70 @@
-# EunoTOS: Anonymous Review Snapshot
+# EunoBench: Anonymous Review Artifact
 
-This bounded snapshot supplies real archived inputs and production checking
-functions, not a script that prints paper-table values. The generated-
-configuration records concern an independent, paper-inspired Tenon
-reconstruction, not an author-supplied orchestration engine.
+**Updated 2026-11-06.** This is the current, bounded review snapshot. It replaces
+the former landing page; the historical replay remains available below.
 
-## Run Offline
+## Current paper results
 
-Use CPython 3.11. The required pyelftools dependency and its license are bundled;
-no network, model key, private workspace or device is needed.
+- **Eight ESP32 B1 configurations, one common-task leaderboard.** Four categories
+  and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
+  ratios, overall ranks and the 235 preference profiles from **48 archived
+  measurement summaries**, including the correct acquisition-block reference.
+- **Table 1:** 70 benchmark-target cells, **10 still unmeasured**.
+  The distributed table and coverage index agree cell by cell. The latest two
+  additions are Pi KVM zperf TCP and UDP, and all 24 original kernel-mode
+  semaphore cases on FreeRTOS. Coverage tests do not replace the common-task
+  scoring inputs or change the leaderboard.
+- Pi KVM results are additional execution-coverage evidence; they are not mixed
+  into the eight-configuration same-board leaderboard. Contiki-NG's hosted
+  deployment and each measurement boundary remain explicit in the table.
+
+### Run the current offline check
+
+Use CPython **3.11**; no installation, model key, network or device is needed.
 
 ```sh
 cd artifact
-python3.11 -S -B tools/eunotos_adoption_replay.py --output ../review-results
+python3.11 -S -B tools/replay_current.py --output ../current-results
 ```
 
-Alternatively extract `EunoTOS_Minimal_Review_Artifact.zip` and follow its README.
-ZIP SHA-256: `86ad2f505fe4e2e2e96985325c4ae0cf621ab872cc80657a518c5e0013b4357b`.
+This writes `leaderboard.csv`, `coverage.csv` and `receipt.json`. Successful replay
+checks the supplied summaries and index; it does **not** reacquire raw hardware
+data, establish new adapter equivalence or independently reconstruct the full
+RAM lifecycle. Full private captures, firmware and new coverage validators are
+not in this bounded copy. The coverage index supplies source commitments and
+case/configuration bindings, not public access to every committed source file.
 
-## What Is Reconstructed
+Browse [the current inputs and Table 1](artifact/current/) or
+[the precomputed current output](results/current/).
+Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
+and run the same command from its root (the ZIP contains the artifact contents).
 
-- Three-OS message-processing rate, board-input power and energy per completion,
-  using original UART bytes and raw meter packets (three recorded resets each).
-- The same-record decision comparison: 18 G1 configuration-assembly candidates,
-  12 resource requests and six retained-state histories.
-- The production reviewed-admission entry's valid/invalid context examples and
-  a new-cohort offline declaration that cannot inherit a measured result.
+ZIP SHA-256: `f4de8d5c63ca6a00bab0375675975fbd4edd425ea419385bc1be55ce463c13e8`.
 
-Scope and inputs are documented in [artifact/README.md](artifact/README.md).
-The RAM catalog and generation/preflight classifications are authenticated
-inputs here, not freshly reconstructed RAM or model experiments. The full
-40-input overall score, ESP32 firmware-byte revalidation, raw RAM lifecycle,
-fresh acquisition and independent human use are not claimed by this subset.
-The real-researcher check remains NOT RUN; its execution template is included.
+## Preserved historical raw-evidence replay
 
-## Source and Rights
+```sh
+cd artifact
+python3.11 -S -B tools/eunotos_adoption_replay.py --output ../legacy-results
+```
 
-See [artifact/THIRD_PARTY.md](artifact/THIRD_PARTY.md) for the public runtime
-source, original TLSF license/linking exception, library patches and notices.
-Those materials preserve third-party rights; the benchmark tools are supplied
-for review without granting a blanket open-source license to the full project.
-No paper draft, credential, full private reproduction archive or original
-private provenance map is included.
+This separate entry replays the original three-system message-energy subset,
+18 G1 configuration candidates, 12 resource requests and six retained-state
+histories. These are historical cohorts, not additional independent samples in
+the current leaderboard. The generated-configuration records concern an
+independent, paper-inspired Tenon reconstruction, not an author-provided
+orchestration engine. Saved RAM profiles and generation/preflight classifications
+remain inputs to this limited replay.
+
+The prior `EunoTOS_Minimal_Review_Artifact.zip` is retained unchanged for version
+comparison. Its README describes that older snapshot, not current coverage.
+Independent human use remains **NOT RUN**. See
+[artifact/README.md](artifact/README.md) for the full scope and boundaries.
+
+## Source and rights
+
+See [artifact/THIRD_PARTY.md](artifact/THIRD_PARTY.md) for upstream source,
+TLSF licensing/linking exceptions and notices. Only this selected redacted
+review copy is authorized for distribution; it does not grant a blanket
+open-source license to the project. No manuscript draft, credential, original
+private provenance map or full private reproduction archive is included.

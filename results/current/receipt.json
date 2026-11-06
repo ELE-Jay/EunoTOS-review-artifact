@@ -1,0 +1,54 @@
+{
+  "pass": true,
+  "configurations": 8,
+  "scalars": 48,
+  "reference": 1,
+  "preference_profiles": 235,
+  "coverage_cells": 70,
+  "unmeasured_cells": 10,
+  "pending": [
+    [
+      "tm-core",
+      "Contiki-NG"
+    ],
+    [
+      "tm-irq",
+      "Contiki-NG"
+    ],
+    [
+      "hartstone-ph3",
+      "Contiki-NG"
+    ],
+    [
+      "hartstone-ph3",
+      "Pi KVM"
+    ],
+    [
+      "semaphore",
+      "NuttX"
+    ],
+    [
+      "semaphore",
+      "RIOT"
+    ],
+    [
+      "semaphore",
+      "AliOS Things"
+    ],
+    [
+      "semaphore",
+      "Contiki-NG"
+    ],
+    [
+      "semaphore",
+      "Pi KVM"
+    ],
+    [
+      "pi-six",
+      "Contiki-NG"
+    ]
+  ],
+  "scope": "Current score arithmetic and declared coverage bindings; new raw captures, ELF, RAM lifecycle and new coverage validators remain private. Legacy subset has its separate raw replay.",
+  "new_acquisitions": 0,
+  "new_model_calls": 0
+}

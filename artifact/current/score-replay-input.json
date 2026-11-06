@@ -1,0 +1,970 @@
+{
+  "rows": [
+    {
+      "os": "FreeRTOS",
+      "runtime_build": "FreeRTOS-absolute-v1",
+      "observer_build": "FreeRTOS-ram-absolute-v1",
+      "task_index": 1.0,
+      "energy_index": 1.0,
+      "network_index": 1.0,
+      "ram_index": 1.0,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 121.08726388888888,
+          "median_joules_per_completed_job": 0.003301887797696322
+        },
+        "2": {
+          "median_submission_to_completion_us": 1882.497478298611,
+          "median_joules_per_completed_job": 0.0004271933459743502
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 313.43333333333334,
+      "network_reset_values": [
+        284.3666666666667,
+        220.5,
+        313.43333333333334,
+        321.5,
+        327.6
+      ],
+      "peak_allocated_ram_bytes": 335736,
+      "ram_reset_values": [
+        335736,
+        335736,
+        335736,
+        335736,
+        335736
+      ],
+      "ram_observer_included": true,
+      "overall_score": 1.0,
+      "rank": 2
+    },
+    {
+      "os": "Zephyr",
+      "runtime_build": "Zephyr-absolute-v1",
+      "observer_build": "Zephyr-ram-absolute-v3",
+      "task_index": 1.0058466685345857,
+      "energy_index": 0.9929997515451373,
+      "network_index": 0.6010847601829203,
+      "ram_index": 1.0496735949576048,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 118.08140277777778,
+          "median_joules_per_completed_job": 0.0033161511550648475
+        },
+        "2": {
+          "median_submission_to_completion_us": 1908.0414347222222,
+          "median_joules_per_completed_job": 0.00043137422590637205
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 188.4,
+      "network_reset_values": [
+        171.73333333333332,
+        188.4,
+        194.73333333333332,
+        198.5,
+        187.33333333333334
+      ],
+      "peak_allocated_ram_bytes": 319848,
+      "ram_reset_values": [
+        319848,
+        319848,
+        319848,
+        319848,
+        319848
+      ],
+      "ram_observer_included": true,
+      "overall_score": 0.8909795329456218,
+      "rank": 7
+    },
+    {
+      "os": "NuttX",
+      "runtime_build": "NuttX-ap4-absolute-v1",
+      "observer_build": "NuttX-ram-paired-absolute-v1",
+      "task_index": 0.5191672430727634,
+      "energy_index": 0.9131191066293112,
+      "network_index": 0.6095926831862172,
+      "ram_index": 1.336656368442845,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 216.92856805555556,
+          "median_joules_per_completed_job": 0.003596016340904766
+        },
+        "2": {
+          "median_submission_to_completion_us": 3891.104104513889,
+          "median_joules_per_completed_job": 0.0004578778007263434
+        }
+      },
+      "task_energy_block": "common-power-nuttx-ap4-absolute-formal-v1",
+      "network_transactions_per_second": 191.06666666666666,
+      "network_reset_values": [
+        116.33333333333333,
+        191.06666666666666,
+        190.8,
+        242.56666666666666,
+        237.46666666666667
+      ],
+      "peak_allocated_ram_bytes": 251176,
+      "ram_reset_values": [
+        250504,
+        250952,
+        250504,
+        250616,
+        251176
+      ],
+      "ram_observer_included": true,
+      "overall_score": 0.7883581426681314,
+      "rank": 8
+    },
+    {
+      "os": "RIOT",
+      "runtime_build": "RIOT-absolute-v1",
+      "observer_build": "RIOT-ram-absolute-v4",
+      "task_index": 0.9300845360725476,
+      "energy_index": 0.9534726724690749,
+      "network_index": 0.9203445708816335,
+      "ram_index": 0.8789820923656927,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 136.6280111111111,
+          "median_joules_per_completed_job": 0.0034881929866192496
+        },
+        "2": {
+          "median_submission_to_completion_us": 1928.6271458333333,
+          "median_joules_per_completed_job": 0.0004448051283162452
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 288.46666666666664,
+      "network_reset_values": [
+        122.76666666666667,
+        288.46666666666664,
+        301.56666666666666,
+        271.3,
+        299.6
+      ],
+      "peak_allocated_ram_bytes": 381960,
+      "ram_reset_values": [
+        380880,
+        380116,
+        380556,
+        381960,
+        380440
+      ],
+      "ram_observer_included": true,
+      "overall_score": 0.9203230280968379,
+      "rank": 4
+    },
+    {
+      "os": "AliOS Things",
+      "runtime_build": "AliOS-absolute-v1",
+      "observer_build": "AliOS-ram-paired-absolute-v1",
+      "task_index": 0.9948999845051391,
+      "energy_index": 0.9472694759168636,
+      "network_index": 1.1910028714240137,
+      "ram_index": 1.1168119220278092,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 120.19199583333334,
+          "median_joules_per_completed_job": 0.0035427984433013186
+        },
+        "2": {
+          "median_submission_to_completion_us": 1916.0130994791666,
+          "median_joules_per_completed_job": 0.00044370391350592953
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 373.3,
+      "network_reset_values": [
+        305.23333333333335,
+        363.8333333333333,
+        420.46666666666664,
+        373.3,
+        389.6333333333333
+      ],
+      "peak_allocated_ram_bytes": 300620,
+      "ram_reset_values": [
+        299996,
+        300308,
+        300620,
+        299228,
+        299996
+      ],
+      "ram_observer_included": true,
+      "overall_score": 1.0581237302634927,
+      "rank": 1
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "runtime_build": "Zephyr-qwen-absolute-v1",
+      "observer_build": "Zephyr-qwen-ram-absolute-v2",
+      "task_index": 1.0041090795146848,
+      "energy_index": 0.9970619078585641,
+      "network_index": 0.6128895033499947,
+      "ram_index": 1.0432804653706558,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 118.70266111111111,
+          "median_joules_per_completed_job": 0.0033132249392091857
+        },
+        "2": {
+          "median_submission_to_completion_us": 1904.6300213541665,
+          "median_joules_per_completed_job": 0.0004282443282549563
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 192.1,
+      "network_reset_values": [
+        182.4,
+        192.1,
+        178.03333333333333,
+        198.56666666666666,
+        199.96666666666667
+      ],
+      "peak_allocated_ram_bytes": 321808,
+      "ram_reset_values": [
+        321808,
+        321808,
+        321808,
+        321808,
+        321808
+      ],
+      "ram_observer_included": true,
+      "overall_score": 0.8944819257412667,
+      "rank": 6
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "runtime_build": "Zephyr-autoos-absolute-v1",
+      "observer_build": "Zephyr-autoos-ram-absolute-v2",
+      "task_index": 0.9879373735694371,
+      "energy_index": 0.9979991817953705,
+      "network_index": 0.6289482080187174,
+      "ram_index": 1.0440591103592398,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 122.27988333333333,
+          "median_joules_per_completed_job": 0.0032882046538033403
+        },
+        "2": {
+          "median_submission_to_completion_us": 1909.9369168402777,
+          "median_joules_per_completed_job": 0.000430692769258566
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 197.13333333333333,
+      "network_reset_values": [
+        166.46666666666667,
+        166.1,
+        197.5,
+        200.2,
+        197.13333333333333
+      ],
+      "peak_allocated_ram_bytes": 321568,
+      "ram_reset_values": [
+        321568,
+        321568,
+        321568,
+        321568,
+        321568
+      ],
+      "ram_observer_included": true,
+      "overall_score": 0.8970153872633136,
+      "rank": 5
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "runtime_build": "Contiki-IDF-absolute-v1",
+      "observer_build": "Contiki-IDF-ram-absolute-v1",
+      "task_index": 1.0103289186064974,
+      "energy_index": 0.9955448284908769,
+      "network_index": 0.9613952993725406,
+      "ram_index": 0.9996307985470136,
+      "phase_values": {
+        "1": {
+          "median_submission_to_completion_us": 117.42333749999999,
+          "median_joules_per_completed_job": 0.003281268493257211
+        },
+        "2": {
+          "median_submission_to_completion_us": 1901.7476182291668,
+          "median_joules_per_completed_job": 0.00043373391360245026
+        }
+      },
+      "task_energy_block": "common-power-absolute-formal-v1",
+      "network_transactions_per_second": 301.3333333333333,
+      "network_reset_values": [
+        236.26666666666668,
+        255.4,
+        301.3333333333333,
+        316.3333333333333,
+        302.73333333333335
+      ],
+      "peak_allocated_ram_bytes": 335860,
+      "ram_reset_values": [
+        335860,
+        335860,
+        335860,
+        335860,
+        335860
+      ],
+      "ram_observer_included": true,
+      "overall_score": 0.9915538538024979,
+      "rank": 3
+    }
+  ],
+  "score_input_manifest": [
+    {
+      "os": "FreeRTOS",
+      "category": "task",
+      "phase": 1,
+      "value": 121.08726388888888,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "ee2ca160b3aceaa1a5b7aebe1a24d0d56798eb9e5d785cb305accdd558e9d1f4",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "FreeRTOS",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.003301887797696322,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "ee2ca160b3aceaa1a5b7aebe1a24d0d56798eb9e5d785cb305accdd558e9d1f4",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "FreeRTOS",
+      "category": "task",
+      "phase": 2,
+      "value": 1882.497478298611,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "ee2ca160b3aceaa1a5b7aebe1a24d0d56798eb9e5d785cb305accdd558e9d1f4",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "FreeRTOS",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.0004271933459743502,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "ee2ca160b3aceaa1a5b7aebe1a24d0d56798eb9e5d785cb305accdd558e9d1f4",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "FreeRTOS",
+      "category": "network",
+      "value": 313.43333333333334,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v1-r1-FreeRTOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-FreeRTOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-FreeRTOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-FreeRTOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-FreeRTOS-absolute-v1"
+      ],
+      "build_manifest_sha256": "ee2ca160b3aceaa1a5b7aebe1a24d0d56798eb9e5d785cb305accdd558e9d1f4"
+    },
+    {
+      "os": "FreeRTOS",
+      "category": "ram",
+      "value": 335736,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r1-FreeRTOS-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r2-FreeRTOS-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r3-FreeRTOS-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r4-FreeRTOS-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r5-FreeRTOS-ram-absolute-v1.json"
+      ],
+      "build_manifest_sha256": "ab0f3712de3dd73e59c46f21b9ad79bfa7e7084272449a30ce357c199fe00eb6"
+    },
+    {
+      "os": "Zephyr",
+      "category": "task",
+      "phase": 1,
+      "value": 118.08140277777778,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "75ac235ea6be87eb0e62fd085c910e58de24a8ce03c38d16b74477dbb3304d6d",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.0033161511550648475,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "75ac235ea6be87eb0e62fd085c910e58de24a8ce03c38d16b74477dbb3304d6d",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr",
+      "category": "task",
+      "phase": 2,
+      "value": 1908.0414347222222,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "75ac235ea6be87eb0e62fd085c910e58de24a8ce03c38d16b74477dbb3304d6d",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.00043137422590637205,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "75ac235ea6be87eb0e62fd085c910e58de24a8ce03c38d16b74477dbb3304d6d",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr",
+      "category": "network",
+      "value": 188.4,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v1-r1-Zephyr-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-Zephyr-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-Zephyr-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-Zephyr-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-Zephyr-absolute-v1"
+      ],
+      "build_manifest_sha256": "75ac235ea6be87eb0e62fd085c910e58de24a8ce03c38d16b74477dbb3304d6d"
+    },
+    {
+      "os": "Zephyr",
+      "category": "ram",
+      "value": 319848,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r1-Zephyr-ram-absolute-v3.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r2-Zephyr-ram-absolute-v3.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r3-Zephyr-ram-absolute-v3.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r4-Zephyr-ram-absolute-v3.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r5-Zephyr-ram-absolute-v3.json"
+      ],
+      "build_manifest_sha256": "4df48bd2417208bbf0613a0e2e49fdc00e68ee241fe98361bc40487fec3ddda7"
+    },
+    {
+      "os": "NuttX",
+      "category": "task",
+      "phase": 1,
+      "value": 216.92856805555556,
+      "unit": "us",
+      "source_campaign": "common-power-nuttx-ap4-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "977c3196dd4707ac5ef82abc0088f9919db4ede1b3df8fa5438a382be9cc4307",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "NuttX",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.003596016340904766,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-nuttx-ap4-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "977c3196dd4707ac5ef82abc0088f9919db4ede1b3df8fa5438a382be9cc4307",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "NuttX",
+      "category": "task",
+      "phase": 2,
+      "value": 3891.104104513889,
+      "unit": "us",
+      "source_campaign": "common-power-nuttx-ap4-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "977c3196dd4707ac5ef82abc0088f9919db4ede1b3df8fa5438a382be9cc4307",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "NuttX",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.0004578778007263434,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-nuttx-ap4-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "977c3196dd4707ac5ef82abc0088f9919db4ede1b3df8fa5438a382be9cc4307",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "NuttX",
+      "category": "network",
+      "value": 191.06666666666666,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r1-NuttX-ap4-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-NuttX-ap4-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-NuttX-ap4-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-NuttX-ap4-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-NuttX-ap4-absolute-v1"
+      ],
+      "build_manifest_sha256": "977c3196dd4707ac5ef82abc0088f9919db4ede1b3df8fa5438a382be9cc4307"
+    },
+    {
+      "os": "NuttX",
+      "category": "ram",
+      "value": 251176,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r1-NuttX-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r2-NuttX-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r3-NuttX-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r4-NuttX-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r5-NuttX-ram-paired-absolute-v1.json"
+      ],
+      "build_manifest_sha256": "99bebfdc916d21eadf50ba3e113ffbc392094f377ecf4549bc005490c27479f3"
+    },
+    {
+      "os": "RIOT",
+      "category": "task",
+      "phase": 1,
+      "value": 136.6280111111111,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "1cf3eedb6258aab68152a6adf5d498a5909aaa43db502f8b109b101de0bf80a3",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "RIOT",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.0034881929866192496,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "1cf3eedb6258aab68152a6adf5d498a5909aaa43db502f8b109b101de0bf80a3",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "RIOT",
+      "category": "task",
+      "phase": 2,
+      "value": 1928.6271458333333,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "1cf3eedb6258aab68152a6adf5d498a5909aaa43db502f8b109b101de0bf80a3",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "RIOT",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.0004448051283162452,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "1cf3eedb6258aab68152a6adf5d498a5909aaa43db502f8b109b101de0bf80a3",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "RIOT",
+      "category": "network",
+      "value": 288.46666666666664,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r1-RIOT-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-RIOT-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-RIOT-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-RIOT-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-RIOT-absolute-v1"
+      ],
+      "build_manifest_sha256": "1cf3eedb6258aab68152a6adf5d498a5909aaa43db502f8b109b101de0bf80a3"
+    },
+    {
+      "os": "RIOT",
+      "category": "ram",
+      "value": 381960,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r1-RIOT-ram-absolute-v4.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r2-RIOT-ram-absolute-v4.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r3-RIOT-ram-absolute-v4.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r4-RIOT-ram-absolute-v4.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r5-RIOT-ram-absolute-v4.json"
+      ],
+      "build_manifest_sha256": "174ac7bee6ebc0585eb778d28724da3e3eafd76b14f8d94daa832f09c92c5ff6"
+    },
+    {
+      "os": "AliOS Things",
+      "category": "task",
+      "phase": 1,
+      "value": 120.19199583333334,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "933024c283c23decd5e934361680c176e209f79dc621d94b77d3d725cdb495b7",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "AliOS Things",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.0035427984433013186,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "933024c283c23decd5e934361680c176e209f79dc621d94b77d3d725cdb495b7",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "AliOS Things",
+      "category": "task",
+      "phase": 2,
+      "value": 1916.0130994791666,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "933024c283c23decd5e934361680c176e209f79dc621d94b77d3d725cdb495b7",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "AliOS Things",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.00044370391350592953,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "933024c283c23decd5e934361680c176e209f79dc621d94b77d3d725cdb495b7",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "AliOS Things",
+      "category": "network",
+      "value": 373.3,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r1-AliOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-AliOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-AliOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-AliOS-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-AliOS-absolute-v1"
+      ],
+      "build_manifest_sha256": "933024c283c23decd5e934361680c176e209f79dc621d94b77d3d725cdb495b7"
+    },
+    {
+      "os": "AliOS Things",
+      "category": "ram",
+      "value": 300620,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r1-AliOS-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r2-AliOS-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r3-AliOS-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r4-AliOS-ram-paired-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-native-extension-absolute-formal-v1/r5-AliOS-ram-paired-absolute-v1.json"
+      ],
+      "build_manifest_sha256": "c37825afcdc7099fcac5b54cd3cb92a4dc6ac37f067b3ebf1a28ca4132ff392e"
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "category": "task",
+      "phase": 1,
+      "value": 118.70266111111111,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "0e1f5b65755e4780c8b987348ef6981a8fda9e01911a17824b57c83bb48ff8f8",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.0033132249392091857,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "0e1f5b65755e4780c8b987348ef6981a8fda9e01911a17824b57c83bb48ff8f8",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "category": "task",
+      "phase": 2,
+      "value": 1904.6300213541665,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "0e1f5b65755e4780c8b987348ef6981a8fda9e01911a17824b57c83bb48ff8f8",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.0004282443282549563,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "0e1f5b65755e4780c8b987348ef6981a8fda9e01911a17824b57c83bb48ff8f8",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "category": "network",
+      "value": 192.1,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r1-Zephyr-qwen-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-Zephyr-qwen-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-Zephyr-qwen-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-Zephyr-qwen-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-Zephyr-qwen-absolute-v1"
+      ],
+      "build_manifest_sha256": "0e1f5b65755e4780c8b987348ef6981a8fda9e01911a17824b57c83bb48ff8f8"
+    },
+    {
+      "os": "Zephyr C2-1 (Qwen)",
+      "category": "ram",
+      "value": 321808,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r1-Zephyr-qwen-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r2-Zephyr-qwen-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r3-Zephyr-qwen-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r4-Zephyr-qwen-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r5-Zephyr-qwen-ram-absolute-v2.json"
+      ],
+      "build_manifest_sha256": "2342b68d7d99b2e8f4d196fde064c5577f52a2a8a85fcd3d2c7669179a8ed2c9"
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "category": "task",
+      "phase": 1,
+      "value": 122.27988333333333,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "971b099b7a1ab69a2ec0191f79af2e81609761a229123fadb5ecc16bc9734081",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.0032882046538033403,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "971b099b7a1ab69a2ec0191f79af2e81609761a229123fadb5ecc16bc9734081",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "category": "task",
+      "phase": 2,
+      "value": 1909.9369168402777,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "971b099b7a1ab69a2ec0191f79af2e81609761a229123fadb5ecc16bc9734081",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.000430692769258566,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "971b099b7a1ab69a2ec0191f79af2e81609761a229123fadb5ecc16bc9734081",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "category": "network",
+      "value": 197.13333333333333,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r1-Zephyr-autoos-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-Zephyr-autoos-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-Zephyr-autoos-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-Zephyr-autoos-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-Zephyr-autoos-absolute-v1"
+      ],
+      "build_manifest_sha256": "971b099b7a1ab69a2ec0191f79af2e81609761a229123fadb5ecc16bc9734081"
+    },
+    {
+      "os": "Zephyr (AutoOS-adapted)",
+      "category": "ram",
+      "value": 321568,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r1-Zephyr-autoos-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r2-Zephyr-autoos-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r3-Zephyr-autoos-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r4-Zephyr-autoos-ram-absolute-v2.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r5-Zephyr-autoos-ram-absolute-v2.json"
+      ],
+      "build_manifest_sha256": "c7c76ebd761331e4e91339c70e079e9449ddc9de1a43a6a38df815e87647ed05"
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "category": "task",
+      "phase": 1,
+      "value": 117.42333749999999,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "e5a1559884c679c19e870de172ca9889e7c491116cda1766244162a79f902853",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "category": "energy",
+      "phase": 1,
+      "value": 0.003281268493257211,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "e5a1559884c679c19e870de172ca9889e7c491116cda1766244162a79f902853",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "category": "task",
+      "phase": 2,
+      "value": 1901.7476182291668,
+      "unit": "us",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "e5a1559884c679c19e870de172ca9889e7c491116cda1766244162a79f902853",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "category": "energy",
+      "phase": 2,
+      "value": 0.00043373391360245026,
+      "unit": "J/completed job",
+      "source_campaign": "common-power-absolute-formal-v1",
+      "resets": 5,
+      "build_manifest_sha256": "e5a1559884c679c19e870de172ca9889e7c491116cda1766244162a79f902853",
+      "reference": "FreeRTOS-absolute-v1"
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "category": "network",
+      "value": 301.3333333333333,
+      "unit": "transactions/s",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r1-Contiki-IDF-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r2-Contiki-IDF-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r3-Contiki-IDF-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r4-Contiki-IDF-absolute-v1",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/udp-engineering-absolute-formal-v3-r5-Contiki-IDF-absolute-v1"
+      ],
+      "build_manifest_sha256": "e5a1559884c679c19e870de172ca9889e7c491116cda1766244162a79f902853"
+    },
+    {
+      "os": "Contiki-NG + ESP-IDF/FreeRTOS",
+      "category": "ram",
+      "value": 335860,
+      "unit": "B",
+      "resets": 5,
+      "sources": [
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r1-Contiki-IDF-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r2-Contiki-IDF-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r3-Contiki-IDF-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r4-Contiki-IDF-ram-absolute-v1.json",
+        "artifacts/reports/eunotos-single-leaderboard-20261103-v1/common-ram-absolute-formal-v2/r5-Contiki-IDF-ram-absolute-v1.json"
+      ],
+      "build_manifest_sha256": "f2b89e9599833a05ae4fa908ccb65370bd53bc79a4b9264b2a35d6a653191849"
+    }
+  ],
+  "weight_sensitivity": {
+    "weight_profiles": 235,
+    "rank_ranges": {
+      "FreeRTOS": [
+        2,
+        6
+      ],
+      "Zephyr": [
+        2,
+        8
+      ],
+      "NuttX": [
+        4,
+        8
+      ],
+      "RIOT": [
+        4,
+        8
+      ],
+      "AliOS Things": [
+        1,
+        1
+      ],
+      "Zephyr C2-1 (Qwen)": [
+        3,
+        7
+      ],
+      "Zephyr (AutoOS-adapted)": [
+        4,
+        6
+      ],
+      "Contiki-NG + ESP-IDF/FreeRTOS": [
+        3,
+        5
+      ]
+    },
+    "scope": "Existing bounded application-preference grid and leave-one-category-out analysis; not measurement confidence intervals."
+  },
+  "reference_controls": {
+    "common-power-absolute-formal-v1": {
+      "1": {
+        "median_submission_to_completion_us": 121.08726388888888,
+        "median_joules_per_completed_job": 0.003301887797696322
+      },
+      "2": {
+        "median_submission_to_completion_us": 1882.497478298611,
+        "median_joules_per_completed_job": 0.0004271933459743502
+      }
+    },
+    "common-power-nuttx-ap4-absolute-formal-v1": {
+      "1": {
+        "median_submission_to_completion_us": 120.87800833333334,
+        "median_joules_per_completed_job": 0.003276821181548086
+      },
+      "2": {
+        "median_submission_to_completion_us": 1882.1614310763887,
+        "median_joules_per_completed_job": 0.0004189607738452218
+      }
+    }
+  }
+}
