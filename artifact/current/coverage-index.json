@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-06T15:19:52.202555+00:00",
+  "created_utc": "2026-11-06T15:41:45.247660+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -502,6 +502,12 @@
       "sha256": "4dcc9ffd6648bdca165517b0d8f051e82c350317decd9497f27aa90466392c53",
       "bytes": 3475,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native Rhino priority tasks and semaphores, native sleep and reset cancellation by retiring deleted static objects. Public take rejects ISR context; the no-wait compatibility operation reads/decrements the native object count under CPU IRQ lock, without faking interrupt context. Byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+    },
+    "coverage-addition-17": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-Pi-KVM.json",
+      "sha256": "eb2c32f9f3a26e53a5885498df86d8c59803f07ef85b33cdba5c5b5a520940f8",
+      "bytes": 171086,
+      "scope": "24 unchanged Zephyr 3.7.0 kernel-mode cases, one complete one-vCPU 128-MiB Pi4B KVM guest, 28 real GICv2 SGIs. Native Tenon priority tasks, semaphore waits and timers. Explicit isolated-kernel compatibility fixes cancel the timeout on ISR wake and avoid duplicate wake-all transitions; original scheduler assertions and failed v1-v4 remain. Retired native objects map reset cancellation; byte pipe uses native semaphores, workers 16384 B. Correctness execution coverage of this fixed variant, not unmodified upstream capability, RAM/latency or B1 scores."
     }
   },
   "five_verdicts": [
@@ -611,8 +617,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v5/coverage-evidence.json",
-    "sha256": "38376cb678467531df3168f80c4734324796ad3f1452fa3d6bdb0a658927c8b4"
+    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v6/coverage-evidence.json",
+    "sha256": "4f3d1bd68b45a748e13fbca97a8154b92343e3a792b85dc94b141e7905237e6b"
   },
   "entries": [
     {
@@ -1801,7 +1807,7 @@
           }
         },
         "Pi KVM": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1809,13 +1815,43 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 1,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "test_k_sem_define",
+              "test_sem_thread2thread",
+              "test_sem_thread2isr",
+              "test_k_sem_init",
+              "test_sem_reset",
+              "test_sem_reset_waiting",
+              "test_sem_count_get",
+              "test_sem_give_from_isr",
+              "test_sem_give_from_thread",
+              "test_sem_take_no_wait",
+              "test_sem_take_no_wait_fails",
+              "test_sem_take_timeout_fails",
+              "test_sem_take_timeout",
+              "test_sem_take_timeout_forever",
+              "test_sem_take_timeout_isr",
+              "test_sem_take_multiple",
+              "test_k_sem_correct_count_limit",
+              "test_sem_give_take_from_isr",
+              "test_sem_multiple_threads_wait",
+              "test_sem_measure_timeouts",
+              "test_sem_measure_timeout_from_thread",
+              "test_sem_multiple_take_and_timeouts",
+              "test_sem_multi_take_timeout_diff_sem",
+              "test_sem_queue_mutual_exclusion"
+            ],
+            "configurations": [
+              "Native Tenon Pi4B KVM semaphore24 with declared wakeup compatibility fixes"
+            ],
+            "platform": "Raspberry Pi 4B one-vCPU KVM guest",
+            "evidence": [
+              "coverage-addition-17"
+            ],
+            "boundary": "24 unchanged Zephyr 3.7.0 kernel-mode cases, one complete one-vCPU 128-MiB Pi4B KVM guest, 28 real GICv2 SGIs. Native Tenon priority tasks, semaphore waits and timers. Explicit isolated-kernel compatibility fixes cancel the timeout on ISR wake and avoid duplicate wake-all transitions; original scheduler assertions and failed v1-v4 remain. Retired native objects map reset cancellation; byte pipe uses native semaphores, workers 16384 B. Correctness execution coverage of this fixed variant, not unmodified upstream capability, RAM/latency or B1 scores."
           }
         }
       }

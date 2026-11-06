@@ -5,7 +5,7 @@
   "reference": 1,
   "preference_profiles": 235,
   "coverage_cells": 70,
-  "unmeasured_cells": 7,
+  "unmeasured_cells": 6,
   "pending": [
     [
       "tm-core",
@@ -26,10 +26,6 @@
     [
       "semaphore",
       "Contiki-NG"
-    ],
-    [
-      "semaphore",
-      "Pi KVM"
     ],
     [
       "pi-six",
