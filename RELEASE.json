@@ -1,9 +1,9 @@
 {
-  "release": "2026-11-06-current-v1",
-  "paper_source_commit": "aba9fb7",
-  "table_sha256": "ef943575a6d871577b93c7bc2a99281e16e1b7fb3d418e30bceb85294d33791c",
-  "archive_sha256": "f4de8d5c63ca6a00bab0375675975fbd4edd425ea419385bc1be55ce463c13e8",
-  "remaining_coverage_cells": 10,
+  "release": "2026-11-06-current-v2",
+  "paper_source_commit": "e487a03",
+  "table_sha256": "95d24d54d3730976db5386fa4bd79996c3ac39199092ddcf5c07fc7d9c33c91b",
+  "archive_sha256": "f729d94a3aeb197197f6f1ba78cda050cf78ccf70399268af4fa2188c2322614",
+  "remaining_coverage_cells": 9,
   "offline_checks": [
     {
       "name": "current",

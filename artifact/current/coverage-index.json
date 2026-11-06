@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-06T13:55:21.804835+00:00",
+  "created_utc": "2026-11-06T14:44:28.610054+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -484,6 +484,12 @@
       "sha256": "0271f6c11400d2445c4acfbdd6c5501fba630128eb284a7d1ea7ff1de91873d0",
       "bytes": 3328,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native FreeRTOS counting semaphores, priority/FIFO waits and ISR operations; reset uses native abort-delay, byte pipe uses native queues plus writer mutex, actual worker stacks 4096 B. Native conditions 240 MHz, one core, 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+    },
+    "coverage-addition-14": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-RIOT.json",
+      "sha256": "a23740bd8620f190e6eb9e4112618c00f0d82a67835d069796dede2cf910ab7f",
+      "bytes": 3365,
+      "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native RIOT semaphores, mutex priority waiters, native deadlines and IRQ-safe operations; reset cancels retired native instances with sema_destroy, bounded byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; tickless native ztimer; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
     }
   },
   "five_verdicts": [
@@ -593,8 +599,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v2/coverage-evidence.json",
-    "sha256": "091533674a9fc1bd00201fa0d45a7ca134ecfa2568a9610688fdbcafccc68d45"
+    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v3/coverage-evidence.json",
+    "sha256": "56d5435c598cf3493ad52d8e008673453834bdd9324713a12d5d96f1ddf29b87"
   },
   "entries": [
     {
@@ -1639,7 +1645,7 @@
           }
         },
         "RIOT": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1647,13 +1653,43 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 1,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "test_k_sem_define",
+              "test_sem_thread2thread",
+              "test_sem_thread2isr",
+              "test_k_sem_init",
+              "test_sem_reset",
+              "test_sem_reset_waiting",
+              "test_sem_count_get",
+              "test_sem_give_from_isr",
+              "test_sem_give_from_thread",
+              "test_sem_take_no_wait",
+              "test_sem_take_no_wait_fails",
+              "test_sem_take_timeout_fails",
+              "test_sem_take_timeout",
+              "test_sem_take_timeout_forever",
+              "test_sem_take_timeout_isr",
+              "test_sem_take_multiple",
+              "test_k_sem_correct_count_limit",
+              "test_sem_give_take_from_isr",
+              "test_sem_multiple_threads_wait",
+              "test_sem_measure_timeouts",
+              "test_sem_measure_timeout_from_thread",
+              "test_sem_multiple_take_and_timeouts",
+              "test_sem_multi_take_timeout_diff_sem",
+              "test_sem_queue_mutual_exclusion"
+            ],
+            "configurations": [
+              "RIOT B1 native counting-semaphore compatibility port"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-14"
+            ],
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native RIOT semaphores, mutex priority waiters, native deadlines and IRQ-safe operations; reset cancels retired native instances with sema_destroy, bounded byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; tickless native ztimer; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
           }
         },
         "AliOS Things": {
