@@ -29,7 +29,7 @@ zperf,zperf: TCP and UDP upload,Contiki-NG,added,True
 zperf,zperf: TCP and UDP upload,Pi KVM,added,True
 semaphore,Zephyr semaphore (24 cases),FreeRTOS,added,True
 semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True
-semaphore,Zephyr semaphore (24 cases),NuttX,unmeasured,False
+semaphore,Zephyr semaphore (24 cases),NuttX,added,True
 semaphore,Zephyr semaphore (24 cases),RIOT,added,True
 semaphore,Zephyr semaphore (24 cases),AliOS Things,unmeasured,False
 semaphore,Zephyr semaphore (24 cases),Contiki-NG,unmeasured,False

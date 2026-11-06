@@ -9,10 +9,10 @@ the former landing page; the historical replay remains available below.
   and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
   ratios, overall ranks and the 235 preference profiles from **48 archived
   measurement summaries**, including the correct acquisition-block reference.
-- **Table 1:** 70 benchmark-target cells, **9 still unmeasured**.
-  The distributed table and coverage index agree cell by cell. Recent
-  additions include Pi KVM zperf TCP and UDP, and all 24 original kernel-mode
-  semaphore cases on FreeRTOS and RIOT. Coverage tests do not replace the common-task
+- **Table 1:** 70 benchmark-target cells, **8 still unmeasured**.
+  The distributed table and coverage index agree cell by cell. Each measured
+  cell identifies its cases, configurations and evidence commitments; remaining
+  gaps stay explicitly unmeasured. Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
   into the eight-configuration same-board leaderboard. Contiki-NG's hosted
@@ -39,7 +39,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `f729d94a3aeb197197f6f1ba78cda050cf78ccf70399268af4fa2188c2322614`.
+ZIP SHA-256: `1d1f4a231983dbc88fa536a7912f2347e5be1d5ea63136a62e3d7b683f2d8764`.
 
 ## Preserved historical raw-evidence replay
 
