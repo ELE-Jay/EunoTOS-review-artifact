@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-06T15:41:45.247660+00:00",
+  "created_utc": "2026-11-06T15:53:49.217888+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -508,6 +508,12 @@
       "sha256": "eb2c32f9f3a26e53a5885498df86d8c59803f07ef85b33cdba5c5b5a520940f8",
       "bytes": 171086,
       "scope": "24 unchanged Zephyr 3.7.0 kernel-mode cases, one complete one-vCPU 128-MiB Pi4B KVM guest, 28 real GICv2 SGIs. Native Tenon priority tasks, semaphore waits and timers. Explicit isolated-kernel compatibility fixes cancel the timeout on ISR wake and avoid duplicate wake-all transitions; original scheduler assertions and failed v1-v4 remain. Retired native objects map reset cancellation; byte pipe uses native semaphores, workers 16384 B. Correctness execution coverage of this fixed variant, not unmodified upstream capability, RAM/latency or B1 scores."
+    },
+    "coverage-addition-18": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-ph3-Contiki-NG.json",
+      "sha256": "ed49e6c71d91a0971035c13cd336a203eaa736a21d45eb6cf843bf8453d88838",
+      "bytes": 3284,
+      "scope": "One complete B1 reset of PH3 on five native Contiki processes/etimers, unchanged SEI-derived C Small_Whetstone and PH3 release/step rules; full first-loss termination. Hosted by ESP-IDF/FreeRTOS at 240 MHz, one core, 1-ms event timers; completion clock is quantized to 10 us. Cooperative event dispatch, no preemptive-priority emulation; this is measured workload coverage, not a pooled preemptive PH3 capacity or B1 Overall input. First loss at step 0."
     }
   },
   "five_verdicts": [
@@ -617,8 +623,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v6/coverage-evidence.json",
-    "sha256": "4f3d1bd68b45a748e13fbca97a8154b92343e3a792b85dc94b141e7905237e6b"
+    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v7/coverage-evidence.json",
+    "sha256": "b9dc98d41ef83cb629ce6e95a299637862f3d5c41d549fa1ed9f981225cd43c4"
   },
   "entries": [
     {
@@ -1245,7 +1251,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -1255,13 +1261,20 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 1,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "Contiki-NG B1 hosted native cooperative PH3 processes"
+            ],
+            "platform": "ESP32 B1, explicit ESP-IDF/FreeRTOS host",
+            "evidence": [
+              "coverage-addition-18"
+            ],
+            "boundary": "One complete B1 reset of PH3 on five native Contiki processes/etimers, unchanged SEI-derived C Small_Whetstone and PH3 release/step rules; full first-loss termination. Hosted by ESP-IDF/FreeRTOS at 240 MHz, one core, 1-ms event timers; completion clock is quantized to 10 us. Cooperative event dispatch, no preemptive-priority emulation; this is measured workload coverage, not a pooled preemptive PH3 capacity or B1 Overall input. First loss at step 0."
           }
         },
         "Pi KVM": {

@@ -18,7 +18,7 @@ hartstone-ph3,Hartstone PH3,Zephyr,added,True
 hartstone-ph3,Hartstone PH3,NuttX,added,True
 hartstone-ph3,Hartstone PH3,RIOT,added,True
 hartstone-ph3,Hartstone PH3,AliOS Things,added,True
-hartstone-ph3,Hartstone PH3,Contiki-NG,unmeasured,False
+hartstone-ph3,Hartstone PH3,Contiki-NG,added,True
 hartstone-ph3,Hartstone PH3,Pi KVM,unmeasured,False
 zperf,zperf: TCP and UDP upload,FreeRTOS,added,True
 zperf,zperf: TCP and UDP upload,Zephyr,reproduced,True

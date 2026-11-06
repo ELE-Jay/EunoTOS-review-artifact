@@ -24,7 +24,7 @@ Thread-Metric: task and IPC (3) & Kernel & \covexisting & \covexisting & \covexi
 % coverage-row: tm-irq
 Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \covexisting & \covnew & \covuntested & \covnew \\
 % coverage-row: hartstone-ph3
-Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested & \covuntested \\
+Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested \\
 % coverage-row: zperf
 zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covnew & \covnew \\
 % coverage-row: semaphore
@@ -50,7 +50,7 @@ and the pinned Tenon application~\cite{tenonrtos}; $\times$ means absent from th
 $r$: our unchanged-source Zephyr~3.7 reproduction, not historical upstream execution.
 Blue $\checkmark$ and $\times$: measured and unmeasured here; $^{*}$ has no upstream counterpart.
 Thread-Metric separates preemption, message and semaphore from two IRQ cases.
-Only starred B1 quantities feed Overall; PH3 uses B0. Pi networking uses Linux sockets and a PL011 bridge; Pi energy includes its host and RAM covers the instrumented guest.
+Only starred B1 quantities feed Overall; Earlier PH3 uses B0; Contiki PH3 uses cooperative B1 processes. Pi networking uses Linux sockets and a PL011 bridge; Pi energy includes its host and RAM covers the instrumented guest.
 Contiki-NG zperf runs in a process with IDF networking; RIOT zperf includes blocking and truncation adapters.
 Configuration and case bindings are in the evidence index.
 \end{minipage}
