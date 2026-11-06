@@ -9,7 +9,7 @@ the former landing page; the historical replay remains available below.
   and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
   ratios, overall ranks and the 235 preference profiles from **48 archived
   measurement summaries**, including the correct acquisition-block reference.
-- **Table 1:** 70 benchmark-target cells, **5 still unmeasured**.
+- **Table 1:** 70 benchmark-target cells, **4 still unmeasured**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicitly unmeasured. Coverage tests do not replace the common-task
@@ -39,7 +39,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `f4e68423b9222bef9ab66c8bf96c0ecc159afa29ff6c9e6655ae5f7ffd75ffd8`.
+ZIP SHA-256: `0b1501e8d6ed568621d32ffed8237fd94a752a59e5dd60c521b89488383c37b3`.
 
 ## Preserved historical raw-evidence replay
 

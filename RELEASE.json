@@ -1,9 +1,9 @@
 {
-  "release": "eunobench-anonymous-refresh-20261106-v6",
-  "paper_source_commit": "2d27cf4",
-  "table_sha256": "c499a3e4d884b7ef87b0e01fc3f01e40b3f6ceb897320d314c4936bbe4e2c1c7",
-  "archive_sha256": "f4e68423b9222bef9ab66c8bf96c0ecc159afa29ff6c9e6655ae5f7ffd75ffd8",
-  "remaining_coverage_cells": 5,
+  "release": "eunobench-anonymous-refresh-20261106-v7",
+  "paper_source_commit": "6bf70e5",
+  "table_sha256": "a10f21c32a1a18a9fc35cedfd3b7e9cf17957770eac2ace2937c581b21c8bd80",
+  "archive_sha256": "0b1501e8d6ed568621d32ffed8237fd94a752a59e5dd60c521b89488383c37b3",
+  "remaining_coverage_cells": 4,
   "offline_checks": [
     {
       "name": "current",

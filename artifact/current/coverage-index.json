@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-06T15:53:49.217888+00:00",
+  "created_utc": "2026-11-06T16:27:33.427565+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -514,6 +514,12 @@
       "sha256": "ed49e6c71d91a0971035c13cd336a203eaa736a21d45eb6cf843bf8453d88838",
       "bytes": 3284,
       "scope": "One complete B1 reset of PH3 on five native Contiki processes/etimers, unchanged SEI-derived C Small_Whetstone and PH3 release/step rules; full first-loss termination. Hosted by ESP-IDF/FreeRTOS at 240 MHz, one core, 1-ms event timers; completion clock is quantized to 10 us. Cooperative event dispatch, no preemptive-priority emulation; this is measured workload coverage, not a pooled preemptive PH3 capacity or B1 Overall input. First loss at step 0."
+    },
+    "coverage-addition-19": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-ph3-Pi-KVM.json",
+      "sha256": "0f633dcb891c63a9790af29e67386dd094e0fd2d2c43e5353b40a1f707255750",
+      "bytes": 153351,
+      "scope": "One complete native Tenon Pi4B one-vCPU 128-MiB KVM PH3 guest; unchanged SEI-derived C workload and contiguous 10-second PH3 steps to first loss. Baseline and integer workload increment are fixed from pre-trial calibration at 20% and 2.5% targets per SEI section 5.2; no post-result selection. Native priority tasks, semaphores and tick sleeps, fixed static OpenLibm. Native clock resolution is separately declared; no ESP32 or common-task score claim."
     }
   },
   "five_verdicts": [
@@ -623,8 +629,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v7/coverage-evidence.json",
-    "sha256": "b9dc98d41ef83cb629ce6e95a299637862f3d5c41d549fa1ed9f981225cd43c4"
+    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v8/coverage-evidence.json",
+    "sha256": "8d742a26b51b140d517cb30c8ba317cd2c16184afdadac95546a8ef076114c68"
   },
   "entries": [
     {
@@ -1278,7 +1284,7 @@
           }
         },
         "Pi KVM": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -1288,13 +1294,20 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 1,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "PH3"
+            ],
+            "configurations": [
+              "Native Tenon Pi4B KVM PH3"
+            ],
+            "platform": "Raspberry Pi 4B one-vCPU KVM guest",
+            "evidence": [
+              "coverage-addition-19"
+            ],
+            "boundary": "One complete native Tenon Pi4B one-vCPU 128-MiB KVM PH3 guest; unchanged SEI-derived C workload and contiguous 10-second PH3 steps to first loss. Baseline and integer workload increment are fixed from pre-trial calibration at 20% and 2.5% targets per SEI section 5.2; no post-result selection. Native priority tasks, semaphores and tick sleeps, fixed static OpenLibm. Native clock resolution is separately declared; no ESP32 or common-task score claim."
           }
         }
       }
