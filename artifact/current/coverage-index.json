@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-06T15:08:08.574123+00:00",
+  "created_utc": "2026-11-06T15:19:52.202555+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -496,6 +496,12 @@
       "sha256": "d9d66e9c0edb1f604ad186a06dddc0a51fb273aea6f52f5a4ced6516af705cc1",
       "bytes": 3354,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native NuttX task groups and priority semaphore waits, native deadlines and IRQ-safe try/post; reset releases retired native semaphore instances with native posts, bounded byte pipe uses native semaphores. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+    },
+    "coverage-addition-16": {
+      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-AliOS Things.json",
+      "sha256": "4dcc9ffd6648bdca165517b0d8f051e82c350317decd9497f27aa90466392c53",
+      "bytes": 3475,
+      "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native Rhino priority tasks and semaphores, native sleep and reset cancellation by retiring deleted static objects. Public take rejects ISR context; the no-wait compatibility operation reads/decrements the native object count under CPU IRQ lock, without faking interrupt context. Byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
     }
   },
   "five_verdicts": [
@@ -605,8 +611,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v4/coverage-evidence.json",
-    "sha256": "001137098d3b676e27dc54ecdc0c3b263a1ce1c0cb9cc2f6374b3e912e700071"
+    "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/integration-v5/coverage-evidence.json",
+    "sha256": "38376cb678467531df3168f80c4734324796ad3f1452fa3d6bdb0a658927c8b4"
   },
   "entries": [
     {
@@ -1729,7 +1735,7 @@
           }
         },
         "AliOS Things": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1737,13 +1743,43 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 1,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "test_k_sem_define",
+              "test_sem_thread2thread",
+              "test_sem_thread2isr",
+              "test_k_sem_init",
+              "test_sem_reset",
+              "test_sem_reset_waiting",
+              "test_sem_count_get",
+              "test_sem_give_from_isr",
+              "test_sem_give_from_thread",
+              "test_sem_take_no_wait",
+              "test_sem_take_no_wait_fails",
+              "test_sem_take_timeout_fails",
+              "test_sem_take_timeout",
+              "test_sem_take_timeout_forever",
+              "test_sem_take_timeout_isr",
+              "test_sem_take_multiple",
+              "test_k_sem_correct_count_limit",
+              "test_sem_give_take_from_isr",
+              "test_sem_multiple_threads_wait",
+              "test_sem_measure_timeouts",
+              "test_sem_measure_timeout_from_thread",
+              "test_sem_multiple_take_and_timeouts",
+              "test_sem_multi_take_timeout_diff_sem",
+              "test_sem_queue_mutual_exclusion"
+            ],
+            "configurations": [
+              "AliOS Things B1 native counting-semaphore compatibility port"
+            ],
+            "platform": "ESP32 B1",
+            "evidence": [
+              "coverage-addition-16"
+            ],
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native Rhino priority tasks and semaphores, native sleep and reset cancellation by retiring deleted static objects. Public take rejects ISR context; the no-wait compatibility operation reads/decrements the native object count under CPU IRQ lock, without faking interrupt context. Byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
           }
         },
         "Contiki-NG": {

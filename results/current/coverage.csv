@@ -31,7 +31,7 @@ semaphore,Zephyr semaphore (24 cases),FreeRTOS,added,True
 semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True
 semaphore,Zephyr semaphore (24 cases),NuttX,added,True
 semaphore,Zephyr semaphore (24 cases),RIOT,added,True
-semaphore,Zephyr semaphore (24 cases),AliOS Things,unmeasured,False
+semaphore,Zephyr semaphore (24 cases),AliOS Things,added,True
 semaphore,Zephyr semaphore (24 cases),Contiki-NG,unmeasured,False
 semaphore,Zephyr semaphore (24 cases),Pi KVM,unmeasured,False
 pi-six,Rhealstone and timer (6 cases),FreeRTOS,added,True
