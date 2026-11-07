@@ -37,7 +37,7 @@ def main(output):
    if tested!=(display!='unmeasured'):raise ValueError('Coverage status disagrees')
    if tested and not cell['eunotos']['evidence']:raise ValueError('Coverage has no evidence binding')
    if not tested:pending.append([entry['id'],system])
-   expected.append('\\'+symbols[display]);coverage_rows.append([entry['id'],entry['name'],system,display,tested]);count+=1
+   expected.append('\\'+('covhosted' if cell.get('hosted_thread_profile') else symbols[display]));coverage_rows.append([entry['id'],entry['name'],system,display,tested]);count+=1
   fragment=table.split('% coverage-row: '+entry['id']+'\n',1)[1].split('\\\\',1)[0]
   if not fragment.rstrip().endswith(' & '.join(expected)):raise ValueError('Table and index differ: '+entry['id'])
  if count!=70:raise ValueError('Coverage universe differs')

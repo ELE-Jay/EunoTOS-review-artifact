@@ -5,7 +5,7 @@
   "reference": 1,
   "preference_profiles": 235,
   "coverage_cells": 70,
-  "unmeasured_cells": 4,
+  "unmeasured_cells": 3,
   "pending": [
     [
       "tm-core",
@@ -13,10 +13,6 @@
     ],
     [
       "tm-irq",
-      "Contiki-NG"
-    ],
-    [
-      "semaphore",
       "Contiki-NG"
     ],
     [

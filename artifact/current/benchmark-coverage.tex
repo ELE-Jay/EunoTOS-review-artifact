@@ -10,6 +10,7 @@
 \definecolor{coverageblue}{RGB}{20,90,128}
 \newcommand{\covexisting}{\ensuremath{\checkmark\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covnew}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
+\newcommand{\covhosted}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{h}}}}
 \newcommand{\covreproduced}{\ensuremath{\checkmark^{r}\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covmeasured}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covuntested}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\times}}}
@@ -28,7 +29,7 @@ Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \c
 % coverage-row: zperf
 zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covnew & \covnew \\
 % coverage-row: semaphore
-Zephyr semaphore (24 cases) & Correctness & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covuntested & \covnew \\
+Zephyr semaphore (24 cases) & Correctness & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covhosted & \covnew \\
 % coverage-row: pi-six
 Rhealstone and timer (6 cases) & Kernel & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested & \covnew \\
 \addlinespace[2pt]
@@ -49,7 +50,8 @@ Left: CMRX and IoTJ Thread-Metric results~\cite{cmrx,silva2019}, the SEI Ada PH 
 and the pinned Tenon application~\cite{tenonrtos}; $\times$ means absent from these references, not every external port.
 $r$: our unchanged-source Zephyr~3.7 reproduction, not historical upstream execution.
 Blue $\checkmark$ and $\times$: measured and unmeasured here; $^{*}$ has no upstream counterpart.
-Thread-Metric separates preemption, message and semaphore from two IRQ cases.
+$h$: Contiki process-dispatched thread suites with IDF/FreeRTOS priority, IPC and IRQ services; not native Contiki preemption.
+Thread-Metric separates three task/IPC cases from two IRQ cases.
 Only starred B1 quantities feed Overall. PH3 uses B0, cooperative B1 processes for Contiki, or a target-calibrated KVM guest for Pi. Pi networking uses Linux sockets and a PL011 bridge; Pi energy includes its host and RAM covers the instrumented guest.
 Contiki-NG zperf runs in a process with IDF networking; RIOT zperf includes blocking and truncation adapters.
 Configuration and case bindings are in the evidence index.
