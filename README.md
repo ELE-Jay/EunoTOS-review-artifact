@@ -18,7 +18,7 @@ the former landing page; the historical replay remains available below.
   energy or RAM. The private production raw replay reconstructs all 48 inputs
   and 235 preference profiles unchanged. Current public replay additionally
   rejects missing or altered deployment attribution.
-- **Table 1:** 70 benchmark-target cells, **6 without qualifying full-subset coverage**.
+- **Table 1:** 70 benchmark-target cells, **5 without qualifying full-subset coverage**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicit. A cross includes measured diagnostics that do not qualify
@@ -43,6 +43,24 @@ the former landing page; the historical replay remains available below.
   guests were measured; six valid preemption/semaphore guests were reused.
   The old custom-ring message results are not relabeled or reused as the new
   message result. This fills one cell; it does not change any B1 score.
+- **Native guest networking completion:** Pi KVM zperf now executes the
+  unchanged TCP and UDP cores with guest lwIP and a virtio NIC. The host is an
+  independent peer behind QEMU SLIRP, not a socket RPC service. Three fresh
+  guests per protocol, native kernel/dependency bindings and UDP wire totals
+  were checked. The **p** mark retains the isolated wakeup/timeout fixes.
+  Original 100-Hz UDP pacing achieves a lower rate than its request; coverage
+  does not establish a common-rate performance comparison. Previous RPC and
+  incompatible-receiver captures remain excluded.
+- **Native Contiki networking completion:** the **n** mark qualifies the
+  unchanged TCP/UDP cores on Contiki-NG's official **native/Linux** target,
+  using its own uIP endpoints, native process/event loop and TUN link. Linux
+  supplies the native platform's clock/select/link and an independent peer.
+  Three fresh processes per protocol, data-socket ownership, receiver totals
+  and the complete UDP finish/statistics exchange were checked. This is
+  neither an ESP32 measurement nor a repair of Contiki's hosted B1 network
+  score. Five original kernel/preemption subsets remain without qualifying
+  coverage in the frozen cooperative model; no host-thread substitution fills
+  them.
 - Semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
@@ -73,7 +91,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `61ea5c1664103bf5ee95b14d527a140b18cf2d05de95634809e14531306734d3`.
+ZIP SHA-256: `348f6c7deebe4c5bf4c6cf6de2cc305c6b84d76b10f9359ed3fae71349092514`.
 
 ## Preserved historical raw-evidence replay
 

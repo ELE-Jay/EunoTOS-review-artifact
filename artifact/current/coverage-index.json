@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T11:10:42.461287+00:00",
+  "created_utc": "2026-11-07T11:33:09.470169+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -508,6 +508,12 @@
       "sha256": "b645363b486e75450e9919bec9e9c9bde64fbfe28d87fe72425660d462961596",
       "bytes": 7120,
       "scope": "Native guest execution coverage of unchanged Zephyr 3.7 synchronous zperf cores, not bare original Tenon networking support or B1 score. lwIP dependency and API adaptation added; isolated previously qualified wakeup/timeout fixes retained. Native coarse UDP pacing and receiver versions explicitly reported. Prior Linux-socket RPC and malformed-ACK cohorts remain excluded."
+    },
+    "coverage-addition-18": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/qualified-contiki-native-zperf.json",
+      "sha256": "f2ad730d5ce338ae065c2fbdfc0782987da272f51f73164b8bdf243ab92cc1d9",
+      "bytes": 8162,
+      "scope": "Unchanged original TCP/UDP core execution on explicit Contiki native/Linux configuration. A bounded socket facade preserves native uIP ownership and runs the original platform loop while blocked, with point-to-point neighbor autofill and link-sized TCP segments. No FreeRTOS/IDF data sockets or replacement scheduler. Different target, not an ESP32 score; old hosted captures remain excluded."
     }
   },
   "five_verdicts": [
@@ -614,11 +620,12 @@
     "added": "cross-to-check within fixed reference",
     "reproduced": "check-r-to-check (unchanged-source reproduction)",
     "measured": "right-side check only",
+    "native": "cross-to-check on explicitly declared Contiki native/Linux target, not B1",
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/integration-v2/coverage-evidence.json",
-    "sha256": "545115786a9473fb066582d15be53ad55393fc99401c05ed1bc29401eed820bf"
+    "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/integration-v4/coverage-evidence.json",
+    "sha256": "ace426701cce9b8fc91c184a4c6da5991145d2c0c68cf76fedc47437341f61da"
   },
   "entries": [
     {
@@ -1463,7 +1470,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1474,13 +1481,23 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 6,
+          "implementation_marker": "native",
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "IDF/lwIP and FreeRTOS supply sockets, pacing clock and yield; not the Contiki network service"
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "Contiki native/Linux uIP zperf with point-to-point TUN"
+            ],
+            "platform": "Contiki-NG official native/Linux x86-64 IPv6 target; not ESP32 B1",
+            "evidence": [
+              "coverage-addition-18"
+            ],
+            "boundary": "Unchanged original TCP/UDP core execution on explicit Contiki native/Linux configuration. A bounded socket facade preserves native uIP ownership and runs the original platform loop while blocked, with point-to-point neighbor autofill and link-sized TCP segments. No FreeRTOS/IDF data sockets or replacement scheduler. Different target, not an ESP32 score; old hosted captures remain excluded.",
+            "replaces_frozen_diagnostic": "IDF/lwIP and FreeRTOS supply sockets, pacing clock and yield; not the Contiki network service"
           }
         },
         "Pi KVM": {

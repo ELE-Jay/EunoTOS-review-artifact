@@ -12,6 +12,7 @@
 \newcommand{\covnew}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covadapted}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{a}}}}
 \newcommand{\covpatched}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{p}}}}
+\newcommand{\covnative}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{n}}}}
 \newcommand{\covreproduced}{\ensuremath{\checkmark^{r}\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covmeasured}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covuntested}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\times}}}
@@ -28,7 +29,7 @@ Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \cov
 % coverage-row: hartstone-ph3
 Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested & \covnew \\
 % coverage-row: zperf
-zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covuntested & \covpatched \\
+zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covnative & \covpatched \\
 % coverage-row: semaphore
 Zephyr semaphore (24 cases) & Correctness & \covadapted & \covreproduced & \covadapted & \covadapted & \covadapted & \covuntested & \covpatched \\
 % coverage-row: pi-six
@@ -50,9 +51,10 @@ Allocated-RAM profiling$^{*}$ & Memory & \covmeasured & \covmeasured & \covmeasu
 Left: fixed CMRX, IoTJ, SEI and Tenon references~\cite{cmrx,silva2019,hartstone,tenonrtos}; $\times$ denotes absence from this corpus.
 $r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: qualifying coverage and no qualifying full subset; $^{*}$ has no upstream counterpart.
 $a$: original correctness bodies through a compatibility API. $p$: separately patched Tenon wakeup/timeout configuration; zperf uses guest lwIP and virtio, not host sockets.
-Host-backed kernel/socket, cooperative PH3 and unverified custom-queue diagnostics do not qualify as original-OS coverage.
+$n$: Contiki native/Linux uIP on a TUN link, not ESP32 or IDF networking.
+Host-backed kernel and socket, cooperative PH3 and unverified custom-queue diagnostics do not qualify as original-OS coverage.
 Only starred B1 quantities feed Overall and cover declared deployments. PH3 uses B0 or target-calibrated Pi guests.
-Pi UDP uses Linux/PL011; Pi energy includes the host, RAM the instrumented guest. Contiki task, network and resource measurements include its IDF host. Case and configuration bindings are in the evidence index.
+Starred Pi UDP uses Linux/PL011; Pi energy includes the host, RAM the instrumented guest. Starred Contiki B1 measurements include its IDF host. Case and configuration bindings are in the evidence index.
 \end{minipage}
 \endgroup
 \end{table*}
