@@ -74,7 +74,7 @@ the former landing page; the historical replay remains available below.
   return-code mapping remain explicit adapter behavior. Timeouts round up by
   one native tick; the original busy-wait call also uses native clock granularity.
   Empty infinite waits and thread creation fail closed. Early-return, missing
-  timer, missing-case and false-full-subset controls are rejected. This is
+  timer, missing-case and false-full-subset controls are rejected.
   Three further ISR-only counter cases execute on ESP32 B1 in three fresh
   resets, each with 27 real CPU_FROM_CPU2 interrupts and hardware/OS ISR-context
   checks. They use unchanged Contiki process dispatch and PT_SEM, with IDF
