@@ -23,6 +23,10 @@ the former landing page; the historical replay remains available below.
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicit. A cross includes measured diagnostics that do not qualify
   for the original OS/subset; it does not necessarily mean no execution exists.
+  The current five non-full cells comprise **four N/A subsets** whose required
+  native services are absent from the frozen cooperative model, and **one
+  partially executed semaphore subset (7/24 original cases)**. Neither is a
+  complete-subset check; the universe remains 70 cells, with 65 complete.
   Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
@@ -58,10 +62,18 @@ the former landing page; the historical replay remains available below.
   Three fresh processes per protocol, data-socket ownership, receiver totals
   and the complete UDP finish/statistics exchange were checked. This is
   neither an ESP32 measurement nor a repair of Contiki's hosted B1 network
-  score. Five original kernel/preemption subsets remain without qualifying
-  coverage in the frozen cooperative model; no host-thread substitution fills
-  them.
-- Semaphore cells marked **a** execute unchanged kernel-mode bodies through a
+  score. Four original thread/preemption subsets are structurally inapplicable
+  to the frozen cooperative model; no host-thread substitution fills them.
+- **Native semaphore partial coverage:** seven unchanged Zephyr counter cases
+  pass in three fresh Contiki native/Linux processes. PT_SEM provides native
+  initialization, count, signal and immediately available take; the explicit
+  compatibility layer provides limit, reset, parameter and return-code mapping.
+  Blocking waits and thread creation fail closed. Counter-fault, missing-case
+  and false-full-subset controls are rejected. This is **7/24**, not a full
+  24-case semaphore result and not a new leaderboard input. The other 17 cases
+  remain unexecuted and are named in the bound index. Three processes contain
+  21 case invocations; those are not 21 independent OS experiments.
+- Complete semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
   target supplies an unchanged native Zephyr API. **p** additionally identifies
@@ -91,7 +103,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `348f6c7deebe4c5bf4c6cf6de2cc305c6b84d76b10f9359ed3fae71349092514`.
+ZIP SHA-256: `8e8cb58499007c2ff9ddae4ef3fc87c93dc3abcc32962ea1c29ee740b6c6e68e`.
 
 ## Preserved historical raw-evidence replay
 

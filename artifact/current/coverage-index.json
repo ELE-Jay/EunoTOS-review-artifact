@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T11:33:09.470169+00:00",
+  "created_utc": "2026-11-07T12:42:07.984754+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -514,6 +514,12 @@
       "sha256": "f2ad730d5ce338ae065c2fbdfc0782987da272f51f73164b8bdf243ab92cc1d9",
       "bytes": 8162,
       "scope": "Unchanged original TCP/UDP core execution on explicit Contiki native/Linux configuration. A bounded socket facade preserves native uIP ownership and runs the original platform loop while blocked, with point-to-point neighbor autofill and link-sized TCP segments. No FreeRTOS/IDF data sockets or replacement scheduler. Different target, not an ESP32 score; old hosted captures remain excluded."
+    },
+    "contiki-native-subset-applicability": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-applicability-20261107-v1/qualified-partial-and-applicability-v2.json",
+      "sha256": "555e6540a3b69372fd654f3b294ab709ebaf50582bafa676754924f2f06b01d6",
+      "bytes": 7218,
+      "scope": "Seven unchanged original counter cases, three fresh processes. The compatibility layer supplies count limit, validation, reset and return-code mapping; native PT_SEM performs init, count, signal and immediately available take. No blocking, priority, IRQ or full-suite conformance. The other original subsets require stackful priority threads absent from this frozen model. Native hardware interrupts are not equated with priority-thread scheduling. All 70 cells and original test denominators remain."
     }
   },
   "five_verdicts": [
@@ -621,11 +627,13 @@
     "reproduced": "check-r-to-check (unchanged-source reproduction)",
     "measured": "right-side check only",
     "native": "cross-to-check on explicitly declared Contiki native/Linux target, not B1",
+    "partial": "executed original cases over the full original denominator; not complete-subset coverage",
+    "inapplicable": "full original subset requires services absent from the frozen execution model; evidence-backed scope, not an OS failure",
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/integration-v4/coverage-evidence.json",
-    "sha256": "ace426701cce9b8fc91c184a4c6da5991145d2c0c68cf76fedc47437341f61da"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-applicability-20261107-v1/integration-v2/coverage-evidence.json",
+    "sha256": "1bcb0b3e8ea355a50f55fb07acb78d795799dd1079575219c6ca14b5606d17de"
   },
   "entries": [
     {
@@ -810,12 +818,17 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 0,
+          "coverage_status": "not_applicable",
+          "implementation_marker": "inapplicable",
           "eunotos": {
             "tested": false,
             "cases": [],
             "configurations": [],
-            "evidence": [],
-            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
+            "evidence": [
+              "contiki-native-subset-applicability"
+            ],
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers",
+            "applicability_reason": "The full three-case cell includes unchanged preemptive_scheduling: independently suspended stackful threads and immediate priority preemption."
           }
         },
         "Pi KVM": {
@@ -1029,12 +1042,17 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 0,
+          "coverage_status": "not_applicable",
+          "implementation_marker": "inapplicable",
           "eunotos": {
             "tested": false,
             "cases": [],
             "configurations": [],
-            "evidence": [],
-            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
+            "evidence": [
+              "contiki-native-subset-applicability"
+            ],
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers",
+            "applicability_reason": "The two-case cell includes interrupt_preemption_processing: an actual ISR resumes a higher-priority blocked thread and that thread preempts the interrupted worker."
           }
         },
         "Pi KVM": {
@@ -1265,12 +1283,17 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 0,
+          "coverage_status": "not_applicable",
+          "implementation_marker": "inapplicable",
           "eunotos": {
             "tested": false,
             "cases": [],
             "configurations": [],
-            "evidence": [],
-            "reason": "Cooperative event dispatch replaces PH3 priority/preemptive release semantics; retain as a derived workload diagnostic"
+            "evidence": [
+              "contiki-native-subset-applicability"
+            ],
+            "reason": "Cooperative event dispatch replaces PH3 priority/preemptive release semantics; retain as a derived workload diagnostic",
+            "applicability_reason": "The original priority/preemptive PH3 release model is not supplied by cooperative process/etimer dispatch. The completed cooperative first-loss run is a derived diagnostic, not qualifying original PH3 coverage."
           }
         },
         "Pi KVM": {
@@ -1825,13 +1848,52 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 3,
+          "coverage_status": "partial",
+          "implementation_marker": "partial",
           "eunotos": {
             "tested": false,
             "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
+            "configurations": [
+              "Contiki native/Linux PT_SEM immediate counter compatibility API"
+            ],
+            "evidence": [
+              "contiki-native-subset-applicability"
+            ],
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers",
+            "applicability_reason": "The complete 24-case suite needs synchronous blocking C calls, priority-ordered native waiters, timeout cancellation, reset and real ISR operations; PT_SEM_WAIT is a yielding protothread macro, not that interface.",
+            "partial_coverage": {
+              "passed_cases": [
+                "test_k_sem_define",
+                "test_k_sem_init",
+                "test_sem_count_get",
+                "test_sem_give_from_thread",
+                "test_sem_take_no_wait",
+                "test_sem_take_no_wait_fails",
+                "test_k_sem_correct_count_limit"
+              ],
+              "original_total": 24,
+              "unexecuted_cases": [
+                "test_sem_thread2thread",
+                "test_sem_thread2isr",
+                "test_sem_reset",
+                "test_sem_reset_waiting",
+                "test_sem_give_from_isr",
+                "test_sem_take_timeout_fails",
+                "test_sem_take_timeout",
+                "test_sem_take_timeout_forever",
+                "test_sem_take_timeout_isr",
+                "test_sem_take_multiple",
+                "test_sem_give_take_from_isr",
+                "test_sem_multiple_threads_wait",
+                "test_sem_measure_timeouts",
+                "test_sem_measure_timeout_from_thread",
+                "test_sem_multiple_take_and_timeouts",
+                "test_sem_multi_take_timeout_diff_sem",
+                "test_sem_queue_mutual_exclusion"
+              ]
+            },
+            "platform": "Contiki-NG native/Linux x86-64; no host synchronization or scheduling provider"
           }
         },
         "Pi KVM": {
@@ -2085,12 +2147,17 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 0,
+          "coverage_status": "not_applicable",
+          "implementation_marker": "inapplicable",
           "eunotos": {
             "tested": false,
             "cases": [],
             "configurations": [],
-            "evidence": [],
-            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
+            "evidence": [
+              "contiki-native-subset-applicability"
+            ],
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers",
+            "applicability_reason": "The full six-case app needs stackful task yield/suspend/resume and runtime priority changes, including the original preemption body."
           }
         },
         "Pi KVM": {

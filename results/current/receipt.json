@@ -30,5 +30,9 @@
   ],
   "scope": "Current score arithmetic and declared coverage bindings; new raw captures, ELF, RAM lifecycle and new coverage validators remain private. Legacy subset has its separate raw replay.",
   "new_acquisitions": 0,
-  "new_model_calls": 0
+  "new_model_calls": 0,
+  "complete_cells": 65,
+  "partial_cells": 1,
+  "not_applicable_cells": 4,
+  "unresolved_unmeasured_cells": 0
 }
