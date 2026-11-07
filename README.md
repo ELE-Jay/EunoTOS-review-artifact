@@ -27,6 +27,10 @@ the former landing page; the historical replay remains available below.
   native services are absent from the frozen cooperative model, and **one
   partially executed semaphore subset (13/24 original cases)**. Neither is a
   complete-subset check; the universe remains 70 cells, with 65 complete.
+  A **separate native MT extension on bare STM32F407 completes 24/24** in
+  three independent resets. Its result is displayed alongside the cooperative
+  baseline's 13/24, not substituted for that configuration. It uses no host
+  kernel and does not alter the ESP32 leaderboard.
   Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
@@ -82,7 +86,8 @@ the former landing page; the historical replay remains available below.
   worker-thread substitute. The **i** marker identifies these three cases;
   **n** identifies the ten Linux cases. The total is **13/24 across three images
   and two platforms**, not a full-suite run or a new leaderboard input. The
-  other 11 cases have no qualifying completed run and are named in the index.
+  other 11 cases have no qualifying completed run on that frozen cooperative
+  configuration and are named in the index.
   Their new fail-closed probes are described below. The six Linux
   process executions and three board resets contain 39 case invocations;
   those are not 39 independent experiments. Original board firmware was restored
@@ -96,8 +101,21 @@ the former landing page; the historical replay remains available below.
   at worker creation, two at the earlier pipe guard); these are admission
   controls, not new passes or OS functional failures. Eleven false-pass inputs
   are rejected by the formal entry. The index records each case and source
-  path. Coverage remains **13/24**, without shrinking the denominator or
+  path. Frozen cooperative coverage remains **13/24**, without shrinking the denominator or
   substituting a host kernel, direct callbacks or an adapter scheduler.
+- **Separate native MT extension, 24/24:** unchanged legacy Contiki MT lifecycle
+  code is combined with an explicitly added Cortex-M context port and native
+  priority scheduling, waits, timeout, reset cancellation, join and byte-pipe
+  services. These services belong to a separately named OS extension, not to
+  FreeRTOS or the benchmark adapter. The same 24 original kernel-mode test
+  bodies pass on bare STM32F407 in three independent resets; each records
+  4,323 checked assertions and 28 actual EXTI interrupts. A non-yielding
+  two-worker control confirms hardware tick preemption. A real image with
+  deliberately FIFO-only waiter selection fails original case 16. Correctness
+  logs and an independent completion bitmask are read from target RAM over
+  SWD because USART did not deliver data. Original Flash is restored and
+  verified after both campaigns. The bounded public index includes commitments
+  and summaries; new source snapshots, images and raw captures remain private.
 - Complete semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
@@ -128,7 +146,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `13810297d44c54207e4986710fbdc0a43e798e4df0fc5f2ffb241cf49d6e9165`.
+ZIP SHA-256: `2ce9c27d420cb4c168c0d49cdae830fe860060e383efc17da290722f37899e75`.
 
 ## Preserved historical raw-evidence replay
 
