@@ -5,15 +5,11 @@
   "reference": 1,
   "preference_profiles": 235,
   "coverage_cells": 70,
-  "unmeasured_cells": 8,
+  "unmeasured_cells": 7,
   "pending": [
     [
       "tm-core",
       "Contiki-NG"
-    ],
-    [
-      "tm-core",
-      "Pi KVM"
     ],
     [
       "tm-irq",

@@ -1,9 +1,9 @@
 {
-  "release": "eunobench-anonymous-figure1-audit-20261107-v1",
-  "paper_source_commit": "541381c1255e3d0ae795f7e6acbecaee9cfee63d",
-  "table_sha256": "11979e7e9b0a35c7bdfe1b0ff485058e8cf1a1aa80fe47c06eb7614dff713caf",
-  "archive_sha256": "792fd3bb4bbc6e21eff6f56298a5abbe70dab09310aed4a6b24649fd817cca0f",
-  "remaining_coverage_cells": 8,
+  "release": "eunobench-anonymous-native-coverage-20261107-v1",
+  "paper_source_commit": "c712108e7f57005f6b93f900b45bf0ee370704fc",
+  "table_sha256": "f45f1006735a3410a17a4236ec055c55c3ffedde41f601263e69871caa3469e8",
+  "archive_sha256": "acec70dcf0f7108a7f6fdf44cba33082f2dcddc325889be5b1a3d670bc3ad544",
+  "remaining_coverage_cells": 7,
   "offline_checks": [
     {
       "name": "current",

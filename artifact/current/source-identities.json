@@ -4,8 +4,8 @@
     "sha256": "c779eaa0e44b26d11e31d7fae1ac9f4dc0ffdbf38eb12ba456eb46eaa48b453d"
   },
   "score_summary_sha256": "8118a620355016a27c812f98052fa1d02c01830b8dfcd35747343e67cdd572f2",
-  "coverage_index_sha256": "103c5250cceaa92c13d660afce4569946dc447f9f5e360a8af0e8450fae8ec9a",
-  "table_sha256": "11979e7e9b0a35c7bdfe1b0ff485058e8cf1a1aa80fe47c06eb7614dff713caf",
+  "coverage_index_sha256": "aa09d718c7dcbb24e7b85ca71365c4bc325e0aa1aad28175e64069806c3b8207",
+  "table_sha256": "f45f1006735a3410a17a4236ec055c55c3ffedde41f601263e69871caa3469e8",
   "coverage_verification": "Qualified on the private host; public hashes are commitments, not access to raw evidence.",
   "historical_raw_subset": "Unchanged v7 measured records; new arithmetic extension does not add independent resets."
 }

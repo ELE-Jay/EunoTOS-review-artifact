@@ -18,7 +18,7 @@ the former landing page; the historical replay remains available below.
   energy or RAM. The private production raw replay reconstructs all 48 inputs
   and 235 preference profiles unchanged. Current public replay additionally
   rejects missing or altered deployment attribution.
-- **Table 1:** 70 benchmark-target cells, **8 without qualifying full-subset coverage**.
+- **Table 1:** 70 benchmark-target cells, **7 without qualifying full-subset coverage**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicit. A cross includes measured diagnostics that do not qualify
@@ -28,14 +28,21 @@ the former landing page; the historical replay remains available below.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
   into the eight-configuration same-board leaderboard. Contiki-NG's hosted
   deployment and each measurement boundary remain explicit in the table.
-- **Coverage corrections (2026-11-07):** eight cells are excluded from original-OS
-  full-subset coverage. The four former Contiki **h** kernel-suite marks used
+- **Coverage corrections (2026-11-07):** the withdrawn diagnostic variants stay
+  excluded. The four former Contiki **h** kernel-suite marks used
   FreeRTOS services. Contiki zperf used IDF/lwIP, and Pi zperf forwarded socket
   operations to Linux. Contiki PH3 replaced priority/preemptive releases with
   cooperative event dispatch. Pi Thread-Metric core used an adapter-owned queue
   without established native-queue/nonblocking equivalence, so its partial
-  native subcases do not qualify the full three-case cell. All real runs,
+  native subcases alone did not qualify the full three-case cell. All real runs,
   including these diagnostics, remain preserved privately.
+- **Native Thread-Metric completion:** Pi KVM now qualifies the three-case
+  subset with a new Tenon **ukmpi mailbox** message image: sixteen owned
+  four-word payload buffers, native nonblocking try operations, and executed
+  copy, FIFO, caller-overwrite, empty and full controls. Three fresh message
+  guests were measured; six valid preemption/semaphore guests were reused.
+  The old custom-ring message results are not relabeled or reused as the new
+  message result. This fills one cell; it does not change any B1 score.
 - Semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
@@ -66,7 +73,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `792fd3bb4bbc6e21eff6f56298a5abbe70dab09310aed4a6b24649fd817cca0f`.
+ZIP SHA-256: `acec70dcf0f7108a7f6fdf44cba33082f2dcddc325889be5b1a3d670bc3ad544`.
 
 ## Preserved historical raw-evidence replay
 

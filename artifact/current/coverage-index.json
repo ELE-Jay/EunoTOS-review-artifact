@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T06:53:08.638884+00:00",
+  "created_utc": "2026-11-07T09:45:50.977190+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -496,6 +496,12 @@
       "sha256": "0f633dcb891c63a9790af29e67386dd094e0fd2d2c43e5353b40a1f707255750",
       "bytes": 153351,
       "scope": "One complete native Tenon Pi4B one-vCPU 128-MiB KVM PH3 guest; unchanged SEI-derived C workload and contiguous 10-second PH3 steps to first loss. Baseline and integer workload increment are fixed from pre-trial calibration at 20% and 2.5% targets per SEI section 5.2; no post-result selection. Native priority tasks, semaphores and tick sleeps, fixed static OpenLibm. Native clock resolution is separately declared; no ESP32 or common-task score claim."
+    },
+    "coverage-addition-16": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/qualified-pi-tm-core.json",
+      "sha256": "846721aa62daa34b6af3ceaca345ae704d8c0628fe0174d73a534b3e7e63835d",
+      "bytes": 6420,
+      "scope": "Three unchanged original Thread-Metric bodies; Tenon native tasks, semaphore and mailbox. New message image copies four native 64-bit words through two native try-operation mailboxes and owned buffers. Old custom-ring message diagnostics remain excluded. Existing valid preemption and semaphore images are reused; this is execution coverage, not an ESP32 score."
     }
   },
   "five_verdicts": [
@@ -605,8 +611,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-table1-service-audit-20261107-v2/integration/coverage-evidence.json",
-    "sha256": "937cfc5010fb5b7748471307dfc0715154f65d67253860144ca8d81a46fcd2bc"
+    "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/integration-v1/coverage-evidence.json",
+    "sha256": "4b05901d7feb63f02e86c3e7d9c6eb7f3d03f20ead8911a63bd489e1c1da663f"
   },
   "entries": [
     {
@@ -800,7 +806,7 @@
           }
         },
         "Pi KVM": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -812,13 +818,24 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 3,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "Message case uses an adapter-owned semaphore/ring queue; native-queue and nonblocking contract equivalence was not established. Two native subcases do not qualify the entire three-case cell"
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "Native Tenon preemption and semaphore images (reused)",
+              "Native Tenon ukmpi mailbox copy/try message image"
+            ],
+            "platform": "Raspberry Pi 4B one-vCPU 128-MiB KVM guest",
+            "evidence": [
+              "coverage-addition-16"
+            ],
+            "boundary": "Three unchanged original Thread-Metric bodies; Tenon native tasks, semaphore and mailbox. New message image copies four native 64-bit words through two native try-operation mailboxes and owned buffers. Old custom-ring message diagnostics remain excluded. Existing valid preemption and semaphore images are reused; this is execution coverage, not an ESP32 score.",
+            "replaces_frozen_diagnostic": "Message case uses an adapter-owned semaphore/ring queue; native-queue and nonblocking contract equivalence was not established. Two native subcases do not qualify the entire three-case cell"
           }
         }
       }
