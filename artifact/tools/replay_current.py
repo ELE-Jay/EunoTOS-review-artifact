@@ -47,6 +47,8 @@ def main(output):
     if not cell['eunotos']['evidence']:raise ValueError('Partial coverage has no evidence binding')
     hw=cell['eunotos'].get('hardware_irq_subset')
     if hw and (len(hw['passed_cases'])!=3 or not set(hw['passed_cases'])<=set(p['passed_cases']) or hw['board_resets']!=3 or hw['actual_irqs_per_reset']!=27 or hw['host_semaphore_provider'] is not False):raise ValueError('Native ISR ownership/coverage differs')
+    remaining=cell['eunotos'].get('remaining_original_semantics')
+    if remaining and (remaining['cases']!=p['unexecuted_cases'] or remaining['new_positive_cases']!=0 or remaining['denominator']!=24 or len(remaining['rows'])!=11 or any(r['benchmark_pass'] or r['benchmark_functional_failure'] or not r['thread_creation_paths'] for r in remaining['rows'])):raise ValueError('Unsupported-service controls cannot become benchmark passes/failures')
     markup+='{'+str(passed)+'}{'+str(total)+'}';partial_count+=1
    elif status=='not_applicable':
     if tested or not cell['eunotos']['evidence'] or not cell['eunotos'].get('applicability_reason'):raise ValueError('Applicability has no evidence')

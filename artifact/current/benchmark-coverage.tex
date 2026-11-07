@@ -53,7 +53,7 @@ Allocated-RAM profiling$^{*}$ & Memory & \covmeasured & \covmeasured & \covmeasu
 Left: fixed CMRX, IoTJ, SEI and Tenon references~\cite{cmrx,silva2019,hartstone,tenonrtos}; $\times$ denotes absence from this corpus.
 $r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: qualifying coverage and no qualifying full subset; $^{*}$ has no upstream counterpart.
 $a$: original correctness bodies through a compatibility API. $p$: separately patched Tenon wakeup/timeout configuration; zperf uses guest lwIP and virtio, not host sockets.
-$n$: Contiki native Linux (uIP on TUN), not B1. $i$: three B1 PT\_SEM IRQ cases; IDF boot and IRQ binding, no host semaphore. Fractions give executed original cases, not full-subset coverage. N/A: the full subset requires services absent from the frozen execution model.
+$n$: Contiki native Linux (uIP on TUN), not B1. $i$: three B1 PT\_SEM IRQ cases; IDF boot and IRQ binding, no host semaphore. Fractions give completed original cases, not full-subset coverage; the other 11 semaphore cases require native stackful workers absent from this Contiki model. N/A: the full subset requires services absent from the frozen execution model.
 Host-backed kernel and socket, cooperative PH3 and unverified custom-queue diagnostics do not qualify as original-OS coverage.
 Only starred B1 quantities feed Overall and cover declared deployments. PH3 uses B0 or target-calibrated Pi guests.
 Starred Pi UDP uses Linux/PL011; Pi energy includes the host, RAM the instrumented guest. Starred Contiki B1 measurements include its IDF host. Case and configuration bindings are in the evidence index.

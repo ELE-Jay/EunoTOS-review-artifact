@@ -82,10 +82,22 @@ the former landing page; the historical replay remains available below.
   worker-thread substitute. The **i** marker identifies these three cases;
   **n** identifies the ten Linux cases. The total is **13/24 across three images
   and two platforms**, not a full-suite run or a new leaderboard input. The
-  other 11 cases remain unexecuted and are named in the index. The six Linux
+  other 11 cases have no qualifying completed run and are named in the index.
+  Their new fail-closed probes are described below. The six Linux
   process executions and three board resets contain 39 case invocations;
   those are not 39 independent experiments. Original board firmware was restored
   and its full Flash digest verified.
+- **Remaining eleven semaphore cases:** every unchanged original body requires
+  worker creation, directly or through its helper. Their requests
+  include reset cancellation, priority/oldest-waiter selection, concurrent
+  timeouts and mutual exclusion. The frozen Contiki-NG cooperative model does
+  not supply the required native stackful worker service. Eleven registered
+  native-process probes stop at an explicit unsupported-service guard (nine
+  at worker creation, two at the earlier pipe guard); these are admission
+  controls, not new passes or OS functional failures. Eleven false-pass inputs
+  are rejected by the formal entry. The index records each case and source
+  path. Coverage remains **13/24**, without shrinking the denominator or
+  substituting a host kernel, direct callbacks or an adapter scheduler.
 - Complete semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
@@ -116,7 +128,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `4a9076acaddd155bd3117099c72b458a996b9803227bba1aed5532004f4cb4a3`.
+ZIP SHA-256: `13810297d44c54207e4986710fbdc0a43e798e4df0fc5f2ffb241cf49d6e9165`.
 
 ## Preserved historical raw-evidence replay
 

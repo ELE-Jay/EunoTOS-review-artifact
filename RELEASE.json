@@ -1,8 +1,8 @@
 {
-  "release": "eunobench-anonymous-contiki-irq-counter-20261107-v1",
-  "paper_source_commit": "eb54df2fcb6ed9cb2fde93d47ad057283d381573",
-  "table_sha256": "35148771407629ef26dc08928794bed7156cbfdb0d903f2e139675224083aca9",
-  "archive_sha256": "4a9076acaddd155bd3117099c72b458a996b9803227bba1aed5532004f4cb4a3",
+  "release": "eunobench-anonymous-contiki-remainder-20261107-v1",
+  "paper_source_commit": "56103a8a08a99f8daaefa2faaf2efadf718b6aa6",
+  "table_sha256": "1ad5d88dadf76d0317be2e8948a1e749dcf9c01f3eb60ca45ad7d73badb6ca86",
+  "archive_sha256": "13810297d44c54207e4986710fbdc0a43e798e4df0fc5f2ffb241cf49d6e9165",
   "remaining_coverage_cells": 5,
   "offline_checks": [
     {

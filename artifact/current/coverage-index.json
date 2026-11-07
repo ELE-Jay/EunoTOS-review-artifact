@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T13:32:30.553196+00:00",
+  "created_utc": "2026-11-07T14:08:29.750200+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -532,6 +532,12 @@
       "sha256": "a28ada166c46289566db878b53c0d3b51bcee1be19f44e27ecbb41338d6608d7",
       "bytes": 3899,
       "scope": "ESP32 B1 hardware CPU_FROM_CPU2 interrupts. Original C calls execute inside an unchanged Contiki process callback; semaphore counters and available takes use PT_SEM. IDF/FreeRTOS supplies boot, interrupt registration and ISR-context witness, not the tested semaphore or thread service. No stackful worker, host wait or preemption claim. Ten other cases reuse their archived Linux captures across two images. Thirteen partial cases across three images and two declared platforms, not a full-suite execution or a leaderboard input."
+    },
+    "contiki-remaining-semaphore-semantics": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-remainder-20261107-v1/remaining-case-audit.json",
+      "sha256": "db21e484a2a9181e35f4927680912cc966a21373d80aac2152c2a31f1814f2a6",
+      "bytes": 32783,
+      "scope": "All eleven original bodies reach a rejected unsupported service in an actual native Contiki process. These are fail-closed controls, not proof of a semaphore runtime failure or an implementation of the missing worker service. Source/helper paths and the frozen execution model establish the compatibility gap. Existing thirteen positive cases are reused without reruns."
     }
   },
   "five_verdicts": [
@@ -644,8 +650,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-irq-counter-20261107-v1/integration-v2/coverage-evidence.json",
-    "sha256": "bd5a1052b5bcc07e330e3463c4184c521727ece4c3a1356b106f19cc7a05e1d3"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-remainder-20261107-v1/integration-v1/coverage-evidence.json",
+    "sha256": "0421d25547ed41ea025d1e0ef1f52c748c0f21bc9124bfb859d58ad03477ad57"
   },
   "entries": [
     {
@@ -1875,7 +1881,8 @@
             "evidence": [
               "contiki-native-subset-applicability",
               "contiki-native-timeout-extension",
-              "contiki-native-hardware-irq-counter-extension"
+              "contiki-native-hardware-irq-counter-extension",
+              "contiki-remaining-semaphore-semantics"
             ],
             "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers",
             "applicability_reason": "The complete 24-case suite needs synchronous blocking C calls, priority-ordered native waiters, timeout cancellation, reset and real ISR operations; PT_SEM_WAIT is a yielding protothread macro, not that interface.",
@@ -1920,6 +1927,232 @@
               "board_resets": 3,
               "actual_irqs_per_reset": 27,
               "host_semaphore_provider": false
+            },
+            "remaining_original_semantics": {
+              "cases": [
+                "test_sem_thread2thread",
+                "test_sem_reset_waiting",
+                "test_sem_take_timeout",
+                "test_sem_take_timeout_forever",
+                "test_sem_take_timeout_isr",
+                "test_sem_take_multiple",
+                "test_sem_multiple_threads_wait",
+                "test_sem_measure_timeout_from_thread",
+                "test_sem_multiple_take_and_timeouts",
+                "test_sem_multi_take_timeout_diff_sem",
+                "test_sem_queue_mutual_exclusion"
+              ],
+              "new_positive_cases": 0,
+              "denominator": 24,
+              "model": "Frozen cooperative Contiki-NG; no native stackful worker/priority wait service",
+              "rows": [
+                {
+                  "case": "test_sem_thread2thread",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_thread2thread",
+                        "tsema_thread_thread",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 105
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_reset_waiting",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_reset_waiting",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 325
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_take_timeout",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_take_timeout",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 505
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_take_timeout_forever",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_take_timeout_forever",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 540
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_take_timeout_isr",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_take_timeout_isr",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 568
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_take_multiple",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_take_multiple",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 592
+                    },
+                    {
+                      "path": [
+                        "test_sem_take_multiple",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 592
+                    },
+                    {
+                      "path": [
+                        "test_sem_take_multiple",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 592
+                    },
+                    {
+                      "path": [
+                        "test_sem_take_multiple",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 592
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_multiple_threads_wait",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_multiple_threads_wait",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 832
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_measure_timeout_from_thread",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_measure_timeout_from_thread",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 939
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_multiple_take_and_timeouts",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_multiple_take_and_timeouts",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 999
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_multi_take_timeout_diff_sem",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_multi_take_timeout_diff_sem",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 1068
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                },
+                {
+                  "case": "test_sem_queue_mutual_exclusion",
+                  "status": "blocked_original_semantics",
+                  "thread_creation_paths": [
+                    {
+                      "path": [
+                        "test_sem_queue_mutual_exclusion",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 1127
+                    },
+                    {
+                      "path": [
+                        "test_sem_queue_mutual_exclusion",
+                        "k_thread_create"
+                      ],
+                      "caller_line": 1127
+                    }
+                  ],
+                  "missing_native_service": "Stackful worker creation and lifecycle; priority/waiter semantics where requested",
+                  "benchmark_pass": false,
+                  "benchmark_functional_failure": false
+                }
+              ],
+              "probe_scope": "Eleven fail-closed admission controls, not positive measurements or OS functional failures"
             }
           }
         },
