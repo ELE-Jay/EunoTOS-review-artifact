@@ -5,8 +5,25 @@
   "reference": 1,
   "preference_profiles": 235,
   "coverage_cells": 70,
-  "unmeasured_cells": 0,
-  "pending": [],
+  "unmeasured_cells": 4,
+  "pending": [
+    [
+      "tm-core",
+      "Contiki-NG"
+    ],
+    [
+      "tm-irq",
+      "Contiki-NG"
+    ],
+    [
+      "semaphore",
+      "Contiki-NG"
+    ],
+    [
+      "pi-six",
+      "Contiki-NG"
+    ]
+  ],
   "scope": "Current score arithmetic and declared coverage bindings; new raw captures, ELF, RAM lifecycle and new coverage validators remain private. Legacy subset has its separate raw replay.",
   "new_acquisitions": 0,
   "new_model_calls": 0

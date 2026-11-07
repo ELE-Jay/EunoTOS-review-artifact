@@ -4,14 +4,14 @@ tm-core,Thread-Metric: task and IPC (3),Zephyr,existing,True
 tm-core,Thread-Metric: task and IPC (3),NuttX,existing,True
 tm-core,Thread-Metric: task and IPC (3),RIOT,existing,True
 tm-core,Thread-Metric: task and IPC (3),AliOS Things,added,True
-tm-core,Thread-Metric: task and IPC (3),Contiki-NG,added,True
+tm-core,Thread-Metric: task and IPC (3),Contiki-NG,unmeasured,False
 tm-core,Thread-Metric: task and IPC (3),Pi KVM,added,True
 tm-irq,Thread-Metric: interrupts (2),FreeRTOS,added,True
 tm-irq,Thread-Metric: interrupts (2),Zephyr,existing,True
 tm-irq,Thread-Metric: interrupts (2),NuttX,added,True
 tm-irq,Thread-Metric: interrupts (2),RIOT,existing,True
 tm-irq,Thread-Metric: interrupts (2),AliOS Things,added,True
-tm-irq,Thread-Metric: interrupts (2),Contiki-NG,added,True
+tm-irq,Thread-Metric: interrupts (2),Contiki-NG,unmeasured,False
 tm-irq,Thread-Metric: interrupts (2),Pi KVM,added,True
 hartstone-ph3,Hartstone PH3,FreeRTOS,added,True
 hartstone-ph3,Hartstone PH3,Zephyr,added,True
@@ -32,14 +32,14 @@ semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True
 semaphore,Zephyr semaphore (24 cases),NuttX,added,True
 semaphore,Zephyr semaphore (24 cases),RIOT,added,True
 semaphore,Zephyr semaphore (24 cases),AliOS Things,added,True
-semaphore,Zephyr semaphore (24 cases),Contiki-NG,added,True
+semaphore,Zephyr semaphore (24 cases),Contiki-NG,unmeasured,False
 semaphore,Zephyr semaphore (24 cases),Pi KVM,added,True
 pi-six,Rhealstone and timer (6 cases),FreeRTOS,added,True
 pi-six,Rhealstone and timer (6 cases),Zephyr,added,True
 pi-six,Rhealstone and timer (6 cases),NuttX,added,True
 pi-six,Rhealstone and timer (6 cases),RIOT,added,True
 pi-six,Rhealstone and timer (6 cases),AliOS Things,added,True
-pi-six,Rhealstone and timer (6 cases),Contiki-NG,added,True
+pi-six,Rhealstone and timer (6 cases),Contiki-NG,unmeasured,False
 pi-six,Rhealstone and timer (6 cases),Pi KVM,added,True
 copy,Copy-checksum task$^{*}$,FreeRTOS,measured,True
 copy,Copy-checksum task$^{*}$,Zephyr,measured,True

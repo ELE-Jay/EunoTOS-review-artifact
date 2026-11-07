@@ -10,7 +10,6 @@
 \definecolor{coverageblue}{RGB}{20,90,128}
 \newcommand{\covexisting}{\ensuremath{\checkmark\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covnew}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
-\newcommand{\covhosted}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{h}}}}
 \newcommand{\covreproduced}{\ensuremath{\checkmark^{r}\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covmeasured}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covuntested}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\times}}}
@@ -21,17 +20,17 @@
  & & FreeRTOS & Zephyr & NuttX & RIOT & \shortstack{AliOS\\Things} & \shortstack{Contiki-\\NG} & \shortstack{Pi KVM\\configs.} \\
 \midrule
 % coverage-row: tm-core
-Thread-Metric: task and IPC (3) & Kernel & \covexisting & \covexisting & \covexisting & \covexisting & \covnew & \covhosted & \covnew \\
+Thread-Metric: task and IPC (3) & Kernel & \covexisting & \covexisting & \covexisting & \covexisting & \covnew & \covuntested & \covnew \\
 % coverage-row: tm-irq
-Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \covexisting & \covnew & \covhosted & \covnew \\
+Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \covexisting & \covnew & \covuntested & \covnew \\
 % coverage-row: hartstone-ph3
 Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew \\
 % coverage-row: zperf
 zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covnew & \covnew \\
 % coverage-row: semaphore
-Zephyr semaphore (24 cases) & Correctness & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covhosted & \covnew \\
+Zephyr semaphore (24 cases) & Correctness & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covuntested & \covnew \\
 % coverage-row: pi-six
-Rhealstone and timer (6 cases) & Kernel & \covnew & \covnew & \covnew & \covnew & \covnew & \covhosted & \covnew \\
+Rhealstone and timer (6 cases) & Kernel & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested & \covnew \\
 \addlinespace[2pt]
 % coverage-row: copy
 Copy-checksum task$^{*}$ & Task execution & \covmeasured & \covmeasured & \covmeasured & \covmeasured & \covmeasured & \covmeasured & \covmeasured \\
@@ -47,8 +46,8 @@ Allocated-RAM profiling$^{*}$ & Memory & \covmeasured & \covmeasured & \covmeasu
 \par\smallskip
 \begin{minipage}{\textwidth}\footnotesize
 Left: fixed CMRX, IoTJ, SEI and Tenon references~\cite{cmrx,silva2019,hartstone,tenonrtos}; $\times$ denotes absence from this corpus.
-$r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$: measured here; $^{*}$ has no upstream counterpart.
-$h$: Contiki process dispatch with FreeRTOS host threads, IPC and IRQs; not native Contiki preemption.
+$r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: measured and unmeasured here; $^{*}$ has no upstream counterpart.
+Contiki-NG's four mechanism gaps exclude FreeRTOS-backed wrappers: process dispatch does not establish native service coverage.
 Only starred B1 quantities feed Overall. PH3 uses B0, cooperative B1 processes for Contiki, or a target-calibrated KVM guest for Pi.
 Pi networking uses Linux sockets and PL011; Pi energy includes the host, RAM the instrumented guest.
 Contiki zperf uses IDF networking; RIOT includes blocking and truncation adapters. The evidence index binds cases, profiles and records.

@@ -9,7 +9,7 @@ the former landing page; the historical replay remains available below.
   and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
   ratios, overall ranks and the 235 preference profiles from **48 archived
   measurement summaries**, including the correct acquisition-block reference.
-- **Table 1:** 70 benchmark-target cells, **0 still unmeasured**.
+- **Table 1:** 70 benchmark-target cells, **4 still unmeasured**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicitly unmeasured. Coverage tests do not replace the common-task
@@ -17,10 +17,14 @@ the former landing page; the historical replay remains available below.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
   into the eight-configuration same-board leaderboard. Contiki-NG's hosted
   deployment and each measurement boundary remain explicit in the table.
-- Contiki thread suites marked **h** use actual Contiki process dispatch with
-  host-provided priority threads, IPC and IRQ services. Their execution coverage
-  does not establish native Contiki preemption or replace the cooperative Contiki
-  configuration in the common-task leaderboard.
+- **Coverage correction (2026-11-07):** the four earlier **h** marks for
+  Contiki-NG have been withdrawn. Thread-Metric core and IRQ subsets, the
+  24-case semaphore subset and the six-case Rhealstone/timer app actually use
+  FreeRTOS scheduling, wait queues and interrupt wakeups behind synchronous
+  Contiki callbacks. Real execution is retained as hosted-stack diagnostics;
+  it does not establish Contiki-NG's original mechanism coverage. These four
+  cells are unmeasured under the original target semantics. The cooperative
+  common-task configuration and its 48 leaderboard inputs are unchanged.
 
 ### Run the current offline check
 
@@ -43,7 +47,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `d9ac6339b33da61702af92ddfdead2fa43ebd161f9e8de74b6ab28800812f380`.
+ZIP SHA-256: `07ab11e82ee673bd97082e14410833714b5315faa21372df4ca8de8d301f0b10`.
 
 ## Preserved historical raw-evidence replay
 

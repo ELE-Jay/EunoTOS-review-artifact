@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T04:15:23.228314+00:00",
+  "created_utc": "2026-11-07T04:43:44.379697+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -520,30 +520,6 @@
       "sha256": "0f633dcb891c63a9790af29e67386dd094e0fd2d2c43e5353b40a1f707255750",
       "bytes": 153351,
       "scope": "One complete native Tenon Pi4B one-vCPU 128-MiB KVM PH3 guest; unchanged SEI-derived C workload and contiguous 10-second PH3 steps to first loss. Baseline and integer workload increment are fixed from pre-trial calibration at 20% and 2.5% targets per SEI section 5.2; no post-result selection. Native priority tasks, semaphores and tick sleeps, fixed static OpenLibm. Native clock resolution is separately declared; no ESP32 or common-task score claim."
-    },
-    "coverage-addition-20": {
-      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/qualified-sem24.json",
-      "sha256": "c700d5f5513ae5aeb799da139826a05fbd3b51d09d85d4a16370171f77dad8f7",
-      "bytes": 2720,
-      "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 24 unchanged Zephyr 3.7 kernel-mode cases and 28 actual CPU IRQs pass in one B1 reset."
-    },
-    "coverage-addition-21": {
-      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/qualified-six.json",
-      "sha256": "d9d28f9ce3e14f0fef4b65a78f4d8bce72aede00cda8227fd56dcb027ede3b52",
-      "bytes": 2759,
-      "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All six unchanged pinned app bodies complete in one B1 reset, 500 iterations and actual CPU IRQ; adapter-inclusive hardware counts."
-    },
-    "coverage-addition-22": {
-      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/qualified-tm-core.json",
-      "sha256": "5af38cb69eeef3fd998211c52eea9a5d07e4bd7520b91d0af9c7ff4c5bbdcc7d",
-      "bytes": 14225,
-      "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 3 unchanged Thread-Metric core bodies, three independent B1 resets each, original 30-second windows. Priority preemption, 16-byte by-value FIFO and synchronization."
-    },
-    "coverage-addition-23": {
-      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/qualified-tm-irq.json",
-      "sha256": "da3faaec7d312452b3d26eea8dd38bc29a75138f1001dd5289cb42ce4ec92d1d",
-      "bytes": 9840,
-      "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 2 unchanged Thread-Metric irq bodies, three independent B1 resets each, original 30-second windows. Real CPU_FROM_CPU2 interrupts, including ISR-to-higher-priority-thread preemption."
     }
   },
   "five_verdicts": [
@@ -653,8 +629,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/integration-v4/coverage-evidence.json",
-    "sha256": "c98a289b0c32e83c8f8726331d2566c4ffae7cf54d762b8dbcdb6daa17c0c435"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-service-owner-audit-20261107-v1/integration/coverage-evidence.json",
+    "sha256": "f895f6944c32a22536aeb04510e5c757b8e7a5485989e2f00ec3b76bba0a24f6"
   },
   "entries": [
     {
@@ -826,7 +802,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -838,23 +814,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 9,
-          "hosted_thread_profile": true,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "preemptive_scheduling",
-              "message_processing",
-              "synchronization_processing"
-            ],
-            "configurations": [
-              "Contiki-NG B1 hosted-thread-services-v1 tm-core"
-            ],
-            "platform": "ESP32 B1, declared ESP-IDF/FreeRTOS host",
-            "evidence": [
-              "coverage-addition-22"
-            ],
-            "boundary": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 3 unchanged Thread-Metric core bodies, three independent B1 resets each, original 30-second windows. Priority preemption, 16-byte by-value FIFO and synchronization."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
           }
         },
         "Pi KVM": {
@@ -1053,7 +1019,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -1065,22 +1031,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 6,
-          "hosted_thread_profile": true,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "interrupt_processing",
-              "interrupt_preemption_processing"
-            ],
-            "configurations": [
-              "Contiki-NG B1 hosted-thread-services-v1 tm-irq"
-            ],
-            "platform": "ESP32 B1, declared ESP-IDF/FreeRTOS host",
-            "evidence": [
-              "coverage-addition-23"
-            ],
-            "boundary": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 2 unchanged Thread-Metric irq bodies, three independent B1 resets each, original 30-second windows. Real CPU_FROM_CPU2 interrupts, including ISR-to-higher-priority-thread preemption."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
           }
         },
         "Pi KVM": {
@@ -1858,7 +1815,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1866,44 +1823,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 1,
-          "hosted_thread_profile": true,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "test_k_sem_define",
-              "test_sem_thread2thread",
-              "test_sem_thread2isr",
-              "test_k_sem_init",
-              "test_sem_reset",
-              "test_sem_reset_waiting",
-              "test_sem_count_get",
-              "test_sem_give_from_isr",
-              "test_sem_give_from_thread",
-              "test_sem_take_no_wait",
-              "test_sem_take_no_wait_fails",
-              "test_sem_take_timeout_fails",
-              "test_sem_take_timeout",
-              "test_sem_take_timeout_forever",
-              "test_sem_take_timeout_isr",
-              "test_sem_take_multiple",
-              "test_k_sem_correct_count_limit",
-              "test_sem_give_take_from_isr",
-              "test_sem_multiple_threads_wait",
-              "test_sem_measure_timeouts",
-              "test_sem_measure_timeout_from_thread",
-              "test_sem_multiple_take_and_timeouts",
-              "test_sem_multi_take_timeout_diff_sem",
-              "test_sem_queue_mutual_exclusion"
-            ],
-            "configurations": [
-              "Contiki-NG B1 hosted-thread-services-v1 sem24"
-            ],
-            "platform": "ESP32 B1, declared ESP-IDF/FreeRTOS host",
-            "evidence": [
-              "coverage-addition-20"
-            ],
-            "boundary": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 24 unchanged Zephyr 3.7 kernel-mode cases and 28 actual CPU IRQs pass in one B1 reset."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
           }
         },
         "Pi KVM": {
@@ -2141,7 +2067,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -2153,26 +2079,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 1,
-          "hosted_thread_profile": true,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "average_task_switch_time, in cpu cycles",
-              "average_multi_task_switch_time, in cpu cycles",
-              "average_task_preempt_time, in cpu cycles",
-              "average_semaphore_shuffle_time, in cpu cycles",
-              "interrupt_latency_time, in cpu cycles",
-              "timer_deviation_under_interrupt_interference, in count of generic timer"
-            ],
-            "configurations": [
-              "Contiki-NG B1 hosted-thread-services-v1 six"
-            ],
-            "platform": "ESP32 B1, declared ESP-IDF/FreeRTOS host",
-            "evidence": [
-              "coverage-addition-21"
-            ],
-            "boundary": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All six unchanged pinned app bodies complete in one B1 reset, 500 iterations and actual CPU IRQ; adapter-inclusive hardware counts."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
           }
         },
         "Pi KVM": {
