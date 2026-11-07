@@ -45,6 +45,8 @@ def main(output):
     p=cell['eunotos']['partial_coverage'];passed=len(p['passed_cases']);total=p['original_total']
     if tested or not 0<passed<total or total!=len(entry['cases']) or not set(p['passed_cases'])<set(entry['cases']) or len(p['unexecuted_cases'])!=total-passed:raise ValueError('Partial case coverage differs')
     if not cell['eunotos']['evidence']:raise ValueError('Partial coverage has no evidence binding')
+    hw=cell['eunotos'].get('hardware_irq_subset')
+    if hw and (len(hw['passed_cases'])!=3 or not set(hw['passed_cases'])<=set(p['passed_cases']) or hw['board_resets']!=3 or hw['actual_irqs_per_reset']!=27 or hw['host_semaphore_provider'] is not False):raise ValueError('Native ISR ownership/coverage differs')
     markup+='{'+str(passed)+'}{'+str(total)+'}';partial_count+=1
    elif status=='not_applicable':
     if tested or not cell['eunotos']['evidence'] or not cell['eunotos'].get('applicability_reason'):raise ValueError('Applicability has no evidence')

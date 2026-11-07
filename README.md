@@ -25,7 +25,7 @@ the former landing page; the historical replay remains available below.
   for the original OS/subset; it does not necessarily mean no execution exists.
   The current five non-full cells comprise **four N/A subsets** whose required
   native services are absent from the frozen cooperative model, and **one
-  partially executed semaphore subset (10/24 original cases)**. Neither is a
+  partially executed semaphore subset (13/24 original cases)**. Neither is a
   complete-subset check; the universe remains 70 cells, with 65 complete.
   Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
@@ -75,9 +75,17 @@ the former landing page; the historical replay remains available below.
   one native tick; the original busy-wait call also uses native clock granularity.
   Empty infinite waits and thread creation fail closed. Early-return, missing
   timer, missing-case and false-full-subset controls are rejected. This is
-  **10/24 across two images**, not a full-suite run or a new leaderboard input.
-  The other 14 cases remain unexecuted and are named in the index. Six process
-  executions contain 30 case invocations; those are not 30 independent experiments.
+  Three further ISR-only counter cases execute on ESP32 B1 in three fresh
+  resets, each with 27 real CPU_FROM_CPU2 interrupts and hardware/OS ISR-context
+  checks. They use unchanged Contiki process dispatch and PT_SEM, with IDF
+  providing boot and interrupt installation, not the tested semaphore or a
+  worker-thread substitute. The **i** marker identifies these three cases;
+  **n** identifies the ten Linux cases. The total is **13/24 across three images
+  and two platforms**, not a full-suite run or a new leaderboard input. The
+  other 11 cases remain unexecuted and are named in the index. The six Linux
+  process executions and three board resets contain 39 case invocations;
+  those are not 39 independent experiments. Original board firmware was restored
+  and its full Flash digest verified.
 - Complete semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
@@ -108,7 +116,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `4547b8a98b0e16f810e3a3fd85b2e1a4d37caf3059ea25f1062f3b17c43e1386`.
+ZIP SHA-256: `4a9076acaddd155bd3117099c72b458a996b9803227bba1aed5532004f4cb4a3`.
 
 ## Preserved historical raw-evidence replay
 

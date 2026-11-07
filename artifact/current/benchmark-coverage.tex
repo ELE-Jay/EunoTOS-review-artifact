@@ -16,7 +16,7 @@
 \newcommand{\covreproduced}{\ensuremath{\checkmark^{r}\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covmeasured}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covuntested}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\times}}}
-\newcommand{\covpartial}[2]{\ensuremath{\textcolor{coverageblue}{#1/#2^{a,n}}}}
+\newcommand{\covpartial}[2]{\ensuremath{\textcolor{coverageblue}{#1/#2^{a,n,i}}}}
 \newcommand{\covinapplicable}{\textcolor{gray}{N/A}}
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}>{\raggedright\arraybackslash}p{.255\textwidth}>{\raggedright\arraybackslash}p{.12\textwidth}*{7}{>{\centering\arraybackslash}p{.077\textwidth}}@{}}
 \toprule
@@ -33,7 +33,7 @@ Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \c
 % coverage-row: zperf
 zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covnative & \covpatched \\
 % coverage-row: semaphore
-Zephyr semaphore (24 cases) & Correctness & \covadapted & \covreproduced & \covadapted & \covadapted & \covadapted & \covpartial{10}{24} & \covpatched \\
+Zephyr semaphore (24 cases) & Correctness & \covadapted & \covreproduced & \covadapted & \covadapted & \covadapted & \covpartial{13}{24} & \covpatched \\
 % coverage-row: pi-six
 Rhealstone and timer (6 cases) & Kernel & \covnew & \covnew & \covnew & \covnew & \covnew & \covinapplicable & \covnew \\
 \addlinespace[2pt]
@@ -53,7 +53,7 @@ Allocated-RAM profiling$^{*}$ & Memory & \covmeasured & \covmeasured & \covmeasu
 Left: fixed CMRX, IoTJ, SEI and Tenon references~\cite{cmrx,silva2019,hartstone,tenonrtos}; $\times$ denotes absence from this corpus.
 $r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: qualifying coverage and no qualifying full subset; $^{*}$ has no upstream counterpart.
 $a$: original correctness bodies through a compatibility API. $p$: separately patched Tenon wakeup/timeout configuration; zperf uses guest lwIP and virtio, not host sockets.
-$n$: Contiki native/Linux, not ESP32; networking uses uIP on TUN. Fractions give executed original cases, not full-subset coverage. N/A: the full subset requires services absent from the frozen execution model.
+$n$: Contiki native Linux (uIP on TUN), not B1. $i$: three B1 PT\_SEM IRQ cases; IDF boot and IRQ binding, no host semaphore. Fractions give executed original cases, not full-subset coverage. N/A: the full subset requires services absent from the frozen execution model.
 Host-backed kernel and socket, cooperative PH3 and unverified custom-queue diagnostics do not qualify as original-OS coverage.
 Only starred B1 quantities feed Overall and cover declared deployments. PH3 uses B0 or target-calibrated Pi guests.
 Starred Pi UDP uses Linux/PL011; Pi energy includes the host, RAM the instrumented guest. Starred Contiki B1 measurements include its IDF host. Case and configuration bindings are in the evidence index.
