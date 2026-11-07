@@ -11,7 +11,7 @@ tm-irq,Thread-Metric: interrupts (2),Zephyr,existing,True
 tm-irq,Thread-Metric: interrupts (2),NuttX,added,True
 tm-irq,Thread-Metric: interrupts (2),RIOT,existing,True
 tm-irq,Thread-Metric: interrupts (2),AliOS Things,added,True
-tm-irq,Thread-Metric: interrupts (2),Contiki-NG,unmeasured,False
+tm-irq,Thread-Metric: interrupts (2),Contiki-NG,added,True
 tm-irq,Thread-Metric: interrupts (2),Pi KVM,added,True
 hartstone-ph3,Hartstone PH3,FreeRTOS,added,True
 hartstone-ph3,Hartstone PH3,Zephyr,added,True

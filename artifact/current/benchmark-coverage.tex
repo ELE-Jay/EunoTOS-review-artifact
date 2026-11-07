@@ -23,7 +23,7 @@
 % coverage-row: tm-core
 Thread-Metric: task and IPC (3) & Kernel & \covexisting & \covexisting & \covexisting & \covexisting & \covnew & \covhosted & \covnew \\
 % coverage-row: tm-irq
-Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \covexisting & \covnew & \covuntested & \covnew \\
+Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \covexisting & \covnew & \covhosted & \covnew \\
 % coverage-row: hartstone-ph3
 Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew \\
 % coverage-row: zperf
@@ -47,8 +47,8 @@ Allocated-RAM profiling$^{*}$ & Memory & \covmeasured & \covmeasured & \covmeasu
 \par\smallskip
 \begin{minipage}{\textwidth}\footnotesize
 Left: fixed CMRX, IoTJ, SEI and Tenon references~\cite{cmrx,silva2019,hartstone,tenonrtos}; $\times$ denotes absence from this corpus.
-$r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: measured and unmeasured here; $^{*}$ has no upstream counterpart.
-$h$: Contiki process dispatch with IDF/FreeRTOS priority threads, IPC and IRQs; not native Contiki preemption.
+$r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$: measured here; $^{*}$ has no upstream counterpart.
+$h$: Contiki process dispatch with FreeRTOS host threads, IPC and IRQs; not native Contiki preemption.
 Only starred B1 quantities feed Overall. PH3 uses B0, cooperative B1 processes for Contiki, or a target-calibrated KVM guest for Pi.
 Pi networking uses Linux sockets and PL011; Pi energy includes the host, RAM the instrumented guest.
 Contiki zperf uses IDF networking; RIOT includes blocking and truncation adapters. The evidence index binds cases, profiles and records.
