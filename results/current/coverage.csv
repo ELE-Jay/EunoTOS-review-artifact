@@ -26,7 +26,7 @@ zperf,zperf: TCP and UDP upload,NuttX,added,True
 zperf,zperf: TCP and UDP upload,RIOT,added,True
 zperf,zperf: TCP and UDP upload,AliOS Things,added,True
 zperf,zperf: TCP and UDP upload,Contiki-NG,unmeasured,False
-zperf,zperf: TCP and UDP upload,Pi KVM,unmeasured,False
+zperf,zperf: TCP and UDP upload,Pi KVM,added,True
 semaphore,Zephyr semaphore (24 cases),FreeRTOS,added,True
 semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True
 semaphore,Zephyr semaphore (24 cases),NuttX,added,True

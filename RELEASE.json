@@ -1,9 +1,9 @@
 {
-  "release": "eunobench-anonymous-native-coverage-20261107-v1",
-  "paper_source_commit": "c712108e7f57005f6b93f900b45bf0ee370704fc",
-  "table_sha256": "f45f1006735a3410a17a4236ec055c55c3ffedde41f601263e69871caa3469e8",
-  "archive_sha256": "acec70dcf0f7108a7f6fdf44cba33082f2dcddc325889be5b1a3d670bc3ad544",
-  "remaining_coverage_cells": 7,
+  "release": "eunobench-anonymous-native-coverage-20261107-v2",
+  "paper_source_commit": "905d6936625d8fed858336892f1d0221ac30c1d2",
+  "table_sha256": "80377d897cc43669725f03a88ea4e42976d7d4d7cffba1d98d059d159cd35c26",
+  "archive_sha256": "61ea5c1664103bf5ee95b14d527a140b18cf2d05de95634809e14531306734d3",
+  "remaining_coverage_cells": 6,
   "offline_checks": [
     {
       "name": "current",

@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T09:45:50.977190+00:00",
+  "created_utc": "2026-11-07T11:10:42.461287+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -502,6 +502,12 @@
       "sha256": "846721aa62daa34b6af3ceaca345ae704d8c0628fe0174d73a534b3e7e63835d",
       "bytes": 6420,
       "scope": "Three unchanged original Thread-Metric bodies; Tenon native tasks, semaphore and mailbox. New message image copies four native 64-bit words through two native try-operation mailboxes and owned buffers. Old custom-ring message diagnostics remain excluded. Existing valid preemption and semaphore images are reused; this is execution coverage, not an ESP32 score."
+    },
+    "coverage-addition-17": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/qualified-pi-native-zperf.json",
+      "sha256": "b645363b486e75450e9919bec9e9c9bde64fbfe28d87fe72425660d462961596",
+      "bytes": 7120,
+      "scope": "Native guest execution coverage of unchanged Zephyr 3.7 synchronous zperf cores, not bare original Tenon networking support or B1 score. lwIP dependency and API adaptation added; isolated previously qualified wakeup/timeout fixes retained. Native coarse UDP pacing and receiver versions explicitly reported. Prior Linux-socket RPC and malformed-ACK cohorts remain excluded."
     }
   },
   "five_verdicts": [
@@ -611,8 +617,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/integration-v1/coverage-evidence.json",
-    "sha256": "4b05901d7feb63f02e86c3e7d9c6eb7f3d03f20ead8911a63bd489e1c1da663f"
+    "path": "[private-evidence]/artifacts/reports/eunobench-native-coverage-20261107-v1/integration-v2/coverage-evidence.json",
+    "sha256": "545115786a9473fb066582d15be53ad55393fc99401c05ed1bc29401eed820bf"
   },
   "entries": [
     {
@@ -1478,7 +1484,7 @@
           }
         },
         "Pi KVM": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1489,13 +1495,23 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 6,
+          "implementation_marker": "patched",
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "Linux host performs socket operations over PL011 RPC; guest has no native TCP/IP path"
+            "tested": true,
+            "cases": [
+              "sync_tcp_upload",
+              "sync_udp_upload"
+            ],
+            "configurations": [
+              "Tenon native guest lwIP with isolated wakeup/timeout fixes"
+            ],
+            "platform": "Pi4B one-vCPU KVM guest, virtio NIC and independent host receiver",
+            "evidence": [
+              "coverage-addition-17"
+            ],
+            "boundary": "Native guest execution coverage of unchanged Zephyr 3.7 synchronous zperf cores, not bare original Tenon networking support or B1 score. lwIP dependency and API adaptation added; isolated previously qualified wakeup/timeout fixes retained. Native coarse UDP pacing and receiver versions explicitly reported. Prior Linux-socket RPC and malformed-ACK cohorts remain excluded.",
+            "replaces_frozen_diagnostic": "Linux host performs socket operations over PL011 RPC; guest has no native TCP/IP path"
           }
         }
       }

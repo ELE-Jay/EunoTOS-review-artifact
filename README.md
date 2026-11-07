@@ -18,7 +18,7 @@ the former landing page; the historical replay remains available below.
   energy or RAM. The private production raw replay reconstructs all 48 inputs
   and 235 preference profiles unchanged. Current public replay additionally
   rejects missing or altered deployment attribution.
-- **Table 1:** 70 benchmark-target cells, **7 without qualifying full-subset coverage**.
+- **Table 1:** 70 benchmark-target cells, **6 without qualifying full-subset coverage**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicit. A cross includes measured diagnostics that do not qualify
@@ -73,7 +73,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `acec70dcf0f7108a7f6fdf44cba33082f2dcddc325889be5b1a3d670bc3ad544`.
+ZIP SHA-256: `61ea5c1664103bf5ee95b14d527a140b18cf2d05de95634809e14531306734d3`.
 
 ## Preserved historical raw-evidence replay
 
