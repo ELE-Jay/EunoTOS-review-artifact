@@ -1,6 +1,6 @@
 # EunoBench: Anonymous Review Artifact
 
-**Updated 2026-11-06.** This is the current, bounded review snapshot. It replaces
+**Updated 2026-11-07.** This is the current, bounded review snapshot. It replaces
 the former landing page; the historical replay remains available below.
 
 ## Current paper results
@@ -9,7 +9,7 @@ the former landing page; the historical replay remains available below.
   and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
   ratios, overall ranks and the 235 preference profiles from **48 archived
   measurement summaries**, including the correct acquisition-block reference.
-- **Table 1:** 70 benchmark-target cells, **2 still unmeasured**.
+- **Table 1:** 70 benchmark-target cells, **1 still unmeasured**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicitly unmeasured. Coverage tests do not replace the common-task
@@ -17,6 +17,10 @@ the former landing page; the historical replay remains available below.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
   into the eight-configuration same-board leaderboard. Contiki-NG's hosted
   deployment and each measurement boundary remain explicit in the table.
+- Contiki thread suites marked **h** use actual Contiki process dispatch with
+  host-provided priority threads, IPC and IRQ services. Their execution coverage
+  does not establish native Contiki preemption or replace the cooperative Contiki
+  configuration in the common-task leaderboard.
 
 ### Run the current offline check
 
@@ -39,7 +43,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `8aa743ed12e88cf17a50cd7454d4d930812f3d41ee25b7fe7a21af020ac76985`.
+ZIP SHA-256: `1898b8616cb67128460eb919150aecaa866e1bc970e5a7741eaecfe9c4435803`.
 
 ## Preserved historical raw-evidence replay
 

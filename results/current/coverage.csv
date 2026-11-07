@@ -4,7 +4,7 @@ tm-core,Thread-Metric: task and IPC (3),Zephyr,existing,True
 tm-core,Thread-Metric: task and IPC (3),NuttX,existing,True
 tm-core,Thread-Metric: task and IPC (3),RIOT,existing,True
 tm-core,Thread-Metric: task and IPC (3),AliOS Things,added,True
-tm-core,Thread-Metric: task and IPC (3),Contiki-NG,unmeasured,False
+tm-core,Thread-Metric: task and IPC (3),Contiki-NG,added,True
 tm-core,Thread-Metric: task and IPC (3),Pi KVM,added,True
 tm-irq,Thread-Metric: interrupts (2),FreeRTOS,added,True
 tm-irq,Thread-Metric: interrupts (2),Zephyr,existing,True

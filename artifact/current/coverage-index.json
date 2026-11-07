@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T03:48:57.995985+00:00",
+  "created_utc": "2026-11-07T04:04:10.500923+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -532,6 +532,12 @@
       "sha256": "d9d28f9ce3e14f0fef4b65a78f4d8bce72aede00cda8227fd56dcb027ede3b52",
       "bytes": 2759,
       "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All six unchanged pinned app bodies complete in one B1 reset, 500 iterations and actual CPU IRQ; adapter-inclusive hardware counts."
+    },
+    "coverage-addition-22": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/qualified-tm-core.json",
+      "sha256": "5af38cb69eeef3fd998211c52eea9a5d07e4bd7520b91d0af9c7ff4c5bbdcc7d",
+      "bytes": 14225,
+      "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 3 unchanged Thread-Metric core bodies, three independent B1 resets each, original 30-second windows. Priority preemption, 16-byte by-value FIFO and synchronization."
     }
   },
   "five_verdicts": [
@@ -641,8 +647,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/integration-v2/coverage-evidence.json",
-    "sha256": "cd86003d6706d5f1d7316eb4b3b788752ec5d606482a0e884bf385990cfa4dec"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/integration-v3/coverage-evidence.json",
+    "sha256": "a112fb302dbeec75e96e911d71e77059592b1b0ee250ddeebdc5543cd1478a13"
   },
   "entries": [
     {
@@ -814,7 +820,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -826,13 +832,23 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 9,
+          "hosted_thread_profile": true,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "preemptive_scheduling",
+              "message_processing",
+              "synchronization_processing"
+            ],
+            "configurations": [
+              "Contiki-NG B1 hosted-thread-services-v1 tm-core"
+            ],
+            "platform": "ESP32 B1, declared ESP-IDF/FreeRTOS host",
+            "evidence": [
+              "coverage-addition-22"
+            ],
+            "boundary": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 3 unchanged Thread-Metric core bodies, three independent B1 resets each, original 30-second windows. Priority preemption, 16-byte by-value FIFO and synchronization."
           }
         },
         "Pi KVM": {
