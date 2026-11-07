@@ -9,22 +9,32 @@ the former landing page; the historical replay remains available below.
   and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
   ratios, overall ranks and the 235 preference profiles from **48 archived
   measurement summaries**, including the correct acquisition-block reference.
-- **Table 1:** 70 benchmark-target cells, **4 still unmeasured**.
+- **Table 1:** 70 benchmark-target cells, **8 without qualifying full-subset coverage**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
-  gaps stay explicitly unmeasured. Coverage tests do not replace the common-task
+  gaps stay explicit. A cross includes measured diagnostics that do not qualify
+  for the original OS/subset; it does not necessarily mean no execution exists.
+  Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
 - Pi KVM results are additional execution-coverage evidence; they are not mixed
   into the eight-configuration same-board leaderboard. Contiki-NG's hosted
   deployment and each measurement boundary remain explicit in the table.
-- **Coverage correction (2026-11-07):** the four earlier **h** marks for
-  Contiki-NG have been withdrawn. Thread-Metric core and IRQ subsets, the
-  24-case semaphore subset and the six-case Rhealstone/timer app actually use
-  FreeRTOS scheduling, wait queues and interrupt wakeups behind synchronous
-  Contiki callbacks. Real execution is retained as hosted-stack diagnostics;
-  it does not establish Contiki-NG's original mechanism coverage. These four
-  cells are unmeasured under the original target semantics. The cooperative
-  common-task configuration and its 48 leaderboard inputs are unchanged.
+- **Coverage corrections (2026-11-07):** eight cells are excluded from original-OS
+  full-subset coverage. The four former Contiki **h** kernel-suite marks used
+  FreeRTOS services. Contiki zperf used IDF/lwIP, and Pi zperf forwarded socket
+  operations to Linux. Contiki PH3 replaced priority/preemptive releases with
+  cooperative event dispatch. Pi Thread-Metric core used an adapter-owned queue
+  without established native-queue/nonblocking equivalence, so its partial
+  native subcases do not qualify the full three-case cell. All real runs,
+  including these diagnostics, remain preserved privately.
+- Semaphore cells marked **a** execute unchanged kernel-mode bodies through a
+  compatibility API over the target OS's own threads and waits. Adapter-provided
+  reset/count-limit/pipe behavior is included; this is not a claim that the
+  target supplies an unchanged native Zephyr API. **p** additionally identifies
+  the separately patched Tenon wakeup/timeout configuration; its earlier
+  unpatched failures remain failures. The common-task deployments, 48 score
+  inputs and all 235 preference profiles are unchanged. Their hosted/network
+  boundaries do not establish native Contiki or Tenon TCP/IP capability.
 
 ### Run the current offline check
 
@@ -47,7 +57,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `07ab11e82ee673bd97082e14410833714b5315faa21372df4ca8de8d301f0b10`.
+ZIP SHA-256: `6ebff5ae4f5f11a74047dd60244b9a1c3baa9ed7cb3712a9de9c738ac2ced6c6`.
 
 ## Preserved historical raw-evidence replay
 

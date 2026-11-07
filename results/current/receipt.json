@@ -5,15 +5,31 @@
   "reference": 1,
   "preference_profiles": 235,
   "coverage_cells": 70,
-  "unmeasured_cells": 4,
+  "unmeasured_cells": 8,
   "pending": [
     [
       "tm-core",
       "Contiki-NG"
     ],
     [
+      "tm-core",
+      "Pi KVM"
+    ],
+    [
       "tm-irq",
       "Contiki-NG"
+    ],
+    [
+      "hartstone-ph3",
+      "Contiki-NG"
+    ],
+    [
+      "zperf",
+      "Contiki-NG"
+    ],
+    [
+      "zperf",
+      "Pi KVM"
     ],
     [
       "semaphore",

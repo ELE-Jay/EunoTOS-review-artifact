@@ -5,7 +5,7 @@ tm-core,Thread-Metric: task and IPC (3),NuttX,existing,True
 tm-core,Thread-Metric: task and IPC (3),RIOT,existing,True
 tm-core,Thread-Metric: task and IPC (3),AliOS Things,added,True
 tm-core,Thread-Metric: task and IPC (3),Contiki-NG,unmeasured,False
-tm-core,Thread-Metric: task and IPC (3),Pi KVM,added,True
+tm-core,Thread-Metric: task and IPC (3),Pi KVM,unmeasured,False
 tm-irq,Thread-Metric: interrupts (2),FreeRTOS,added,True
 tm-irq,Thread-Metric: interrupts (2),Zephyr,existing,True
 tm-irq,Thread-Metric: interrupts (2),NuttX,added,True
@@ -18,15 +18,15 @@ hartstone-ph3,Hartstone PH3,Zephyr,added,True
 hartstone-ph3,Hartstone PH3,NuttX,added,True
 hartstone-ph3,Hartstone PH3,RIOT,added,True
 hartstone-ph3,Hartstone PH3,AliOS Things,added,True
-hartstone-ph3,Hartstone PH3,Contiki-NG,added,True
+hartstone-ph3,Hartstone PH3,Contiki-NG,unmeasured,False
 hartstone-ph3,Hartstone PH3,Pi KVM,added,True
 zperf,zperf: TCP and UDP upload,FreeRTOS,added,True
 zperf,zperf: TCP and UDP upload,Zephyr,reproduced,True
 zperf,zperf: TCP and UDP upload,NuttX,added,True
 zperf,zperf: TCP and UDP upload,RIOT,added,True
 zperf,zperf: TCP and UDP upload,AliOS Things,added,True
-zperf,zperf: TCP and UDP upload,Contiki-NG,added,True
-zperf,zperf: TCP and UDP upload,Pi KVM,added,True
+zperf,zperf: TCP and UDP upload,Contiki-NG,unmeasured,False
+zperf,zperf: TCP and UDP upload,Pi KVM,unmeasured,False
 semaphore,Zephyr semaphore (24 cases),FreeRTOS,added,True
 semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True
 semaphore,Zephyr semaphore (24 cases),NuttX,added,True

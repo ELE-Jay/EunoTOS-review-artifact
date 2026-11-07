@@ -10,6 +10,8 @@
 \definecolor{coverageblue}{RGB}{20,90,128}
 \newcommand{\covexisting}{\ensuremath{\checkmark\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covnew}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
+\newcommand{\covadapted}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{a}}}}
+\newcommand{\covpatched}{\ensuremath{\times\!\rightarrow\!\textcolor{coverageblue}{\checkmark^{p}}}}
 \newcommand{\covreproduced}{\ensuremath{\checkmark^{r}\!\rightarrow\!\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covmeasured}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\checkmark}}}
 \newcommand{\covuntested}{\ensuremath{\phantom{\times\!\rightarrow\!}\textcolor{coverageblue}{\times}}}
@@ -20,15 +22,15 @@
  & & FreeRTOS & Zephyr & NuttX & RIOT & \shortstack{AliOS\\Things} & \shortstack{Contiki-\\NG} & \shortstack{Pi KVM\\configs.} \\
 \midrule
 % coverage-row: tm-core
-Thread-Metric: task and IPC (3) & Kernel & \covexisting & \covexisting & \covexisting & \covexisting & \covnew & \covuntested & \covnew \\
+Thread-Metric: task and IPC (3) & Kernel & \covexisting & \covexisting & \covexisting & \covexisting & \covnew & \covuntested & \covuntested \\
 % coverage-row: tm-irq
 Thread-Metric: interrupts (2) & Kernel & \covnew & \covexisting & \covnew & \covexisting & \covnew & \covuntested & \covnew \\
 % coverage-row: hartstone-ph3
-Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew & \covnew \\
+Hartstone PH3 & Real-time & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested & \covnew \\
 % coverage-row: zperf
-zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covnew & \covnew \\
+zperf: TCP and UDP upload & Network & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covuntested & \covuntested \\
 % coverage-row: semaphore
-Zephyr semaphore (24 cases) & Correctness & \covnew & \covreproduced & \covnew & \covnew & \covnew & \covuntested & \covnew \\
+Zephyr semaphore (24 cases) & Correctness & \covadapted & \covreproduced & \covadapted & \covadapted & \covadapted & \covuntested & \covpatched \\
 % coverage-row: pi-six
 Rhealstone and timer (6 cases) & Kernel & \covnew & \covnew & \covnew & \covnew & \covnew & \covuntested & \covnew \\
 \addlinespace[2pt]
@@ -46,11 +48,11 @@ Allocated-RAM profiling$^{*}$ & Memory & \covmeasured & \covmeasured & \covmeasu
 \par\smallskip
 \begin{minipage}{\textwidth}\footnotesize
 Left: fixed CMRX, IoTJ, SEI and Tenon references~\cite{cmrx,silva2019,hartstone,tenonrtos}; $\times$ denotes absence from this corpus.
-$r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: measured and unmeasured here; $^{*}$ has no upstream counterpart.
-Contiki-NG's four mechanism gaps exclude FreeRTOS-backed wrappers: process dispatch does not establish native service coverage.
-Only starred B1 quantities feed Overall. PH3 uses B0, cooperative B1 processes for Contiki, or a target-calibrated KVM guest for Pi.
-Pi networking uses Linux sockets and PL011; Pi energy includes the host, RAM the instrumented guest.
-Contiki zperf uses IDF networking; RIOT includes blocking and truncation adapters. The evidence index binds cases, profiles and records.
+$r$: unchanged-source Zephyr~3.7 reproduction. Blue $\checkmark$ and $\times$: qualifying coverage and no qualifying full subset; $^{*}$ has no upstream counterpart.
+$a$: original correctness bodies through a compatibility API; $p$: additionally, a separately patched Tenon wakeup/timeout configuration. Neither denotes an unchanged native Zephyr API.
+Host-backed kernel/socket, cooperative PH3 and unverified custom-queue diagnostics do not qualify as original-OS coverage.
+Only starred B1 quantities feed Overall and cover declared deployments. PH3 uses B0 or target-calibrated Pi guests.
+Pi UDP uses Linux/PL011; Pi energy includes the host, RAM the instrumented guest. Contiki task, network and resource measurements include its IDF host. Case and configuration bindings are in the evidence index.
 \end{minipage}
 \endgroup
 \end{table*}

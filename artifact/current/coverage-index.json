@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T04:43:44.379697+00:00",
+  "created_utc": "2026-11-07T06:53:08.638884+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -450,72 +450,48 @@
       "scope": "All six fixed author bodies, 500 iterations in iterative cases and one real peripheral IRQ; one independent reset is execution coverage, not a precision estimate or leaderboard input. NuttX native task groups and SIGSTOP/SIGCONT with 100-Hz native tick"
     },
     "coverage-addition-8": {
-      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v3/qualified-tm-core-Pi-KVM.json",
-      "sha256": "c256f6cccefa4938fed2f3608501c86e9c726bb6292a1382b023f9b27405a3f4",
-      "bytes": 1539,
-      "scope": "Three unchanged Thread-Metric core bodies, three fresh KVM guests each and one original 30-s window per guest. Native Tenon priority threads and semaphore; bounded FIFO copies four native unsigned-long words (32 B). Pi coverage only; not the ESP32 four-word/16-B ranking input."
-    },
-    "coverage-addition-9": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v3/qualified-tm-irq-Pi-KVM.json",
       "sha256": "2b91444c4d58370a67e27d56e931a646c84eee74c97eb9d6af9dc368b65bc54d",
       "bytes": 1299,
       "scope": "Two unchanged original Thread-Metric IRQ bodies, three fresh KVM guests each, one 30-s window each. Hardware GICv2 SGI 1 via the native trap and registered dispatcher; ISACTIVER0 bit 1 witnesses an active interrupt before native EOI. Native IRQ nesting retained; original task/handler count invariants pass. Pi coverage only; no ESP32 ranking input."
     },
-    "coverage-addition-10": {
-      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v4/qualified-zperf-Contiki-NG.json",
-      "sha256": "d2e0239a2edc89f7fa89d65704b78e96f279508d01ff693265774b1077b033dd",
-      "bytes": 8510,
-      "scope": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. Contiki process executes both uploaders with actual context checks; ESP-IDF 5.2.5/FreeRTOS provides hosting, sockets, clock and radio. Deployment coverage, not native Contiki TCP/IP."
-    },
-    "coverage-addition-11": {
+    "coverage-addition-9": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v4/qualified-zperf-RIOT.json",
       "sha256": "dfd2082de2e40e89b4fff707017f6f4111d4d2e8afdfe547d678de1a3d5be51b",
       "bytes": 10550,
       "scope": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. RIOT native priority threads, POSIX/lwIP, 65536-byte network heap and tickless native clock with 10-ms statistic grid; separate matched native-select timeout control. UDP maps blocking send to repeated native send calls only on transient buffer exhaustion, with a 2-s per-call guard and explicit wait accounting included in the original duration. TCP keeps its previously acquired firmware and one prior sample; UDP uses its separately bound adapter image. This is adapter-inclusive execution coverage, not an unmodified native-API performance score."
     },
-    "coverage-addition-12": {
-      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-zperf-Pi-KVM.json",
-      "sha256": "d570030f7b5e9826c4c4cb2dd1ddc733fcd8f2a907c26c8f2b04c65f260bd321",
-      "bytes": 421127,
-      "scope": "Unchanged Zephyr 3.7 synchronous TCP/UDP upload cores, 3 fresh one-vCPU Pi4B KVM guests/protocol, 60 s, 16384/1024-byte payloads. Native Tenon workload and clock; Linux host sockets over declared PL011 bridge, all bridge overhead included. Real LAN receiver and UDP packet/finish/statistics replay. Deployment execution coverage, not native Tenon TCP/IP or B1 scores."
-    },
-    "coverage-addition-13": {
+    "coverage-addition-10": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-FreeRTOS.json",
       "sha256": "0271f6c11400d2445c4acfbdd6c5501fba630128eb284a7d1ea7ff1de91873d0",
       "bytes": 3328,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native FreeRTOS counting semaphores, priority/FIFO waits and ISR operations; reset uses native abort-delay, byte pipe uses native queues plus writer mutex, actual worker stacks 4096 B. Native conditions 240 MHz, one core, 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
     },
-    "coverage-addition-14": {
+    "coverage-addition-11": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-RIOT.json",
       "sha256": "a23740bd8620f190e6eb9e4112618c00f0d82a67835d069796dede2cf910ab7f",
       "bytes": 3365,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native RIOT semaphores, mutex priority waiters, native deadlines and IRQ-safe operations; reset cancels retired native instances with sema_destroy, bounded byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; tickless native ztimer; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
     },
-    "coverage-addition-15": {
+    "coverage-addition-12": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-NuttX.json",
       "sha256": "d9d66e9c0edb1f604ad186a06dddc0a51fb273aea6f52f5a4ced6516af705cc1",
       "bytes": 3354,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native NuttX task groups and priority semaphore waits, native deadlines and IRQ-safe try/post; reset releases retired native semaphore instances with native posts, bounded byte pipe uses native semaphores. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
     },
-    "coverage-addition-16": {
+    "coverage-addition-13": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-AliOS Things.json",
       "sha256": "4dcc9ffd6648bdca165517b0d8f051e82c350317decd9497f27aa90466392c53",
       "bytes": 3475,
       "scope": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native Rhino priority tasks and semaphores, native sleep and reset cancellation by retiring deleted static objects. Public take rejects ISR context; the no-wait compatibility operation reads/decrements the native object count under CPU IRQ lock, without faking interrupt context. Byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
     },
-    "coverage-addition-17": {
+    "coverage-addition-14": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-semaphore-Pi-KVM.json",
       "sha256": "eb2c32f9f3a26e53a5885498df86d8c59803f07ef85b33cdba5c5b5a520940f8",
       "bytes": 171086,
       "scope": "24 unchanged Zephyr 3.7.0 kernel-mode cases, one complete one-vCPU 128-MiB Pi4B KVM guest, 28 real GICv2 SGIs. Native Tenon priority tasks, semaphore waits and timers. Explicit isolated-kernel compatibility fixes cancel the timeout on ISR wake and avoid duplicate wake-all transitions; original scheduler assertions and failed v1-v4 remain. Retired native objects map reset cancellation; byte pipe uses native semaphores, workers 16384 B. Correctness execution coverage of this fixed variant, not unmodified upstream capability, RAM/latency or B1 scores."
     },
-    "coverage-addition-18": {
-      "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-ph3-Contiki-NG.json",
-      "sha256": "ed49e6c71d91a0971035c13cd336a203eaa736a21d45eb6cf843bf8453d88838",
-      "bytes": 3284,
-      "scope": "One complete B1 reset of PH3 on five native Contiki processes/etimers, unchanged SEI-derived C Small_Whetstone and PH3 release/step rules; full first-loss termination. Hosted by ESP-IDF/FreeRTOS at 240 MHz, one core, 1-ms event timers; completion clock is quantized to 10 us. Cooperative event dispatch, no preemptive-priority emulation; this is measured workload coverage, not a pooled preemptive PH3 capacity or B1 Overall input. First loss at step 0."
-    },
-    "coverage-addition-19": {
+    "coverage-addition-15": {
       "path": "[private-evidence]/artifacts/reports/eunotos-coverage-completion-20261106-v5/qualified-ph3-Pi-KVM.json",
       "sha256": "0f633dcb891c63a9790af29e67386dd094e0fd2d2c43e5353b40a1f707255750",
       "bytes": 153351,
@@ -629,8 +605,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-service-owner-audit-20261107-v1/integration/coverage-evidence.json",
-    "sha256": "f895f6944c32a22536aeb04510e5c757b8e7a5485989e2f00ec3b76bba0a24f6"
+    "path": "[private-evidence]/artifacts/reports/eunobench-table1-service-audit-20261107-v2/integration/coverage-evidence.json",
+    "sha256": "937cfc5010fb5b7748471307dfc0715154f65d67253860144ca8d81a46fcd2bc"
   },
   "entries": [
     {
@@ -820,11 +796,11 @@
             "cases": [],
             "configurations": [],
             "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
           }
         },
         "Pi KVM": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -836,22 +812,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 9,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "preemptive_scheduling",
-              "message_processing",
-              "synchronization_processing"
-            ],
-            "configurations": [
-              "Tenon Pi KVM native Thread-Metric adapter"
-            ],
-            "platform": "Pi4B one-vCPU KVM",
-            "evidence": [
-              "coverage-addition-8"
-            ],
-            "boundary": "Three unchanged Thread-Metric core bodies, three fresh KVM guests each and one original 30-s window per guest. Native Tenon priority threads and semaphore; bounded FIFO copies four native unsigned-long words (32 B). Pi coverage only; not the ESP32 four-word/16-B ranking input."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "Message case uses an adapter-owned semaphore/ring queue; native-queue and nonblocking contract equivalence was not established. Two native subcases do not qualify the entire three-case cell"
           }
         }
       }
@@ -1037,7 +1004,7 @@
             "cases": [],
             "configurations": [],
             "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
           }
         },
         "Pi KVM": {
@@ -1065,7 +1032,7 @@
             ],
             "platform": "Pi4B one-vCPU KVM",
             "evidence": [
-              "coverage-addition-9"
+              "coverage-addition-8"
             ],
             "boundary": "Two unchanged original Thread-Metric IRQ bodies, three fresh KVM guests each, one 30-s window each. Hardware GICv2 SGI 1 via the native trap and registered dispatcher; ISACTIVER0 bit 1 witnesses an active interrupt before native EOI. Native IRQ nesting retained; original task/handler count invariants pass. Pi coverage only; no ESP32 ranking input."
           }
@@ -1257,7 +1224,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -1267,20 +1234,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 1,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "PH3"
-            ],
-            "configurations": [
-              "Contiki-NG B1 hosted native cooperative PH3 processes"
-            ],
-            "platform": "ESP32 B1, explicit ESP-IDF/FreeRTOS host",
-            "evidence": [
-              "coverage-addition-18"
-            ],
-            "boundary": "One complete B1 reset of PH3 on five native Contiki processes/etimers, unchanged SEI-derived C Small_Whetstone and PH3 release/step rules; full first-loss termination. Hosted by ESP-IDF/FreeRTOS at 240 MHz, one core, 1-ms event timers; completion clock is quantized to 10 us. Cooperative event dispatch, no preemptive-priority emulation; this is measured workload coverage, not a pooled preemptive PH3 capacity or B1 Overall input. First loss at step 0."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "Cooperative event dispatch replaces PH3 priority/preemptive release semantics; retain as a derived workload diagnostic"
           }
         },
         "Pi KVM": {
@@ -1305,7 +1265,7 @@
             ],
             "platform": "Raspberry Pi 4B one-vCPU KVM guest",
             "evidence": [
-              "coverage-addition-19"
+              "coverage-addition-15"
             ],
             "boundary": "One complete native Tenon Pi4B one-vCPU 128-MiB KVM PH3 guest; unchanged SEI-derived C workload and contiguous 10-second PH3 steps to first loss. Baseline and integer workload increment are fixed from pre-trial calibration at 20% and 2.5% targets per SEI section 5.2; no post-result selection. Native priority tasks, semaphores and tick sleeps, fixed static OpenLibm. Native clock resolution is separately declared; no ESP32 or common-task score claim."
           }
@@ -1445,7 +1405,7 @@
             ],
             "platform": "ESP32 B1",
             "evidence": [
-              "coverage-addition-11"
+              "coverage-addition-9"
             ],
             "boundary": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. RIOT native priority threads, POSIX/lwIP, 65536-byte network heap and tickless native clock with 10-ms statistic grid; separate matched native-select timeout control. UDP maps blocking send to repeated native send calls only on transient buffer exhaustion, with a 2-s per-call guard and explicit wait accounting included in the original duration. TCP keeps its previously acquired firmware and one prior sample; UDP uses its separately bound adapter image. This is adapter-inclusive execution coverage, not an unmodified native-API performance score."
           }
@@ -1480,7 +1440,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1491,25 +1451,17 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 6,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "sync_tcp_upload",
-              "sync_udp_upload"
-            ],
-            "configurations": [
-              "Contiki-NG original upload deployment"
-            ],
-            "platform": "ESP32 B1",
-            "evidence": [
-              "coverage-addition-10"
-            ],
-            "boundary": "Original Zephyr v3.7 synchronous TCP/UDP upload bodies, three independent resets per protocol, 60 s, 16384/1024-byte payloads and original receiver/wire accounting. Contiki process executes both uploaders with actual context checks; ESP-IDF 5.2.5/FreeRTOS provides hosting, sockets, clock and radio. Deployment coverage, not native Contiki TCP/IP."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "IDF/lwIP and FreeRTOS supply sockets, pacing clock and yield; not the Contiki network service"
           }
         },
         "Pi KVM": {
-          "display": "added",
+          "display": "unmeasured",
           "original": {
             "state": "no_target_path",
             "evidence": [
@@ -1520,21 +1472,13 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 6,
+          "new_hardware_measurements_this_audit": 0,
           "eunotos": {
-            "tested": true,
-            "cases": [
-              "sync_tcp_upload",
-              "sync_udp_upload"
-            ],
-            "configurations": [
-              "Native Tenon Pi4B KVM zperf with Linux/PL011 socket provider"
-            ],
-            "platform": "Raspberry Pi 4B one-vCPU KVM guest and Linux host",
-            "evidence": [
-              "coverage-addition-12"
-            ],
-            "boundary": "Unchanged Zephyr 3.7 synchronous TCP/UDP upload cores, 3 fresh one-vCPU Pi4B KVM guests/protocol, 60 s, 16384/1024-byte payloads. Native Tenon workload and clock; Linux host sockets over declared PL011 bridge, all bridge overhead included. Real LAN receiver and UDP packet/finish/statistics replay. Deployment execution coverage, not native Tenon TCP/IP or B1 scores."
+            "tested": false,
+            "cases": [],
+            "configurations": [],
+            "evidence": [],
+            "reason": "Linux host performs socket operations over PL011 RPC; guest has no native TCP/IP path"
           }
         }
       }
@@ -1581,6 +1525,7 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 1,
+          "implementation_marker": "adapted",
           "eunotos": {
             "tested": true,
             "cases": [
@@ -1614,9 +1559,10 @@
             ],
             "platform": "ESP32 B1",
             "evidence": [
-              "coverage-addition-13"
+              "coverage-addition-10"
             ],
-            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native FreeRTOS counting semaphores, priority/FIFO waits and ISR operations; reset uses native abort-delay, byte pipe uses native queues plus writer mutex, actual worker stacks 4096 B. Native conditions 240 MHz, one core, 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native FreeRTOS counting semaphores, priority/FIFO waits and ISR operations; reset uses native abort-delay, byte pipe uses native queues plus writer mutex, actual worker stacks 4096 B. Native conditions 240 MHz, one core, 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score.",
+            "api_scope": "Original kernel-mode bodies through a compatibility API: native target threads/waits, adapter reset/count-limit/static-init/pipe mapping; not conformance of an unchanged native Zephyr API"
           }
         },
         "Zephyr": {
@@ -1680,6 +1626,7 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 1,
+          "implementation_marker": "adapted",
           "eunotos": {
             "tested": true,
             "cases": [
@@ -1713,9 +1660,10 @@
             ],
             "platform": "ESP32 B1",
             "evidence": [
-              "coverage-addition-15"
+              "coverage-addition-12"
             ],
-            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native NuttX task groups and priority semaphore waits, native deadlines and IRQ-safe try/post; reset releases retired native semaphore instances with native posts, bounded byte pipe uses native semaphores. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native NuttX task groups and priority semaphore waits, native deadlines and IRQ-safe try/post; reset releases retired native semaphore instances with native posts, bounded byte pipe uses native semaphores. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score.",
+            "api_scope": "Original kernel-mode bodies through a compatibility API: native target threads/waits, adapter reset/count-limit/static-init/pipe mapping; not conformance of an unchanged native Zephyr API"
           }
         },
         "RIOT": {
@@ -1728,6 +1676,7 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 1,
+          "implementation_marker": "adapted",
           "eunotos": {
             "tested": true,
             "cases": [
@@ -1761,9 +1710,10 @@
             ],
             "platform": "ESP32 B1",
             "evidence": [
-              "coverage-addition-14"
+              "coverage-addition-11"
             ],
-            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native RIOT semaphores, mutex priority waiters, native deadlines and IRQ-safe operations; reset cancels retired native instances with sema_destroy, bounded byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; tickless native ztimer; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native RIOT semaphores, mutex priority waiters, native deadlines and IRQ-safe operations; reset cancels retired native instances with sema_destroy, bounded byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; tickless native ztimer; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score.",
+            "api_scope": "Original kernel-mode bodies through a compatibility API: native target threads/waits, adapter reset/count-limit/static-init/pipe mapping; not conformance of an unchanged native Zephyr API"
           }
         },
         "AliOS Things": {
@@ -1776,6 +1726,7 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 1,
+          "implementation_marker": "adapted",
           "eunotos": {
             "tested": true,
             "cases": [
@@ -1809,9 +1760,10 @@
             ],
             "platform": "ESP32 B1",
             "evidence": [
-              "coverage-addition-16"
+              "coverage-addition-13"
             ],
-            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native Rhino priority tasks and semaphores, native sleep and reset cancellation by retiring deleted static objects. Public take rejects ISR context; the no-wait compatibility operation reads/decrements the native object count under CPU IRQ lock, without faking interrupt context. Byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score."
+            "boundary": "All 24 unchanged Zephyr v3.7.0 kernel-mode semaphore tests pass in one complete B1 reset; 28 real CPU_FROM_CPU2 IRQs. Native Rhino priority tasks and semaphores, native sleep and reset cancellation by retiring deleted static objects. Public take rejects ISR context; the no-wait compatibility operation reads/decrements the native object count under CPU IRQ lock, without faking interrupt context. Byte pipe uses native semaphore notifications. Actual worker stacks 4096 B, 240 MHz, one core; 100 Hz; no skipped kernel-mode case. Adapter-inclusive correctness coverage, not a precision estimate, Zephyr userspace or leaderboard score.",
+            "api_scope": "Original kernel-mode bodies through a compatibility API: native target threads/waits, adapter reset/count-limit/static-init/pipe mapping; not conformance of an unchanged native Zephyr API; ISR no-wait take is adapter count manipulation under the Rhino IRQ lock, not the public Rhino take API"
           }
         },
         "Contiki-NG": {
@@ -1829,7 +1781,7 @@
             "cases": [],
             "configurations": [],
             "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
           }
         },
         "Pi KVM": {
@@ -1842,6 +1794,7 @@
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
           "new_hardware_measurements_this_audit": 1,
+          "implementation_marker": "patched",
           "eunotos": {
             "tested": true,
             "cases": [
@@ -1871,13 +1824,15 @@
               "test_sem_queue_mutual_exclusion"
             ],
             "configurations": [
-              "Native Tenon Pi4B KVM semaphore24 with declared wakeup compatibility fixes"
+              "Tenon Pi4B KVM semaphore24 compatibility API with isolated wakeup/timeout kernel fixes"
             ],
             "platform": "Raspberry Pi 4B one-vCPU KVM guest",
             "evidence": [
-              "coverage-addition-17"
+              "coverage-addition-14"
             ],
-            "boundary": "24 unchanged Zephyr 3.7.0 kernel-mode cases, one complete one-vCPU 128-MiB Pi4B KVM guest, 28 real GICv2 SGIs. Native Tenon priority tasks, semaphore waits and timers. Explicit isolated-kernel compatibility fixes cancel the timeout on ISR wake and avoid duplicate wake-all transitions; original scheduler assertions and failed v1-v4 remain. Retired native objects map reset cancellation; byte pipe uses native semaphores, workers 16384 B. Correctness execution coverage of this fixed variant, not unmodified upstream capability, RAM/latency or B1 scores."
+            "boundary": "24 unchanged Zephyr 3.7.0 kernel-mode cases, one complete one-vCPU 128-MiB Pi4B KVM guest, 28 real GICv2 SGIs. Native Tenon priority tasks, semaphore waits and timers. Explicit isolated-kernel compatibility fixes cancel the timeout on ISR wake and avoid duplicate wake-all transitions; original scheduler assertions and failed v1-v4 remain. Retired native objects map reset cancellation; byte pipe uses native semaphores, workers 16384 B. Correctness execution coverage of this fixed variant, not unmodified upstream capability, RAM/latency or B1 scores.",
+            "api_scope": "Original kernel-mode bodies through a compatibility API: native target threads/waits, adapter reset/count-limit/static-init/pipe mapping; not conformance of an unchanged native Zephyr API",
+            "kernel_scope": "Patched diagnostic configuration; prior unpatched failures are retained and are not converted into passes"
           }
         }
       }
@@ -2085,7 +2040,7 @@
             "cases": [],
             "configurations": [],
             "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers"
           }
         },
         "Pi KVM": {
@@ -2310,7 +2265,8 @@
                 "runtime_build": "Contiki-IDF-absolute-v1",
                 "observer_build": "Contiki-IDF-ram-absolute-v1"
               }
-            ]
+            ],
+            "service_scope": "Declared deployment measurement: Contiki processes execute task logic; IDF/FreeRTOS supplies hosting/networking. Not native Contiki network or preemption capability."
           }
         },
         "Pi KVM": {
@@ -2330,7 +2286,8 @@
             "evidence": [
               "coverage-addition-0"
             ],
-            "boundary": "Three fresh guests; same 256-byte owned copies, 16 slots, eight FNV rounds, 10-ms releases, 3000/24000 foreground and 3000 background completions; no cross-platform timing or score."
+            "boundary": "Three fresh guests; same 256-byte owned copies, 16 slots, eight FNV rounds, 10-ms releases, 3000/24000 foreground and 3000 background completions; no cross-platform timing or score.",
+            "service_scope": "Declared guest/deployment measurement: Tenon executes task logic; Linux/PL011 supplies UDP transport. Board energy includes the host; RAM is guest-only. Not native Tenon TCP/IP capability."
           }
         }
       }
@@ -2509,7 +2466,8 @@
                 "runtime_build": "Contiki-IDF-absolute-v1",
                 "observer_build": "Contiki-IDF-ram-absolute-v1"
               }
-            ]
+            ],
+            "service_scope": "Declared deployment measurement: Contiki processes execute task logic; IDF/FreeRTOS supplies hosting/networking. Not native Contiki network or preemption capability."
           }
         },
         "Pi KVM": {
@@ -2528,7 +2486,8 @@
             "evidence": [
               "coverage-addition-3"
             ],
-            "boundary": "Three fresh guests, 256-byte request and 260-byte checked reply, eight FNV rounds, capacity 16, 5-s warmup and 30-s measurement, one outstanding request and 100-ms timeout. Native queue/semaphore worker performs all work. Host bridge and driver repair declared; all deadline misses retained. Execution coverage only; not native TCP/IP or B1 score."
+            "boundary": "Three fresh guests, 256-byte request and 260-byte checked reply, eight FNV rounds, capacity 16, 5-s warmup and 30-s measurement, one outstanding request and 100-ms timeout. Native queue/semaphore worker performs all work. Host bridge and driver repair declared; all deadline misses retained. Execution coverage only; not native TCP/IP or B1 score.",
+            "service_scope": "Declared guest/deployment measurement: Tenon executes task logic; Linux/PL011 supplies UDP transport. Board energy includes the host; RAM is guest-only. Not native Tenon TCP/IP capability."
           }
         }
       }
@@ -2713,7 +2672,8 @@
                 "observer_build": "Contiki-IDF-ram-absolute-v1"
               }
             ],
-            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion"
+            "boundary": "POWER-Z KM003C whole B1 input, host monotonic phase windows, joules per verified foreground completion",
+            "service_scope": "Declared deployment measurement: Contiki processes execute task logic; IDF/FreeRTOS supplies hosting/networking. Not native Contiki network or preemption capability."
           }
         },
         "Pi KVM": {
@@ -2735,7 +2695,8 @@
               "pi-build-energy"
             ],
             "platform": "Raspberry Pi 4B whole board including Linux/KVM host",
-            "boundary": "Activation/build-and-validation intervals, not a common-task ESP32 energy score"
+            "boundary": "Activation/build-and-validation intervals, not a common-task ESP32 energy score",
+            "service_scope": "Declared guest/deployment measurement: Tenon executes task logic; Linux/PL011 supplies UDP transport. Board energy includes the host; RAM is guest-only. Not native Tenon TCP/IP capability."
           }
         }
       }
@@ -2920,7 +2881,8 @@
                 "observer_build": "Contiki-IDF-ram-absolute-v1"
               }
             ],
-            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once"
+            "boundary": "Startup, normal and competing tasks, UDP and quiescence; observer included, physical capacity counted once",
+            "service_scope": "Declared deployment measurement: Contiki processes execute task logic; IDF/FreeRTOS supplies hosting/networking. Not native Contiki network or preemption capability."
           }
         },
         "Pi KVM": {
@@ -2941,7 +2903,8 @@
               "pi-ram"
             ],
             "platform": "Raspberry Pi 4B KVM guest, host excluded",
-            "boundary": "Matched one-vCPU 128-MiB Pi4B/KVM observer images, native entry through termination entry; six unchanged original workloads. Separate phase-7 validation does not raise the peak."
+            "boundary": "Matched one-vCPU 128-MiB Pi4B/KVM observer images, native entry through termination entry; six unchanged original workloads. Separate phase-7 validation does not raise the peak.",
+            "service_scope": "Declared guest/deployment measurement: Tenon executes task logic; Linux/PL011 supplies UDP transport. Board energy includes the host; RAM is guest-only. Not native Tenon TCP/IP capability."
           }
         }
       }
