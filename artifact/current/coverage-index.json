@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T15:18:01.639607+00:00",
+  "created_utc": "2026-11-07T16:01:31.293485+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -656,8 +656,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-mt-sem24-20261107-v1/integration-v1/coverage-evidence.json",
-    "sha256": "ffca81059f2b22c5d3c3bec9846dd2b6cc3569ba2e6b30f17e2bf64da7a81d59"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-mt-sem24-20261107-v1/integration-v2-na-display/coverage-evidence.json",
+    "sha256": "1b64785a320759794e46a62646f65f25c8e625eddbd6ef2780517b7190f5101b"
   },
   "entries": [
     {
@@ -1876,6 +1876,8 @@
           "coverage_status": "partial",
           "implementation_marker": "partial",
           "reused_native_counter_processes": 3,
+          "table_applicability": "not_applicable",
+          "table_scope": "Full original semaphore subset on the frozen cooperative configuration; partial executions and the separate MT extension are footnote evidence, not a full baseline pass",
           "eunotos": {
             "tested": false,
             "cases": [],

@@ -23,13 +23,14 @@ the former landing page; the historical replay remains available below.
   cell identifies its cases, configurations and evidence commitments; remaining
   gaps stay explicit. A cross includes measured diagnostics that do not qualify
   for the original OS/subset; it does not necessarily mean no execution exists.
-  The current five non-full cells comprise **four N/A subsets** whose required
-  native services are absent from the frozen cooperative model, and **one
-  partially executed semaphore subset (13/24 original cases)**. Neither is a
-  complete-subset check; the universe remains 70 cells, with 65 complete.
+  Table 1 displays **five N/A cells** for full original subsets whose required
+  native services are absent from the frozen cooperative model. The semaphore
+  cell's footnote preserves **13/24 original cases passed**, while the index
+  retains that partial-execution evidence separately from full-subset
+  applicability. The universe remains 70 cells, with 65 complete.
   A **separate native MT extension on bare STM32F407 completes 24/24** in
-  three independent resets. Its result is displayed alongside the cooperative
-  baseline's 13/24, not substituted for that configuration. It uses no host
+  three independent resets. Its result is recorded in the footnote alongside the
+  cooperative baseline's 13/24, not substituted for that configuration. It uses no host
   kernel and does not alter the ESP32 leaderboard.
   Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
@@ -146,7 +147,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `2ce9c27d420cb4c168c0d49cdae830fe860060e383efc17da290722f37899e75`.
+ZIP SHA-256: `01c6798c743578eac726648730adaac0886dc1202d328b4885fae377618b17bf`.
 
 ## Preserved historical raw-evidence replay
 

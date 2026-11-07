@@ -35,5 +35,6 @@
   "partial_cells": 1,
   "not_applicable_cells": 4,
   "unresolved_unmeasured_cells": 0,
-  "separate_full_extension_variants": 1
+  "separate_full_extension_variants": 1,
+  "table_not_applicable_cells": 5
 }

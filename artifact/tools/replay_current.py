@@ -31,7 +31,7 @@ def main(output):
  if sensitivity(actual)!=data['weight_sensitivity']:raise ValueError('235-profile sensitivity differs')
  coverage=json.loads((ROOT/'current/coverage-index.json').read_text());columns=coverage['columns']
  table=(ROOT/'current/benchmark-coverage.tex').read_text();symbols={'existing':'covexisting','added':'covnew','reproduced':'covreproduced','measured':'covmeasured','unmeasured':'covuntested'}
- count=0;pending=[];coverage_rows=[];partial_count=na_count=extension_count=0
+ count=0;pending=[];coverage_rows=[];partial_count=na_count=extension_count=table_na_count=0
  for entry in coverage['entries']:
   expected=[]
   for system in columns:
@@ -54,10 +54,11 @@ def main(output):
     if extension:
      if entry['id']!='semaphore' or system!='Contiki-NG' or passed!=13 or extension['configuration']!='Contiki-NG + native MT extension' or extension['platform']!='STM32F407 bare metal' or extension['host_kernel'] is not None or extension['passed_cases']!=24 or extension['original_total']!=24 or extension['fresh_resets']!=3 or extension['extension_qualifying_full_subset'] is not True or extension['scoring_inputs_changed'] is not False:raise ValueError('Separate MT extension identity/coverage differs')
      if len(extension['runs'])!=3 or any(r['actual_irqs']!=28 or r['assertions']!=4323 or r['tick_preemptions']<=0 for r in extension['runs']):raise ValueError('MT execution summaries differ')
-     markup='\\covextended';extension_count+=1
+     if cell.get('table_applicability')!='not_applicable':raise ValueError('Original cooperative subset applicability differs')
+     markup='\\covinapplicable';extension_count+=1;table_na_count+=1
    elif status=='not_applicable':
     if tested or not cell['eunotos']['evidence'] or not cell['eunotos'].get('applicability_reason'):raise ValueError('Applicability has no evidence')
-    na_count+=1
+    na_count+=1;table_na_count+=1
    expected.append(markup);coverage_rows.append([entry['id'],entry['name'],system,display,tested,status,passed,total]);count+=1
   fragment=table.split('% coverage-row: '+entry['id']+'\n',1)[1].split('\\\\',1)[0]
   if not fragment.rstrip().endswith(' & '.join(expected)):raise ValueError('Table and index differ: '+entry['id'])
@@ -69,7 +70,7 @@ def main(output):
  with (output/'coverage.csv').open('w',newline='') as f:
   w=csv.writer(f);w.writerow(['subset','name','system','display','measured','coverage_status','passed_cases','original_total']);w.writerows(coverage_rows)
  receipt={'pass':True,'configurations':len(actual),'scalars':48,'reference':1,'preference_profiles':235,'coverage_cells':count,'unmeasured_cells':len(pending),'pending':pending,'scope':'Current score arithmetic and declared coverage bindings; new raw captures, ELF, RAM lifecycle and new coverage validators remain private. Legacy subset has its separate raw replay.','new_acquisitions':0,'new_model_calls':0}
- receipt.update(complete_cells=count-len(pending),partial_cells=partial_count,not_applicable_cells=na_count,unresolved_unmeasured_cells=len(pending)-partial_count-na_count,separate_full_extension_variants=extension_count)
+ receipt.update(complete_cells=count-len(pending),partial_cells=partial_count,not_applicable_cells=na_count,unresolved_unmeasured_cells=len(pending)-partial_count-na_count,separate_full_extension_variants=extension_count,table_not_applicable_cells=table_na_count)
  (output/'receipt.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps(receipt))
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--output',type=Path,required=True);a=p.parse_args();main(a.output)

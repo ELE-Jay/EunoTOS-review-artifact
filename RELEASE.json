@@ -1,8 +1,8 @@
 {
-  "release": "eunobench-anonymous-contiki-mt-20261107-v1",
-  "paper_source_commit": "25c6448",
-  "table_sha256": "150b418b508d253f3214ec5f0230518fec12e26fb9e1d2faca51d7d4f1a461de",
-  "archive_sha256": "2ce9c27d420cb4c168c0d49cdae830fe860060e383efc17da290722f37899e75",
+  "release": "eunobench-anonymous-na-display-20261108-v1",
+  "paper_source_commit": "f456f30",
+  "table_sha256": "ea3db77876a3a935692a2854c39045ae5f22afb8366a8a84604238bca227700c",
+  "archive_sha256": "01c6798c743578eac726648730adaac0886dc1202d328b4885fae377618b17bf",
   "remaining_coverage_cells": 5,
   "offline_checks": [
     {
