@@ -25,7 +25,7 @@ the former landing page; the historical replay remains available below.
   for the original OS/subset; it does not necessarily mean no execution exists.
   The current five non-full cells comprise **four N/A subsets** whose required
   native services are absent from the frozen cooperative model, and **one
-  partially executed semaphore subset (7/24 original cases)**. Neither is a
+  partially executed semaphore subset (10/24 original cases)**. Neither is a
   complete-subset check; the universe remains 70 cells, with 65 complete.
   Coverage tests do not replace the common-task
   scoring inputs or change the leaderboard.
@@ -64,15 +64,20 @@ the former landing page; the historical replay remains available below.
   neither an ESP32 measurement nor a repair of Contiki's hosted B1 network
   score. Four original thread/preemption subsets are structurally inapplicable
   to the frozen cooperative model; no host-thread substitution fills them.
-- **Native semaphore partial coverage:** seven unchanged Zephyr counter cases
-  pass in three fresh Contiki native/Linux processes. PT_SEM provides native
-  initialization, count, signal and immediately available take; the explicit
-  compatibility layer provides limit, reset, parameter and return-code mapping.
-  Blocking waits and thread creation fail closed. Counter-fault, missing-case
-  and false-full-subset controls are rejected. This is **7/24**, not a full
-  24-case semaphore result and not a new leaderboard input. The other 17 cases
-  remain unexecuted and are named in the bound index. Three processes contain
-  21 case invocations; those are not 21 independent OS experiments.
+- **Native semaphore partial coverage:** seven unchanged counter cases reuse
+  their three archived Contiki native/Linux processes. Three additional
+  single-caller timeout cases pass in three new processes. PT_SEM supplies
+  counters and available takes; Contiki process protothreads and etimer supply
+  the finite wait. The synchronous compatibility facade pumps exactly the
+  original native event-loop iteration outside callbacks; it does not supply
+  priority threads or a multi-waiter scheduler. Limits, reset, validation and
+  return-code mapping remain explicit adapter behavior. Timeouts round up by
+  one native tick; the original busy-wait call also uses native clock granularity.
+  Empty infinite waits and thread creation fail closed. Early-return, missing
+  timer, missing-case and false-full-subset controls are rejected. This is
+  **10/24 across two images**, not a full-suite run or a new leaderboard input.
+  The other 14 cases remain unexecuted and are named in the index. Six process
+  executions contain 30 case invocations; those are not 30 independent experiments.
 - Complete semaphore cells marked **a** execute unchanged kernel-mode bodies through a
   compatibility API over the target OS's own threads and waits. Adapter-provided
   reset/count-limit/pipe behavior is included; this is not a claim that the
@@ -103,7 +108,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `8e8cb58499007c2ff9ddae4ef3fc87c93dc3abcc32962ea1c29ee740b6c6e68e`.
+ZIP SHA-256: `4547b8a98b0e16f810e3a3fd85b2e1a4d37caf3059ea25f1062f3b17c43e1386`.
 
 ## Preserved historical raw-evidence replay
 

@@ -1,8 +1,8 @@
 {
-  "release": "eunobench-anonymous-contiki-partial-20261107-v1",
-  "paper_source_commit": "f417985451a3770b86f32a3b79fc3d1d41ed5da2",
-  "table_sha256": "eebe1592b224e2a3880fc8c0e9edc1cd8f28e0324fd104d4aaccf1cac19ee74d",
-  "archive_sha256": "8e8cb58499007c2ff9ddae4ef3fc87c93dc3abcc32962ea1c29ee740b6c6e68e",
+  "release": "eunobench-anonymous-contiki-timeouts-20261107-v1",
+  "paper_source_commit": "230145bdf2a63ccb772ec897356a23cd4ff5c2f2",
+  "table_sha256": "d4fb477f230a3627ec78028e913a7320cd1168b41dda6af8cb411c660643a8fb",
+  "archive_sha256": "4547b8a98b0e16f810e3a3fd85b2e1a4d37caf3059ea25f1062f3b17c43e1386",
   "remaining_coverage_cells": 5,
   "offline_checks": [
     {

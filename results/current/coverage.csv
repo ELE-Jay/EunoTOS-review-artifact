@@ -32,7 +32,7 @@ semaphore,Zephyr semaphore (24 cases),Zephyr,reproduced,True,complete,,
 semaphore,Zephyr semaphore (24 cases),NuttX,added,True,complete,,
 semaphore,Zephyr semaphore (24 cases),RIOT,added,True,complete,,
 semaphore,Zephyr semaphore (24 cases),AliOS Things,added,True,complete,,
-semaphore,Zephyr semaphore (24 cases),Contiki-NG,unmeasured,False,partial,7,24
+semaphore,Zephyr semaphore (24 cases),Contiki-NG,unmeasured,False,partial,10,24
 semaphore,Zephyr semaphore (24 cases),Pi KVM,added,True,complete,,
 pi-six,Rhealstone and timer (6 cases),FreeRTOS,added,True,complete,,
 pi-six,Rhealstone and timer (6 cases),Zephyr,added,True,complete,,

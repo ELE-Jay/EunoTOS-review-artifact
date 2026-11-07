@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T12:42:07.984754+00:00",
+  "created_utc": "2026-11-07T13:13:12.088785+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -520,6 +520,12 @@
       "sha256": "555e6540a3b69372fd654f3b294ab709ebaf50582bafa676754924f2f06b01d6",
       "bytes": 7218,
       "scope": "Seven unchanged original counter cases, three fresh processes. The compatibility layer supplies count limit, validation, reset and return-code mapping; native PT_SEM performs init, count, signal and immediately available take. No blocking, priority, IRQ or full-suite conformance. The other original subsets require stackful priority threads absent from this frozen model. Native hardware interrupts are not equated with priority-thread scheduling. All 70 cells and original test denominators remain."
+    },
+    "contiki-native-timeout-extension": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-timeouts-20261107-v1/qualified-timeout-extension-v2.json",
+      "sha256": "2ceec2a21274037125191cba92c78a1bc63c2d17de07a19d4b58b12311f4546f",
+      "bytes": 4783,
+      "scope": "Three original single-caller timeout cases. The compatibility facade retains the original C call stack outside process callbacks and pumps precisely the original native event-loop iteration. Contiki etimer and process protothreads implement the wait; PT_SEM implements counters and available takes. Finite timeouts round up by one native tick. No host semaphore, priority thread or multi-waiter queue; original busy-wait(1 us) rounds up to the native clock granularity. Native/Linux execution, not B1 timing or ranking. Seven counter cases reuse their original three process captures; no duplicate measurement. Ten of twenty-four cases across two images, not a full-suite execution."
     }
   },
   "five_verdicts": [
@@ -632,8 +638,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-applicability-20261107-v1/integration-v2/coverage-evidence.json",
-    "sha256": "1bcb0b3e8ea355a50f55fb07acb78d795799dd1079575219c6ca14b5606d17de"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-timeouts-20261107-v1/integration-v2/coverage-evidence.json",
+    "sha256": "8fa81197acd75f8e83c9a50aa317993909fc75e58e0db7b8d88e462efdc58c55"
   },
   "entries": [
     {
@@ -1851,14 +1857,17 @@
           "new_hardware_measurements_this_audit": 3,
           "coverage_status": "partial",
           "implementation_marker": "partial",
+          "reused_native_counter_processes": 3,
           "eunotos": {
             "tested": false,
             "cases": [],
             "configurations": [
-              "Contiki native/Linux PT_SEM immediate counter compatibility API"
+              "Contiki native/Linux PT_SEM immediate counter compatibility API",
+              "Contiki native/Linux PT_SEM and etimer single-caller timeout compatibility API"
             ],
             "evidence": [
-              "contiki-native-subset-applicability"
+              "contiki-native-subset-applicability",
+              "contiki-native-timeout-extension"
             ],
             "reason": "FreeRTOS supplies the original kernel mechanisms behind synchronous Contiki wrappers",
             "applicability_reason": "The complete 24-case suite needs synchronous blocking C calls, priority-ordered native waiters, timeout cancellation, reset and real ISR operations; PT_SEM_WAIT is a yielding protothread macro, not that interface.",
@@ -1870,30 +1879,30 @@
                 "test_sem_give_from_thread",
                 "test_sem_take_no_wait",
                 "test_sem_take_no_wait_fails",
-                "test_k_sem_correct_count_limit"
+                "test_k_sem_correct_count_limit",
+                "test_sem_reset",
+                "test_sem_take_timeout_fails",
+                "test_sem_measure_timeouts"
               ],
               "original_total": 24,
               "unexecuted_cases": [
                 "test_sem_thread2thread",
                 "test_sem_thread2isr",
-                "test_sem_reset",
                 "test_sem_reset_waiting",
                 "test_sem_give_from_isr",
-                "test_sem_take_timeout_fails",
                 "test_sem_take_timeout",
                 "test_sem_take_timeout_forever",
                 "test_sem_take_timeout_isr",
                 "test_sem_take_multiple",
                 "test_sem_give_take_from_isr",
                 "test_sem_multiple_threads_wait",
-                "test_sem_measure_timeouts",
                 "test_sem_measure_timeout_from_thread",
                 "test_sem_multiple_take_and_timeouts",
                 "test_sem_multi_take_timeout_diff_sem",
                 "test_sem_queue_mutual_exclusion"
               ]
             },
-            "platform": "Contiki-NG native/Linux x86-64; no host synchronization or scheduling provider"
+            "platform": "Contiki-NG native/Linux x86-64; native PT_SEM and etimer; no host synchronization provider"
           }
         },
         "Pi KVM": {
