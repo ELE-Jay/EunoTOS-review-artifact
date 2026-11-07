@@ -1,6 +1,6 @@
 {
   "schema": "eunotos-coverage-paper-index-v1",
-  "created_utc": "2026-11-07T03:43:01.570620+00:00",
+  "created_utc": "2026-11-07T03:48:57.995985+00:00",
   "columns": [
     "FreeRTOS",
     "Zephyr",
@@ -526,6 +526,12 @@
       "sha256": "c700d5f5513ae5aeb799da139826a05fbd3b51d09d85d4a16370171f77dad8f7",
       "bytes": 2720,
       "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All 24 unchanged Zephyr 3.7 kernel-mode cases and 28 actual CPU IRQs pass in one B1 reset."
+    },
+    "coverage-addition-21": {
+      "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/qualified-six.json",
+      "sha256": "d9d28f9ce3e14f0fef4b65a78f4d8bce72aede00cda8227fd56dcb027ede3b52",
+      "bytes": 2759,
+      "scope": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All six unchanged pinned app bodies complete in one B1 reset, 500 iterations and actual CPU IRQ; adapter-inclusive hardware counts."
     }
   },
   "five_verdicts": [
@@ -635,8 +641,8 @@
     "unmeasured": "right-side cross only"
   },
   "full_private_index": {
-    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/integration-v1/coverage-evidence.json",
-    "sha256": "6dbcd1ee093f83939538e6f284f93559419f3bcdd0685687777468b6e4a99ce6"
+    "path": "[private-evidence]/artifacts/reports/eunobench-contiki-coverage-20261107-v1/integration-v2/coverage-evidence.json",
+    "sha256": "cd86003d6706d5f1d7316eb4b3b788752ec5d606482a0e884bf385990cfa4dec"
   },
   "entries": [
     {
@@ -2104,7 +2110,7 @@
           }
         },
         "Contiki-NG": {
-          "display": "unmeasured",
+          "display": "added",
           "original": {
             "state": "not_in_reference",
             "evidence": [
@@ -2116,13 +2122,26 @@
             ],
             "scope": "Declared fixed reference corpus only; no exhaustive absence or first-port claim"
           },
-          "new_hardware_measurements_this_audit": 0,
+          "new_hardware_measurements_this_audit": 1,
+          "hosted_thread_profile": true,
           "eunotos": {
-            "tested": false,
-            "cases": [],
-            "configurations": [],
-            "evidence": [],
-            "reason": "No execution of this exact suite/subset in the declared evaluation; other ports, native network tests and different bounded-copy tasks do not establish this cell"
+            "tested": true,
+            "cases": [
+              "average_task_switch_time, in cpu cycles",
+              "average_multi_task_switch_time, in cpu cycles",
+              "average_task_preempt_time, in cpu cycles",
+              "average_semaphore_shuffle_time, in cpu cycles",
+              "interrupt_latency_time, in cpu cycles",
+              "timer_deviation_under_interrupt_interference, in count of generic timer"
+            ],
+            "configurations": [
+              "Contiki-NG B1 hosted-thread-services-v1 six"
+            ],
+            "platform": "ESP32 B1, declared ESP-IDF/FreeRTOS host",
+            "evidence": [
+              "coverage-addition-21"
+            ],
+            "boundary": "Contiki-NG processes with explicit ESP-IDF 5.2.5/FreeRTOS priority-thread and IPC provider; task-local process context. No new scheduler. All public benchmark service calls traverse process_post_synch and are included in the measurement. This is hosted-stack execution coverage, not native Contiki preemptive APIs or an unchanged leaderboard profile. All six unchanged pinned app bodies complete in one B1 reset, 500 iterations and actual CPU IRQ; adapter-inclusive hardware counts."
           }
         },
         "Pi KVM": {
