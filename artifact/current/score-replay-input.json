@@ -945,6 +945,117 @@
     },
     "scope": "Existing bounded application-preference grid and leave-one-category-out analysis; not measurement confidence intervals."
   },
+  "comparison_scope": {
+    "schema": "eunobench-deployment-attribution-v1",
+    "comparison_unit": "deployed_configuration",
+    "native_os_capability_ranking": false,
+    "profiles": [
+      {
+        "configuration": "FreeRTOS",
+        "display_name": "FreeRTOS",
+        "runtime_build": "FreeRTOS-absolute-v1",
+        "observer_build": "FreeRTOS-ram-absolute-v1",
+        "host_kernel": null,
+        "task_dispatch": "FreeRTOS native task and queue services",
+        "communication": "ESP-IDF lwIP on FreeRTOS, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "Zephyr",
+        "display_name": "Zephyr",
+        "runtime_build": "Zephyr-absolute-v1",
+        "observer_build": "Zephyr-ram-absolute-v3",
+        "host_kernel": null,
+        "task_dispatch": "Zephyr native task and queue services",
+        "communication": "Zephyr network stack, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "NuttX",
+        "display_name": "NuttX",
+        "runtime_build": "NuttX-ap4-absolute-v1",
+        "observer_build": "NuttX-ram-paired-absolute-v1",
+        "host_kernel": null,
+        "task_dispatch": "NuttX native task and queue services",
+        "communication": "NuttX network stack, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "RIOT",
+        "display_name": "RIOT",
+        "runtime_build": "RIOT-absolute-v1",
+        "observer_build": "RIOT-ram-absolute-v4",
+        "host_kernel": null,
+        "task_dispatch": "RIOT native task and queue services",
+        "communication": "RIOT socket and network port, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "AliOS Things",
+        "display_name": "AliOS Things",
+        "runtime_build": "AliOS-absolute-v1",
+        "observer_build": "AliOS-ram-paired-absolute-v1",
+        "host_kernel": null,
+        "task_dispatch": "Rhino native task and queue services",
+        "communication": "AliOS lwIP on Rhino, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "Zephyr C2-1 (Qwen)",
+        "display_name": "Zephyr (direct prompting)",
+        "runtime_build": "Zephyr-qwen-absolute-v1",
+        "observer_build": "Zephyr-qwen-ram-absolute-v2",
+        "host_kernel": null,
+        "task_dispatch": "Zephyr native task and queue services",
+        "communication": "Zephyr network stack, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "Zephyr (AutoOS-adapted)",
+        "display_name": "Zephyr (AutoOS-adapted)",
+        "runtime_build": "Zephyr-autoos-absolute-v1",
+        "observer_build": "Zephyr-autoos-ram-absolute-v2",
+        "host_kernel": null,
+        "task_dispatch": "Zephyr native task and queue services",
+        "communication": "Zephyr network stack, application worker and complete UDP transaction",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      },
+      {
+        "configuration": "Contiki-NG + ESP-IDF/FreeRTOS",
+        "display_name": "Contiki-NG + FreeRTOS",
+        "runtime_build": "Contiki-IDF-absolute-v1",
+        "observer_build": "Contiki-IDF-ram-absolute-v1",
+        "host_kernel": "FreeRTOS",
+        "task_dispatch": "Contiki process queue on a FreeRTOS event-loop task",
+        "communication": "IDF lwIP and FreeRTOS networking, ingress queue, Contiki checksum worker and reply path",
+        "energy": "Whole B1 input during the marked phase, including radio, runtime and host where present; not an isolated kernel energy measurement",
+        "ram": "Whole declared instrumented deployment allocation peak, including the host where present; not standalone kernel RAM",
+        "task_boundary": "Submission to verified completion, including copy and queue waiting; excludes earlier release and ingress waiting",
+        "component_costs_separately_measured": false
+      }
+    ]
+  },
   "reference_controls": {
     "common-power-absolute-formal-v1": {
       "1": {

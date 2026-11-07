@@ -9,6 +9,15 @@ the former landing page; the historical replay remains available below.
   and Overall use **FreeRTOS = 1**. The offline entry recomputes the category
   ratios, overall ranks and the 235 preference profiles from **48 archived
   measurement summaries**, including the correct acquisition-block reference.
+- **Figure 1 attribution:** the comparison unit is the complete deployed
+  configuration. **Contiki-NG + FreeRTOS** includes actual Contiki job dispatch,
+  FreeRTOS host scheduling and IDF/lwIP networking. Task response starts at
+  submission, excluding earlier release and ingress waiting. UDP rate is a
+  complete transaction; energy and observer RAM cover the declared combined
+  deployment. The indices do not isolate Contiki's kernel, native TCP/IP,
+  energy or RAM. The private production raw replay reconstructs all 48 inputs
+  and 235 preference profiles unchanged. Current public replay additionally
+  rejects missing or altered deployment attribution.
 - **Table 1:** 70 benchmark-target cells, **8 without qualifying full-subset coverage**.
   The distributed table and coverage index agree cell by cell. Each measured
   cell identifies its cases, configurations and evidence commitments; remaining
@@ -57,7 +66,7 @@ Browse [the current inputs and Table 1](artifact/current/) or
 Download [EunoBench_Review_20261106.zip](EunoBench_Review_20261106.zip), extract it,
 and run the same command from its root (the ZIP contains the artifact contents).
 
-ZIP SHA-256: `6ebff5ae4f5f11a74047dd60244b9a1c3baa9ed7cb3712a9de9c738ac2ced6c6`.
+ZIP SHA-256: `792fd3bb4bbc6e21eff6f56298a5abbe70dab09310aed4a6b24649fd817cca0f`.
 
 ## Preserved historical raw-evidence replay
 

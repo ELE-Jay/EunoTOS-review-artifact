@@ -6,6 +6,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 from eunotos_adoption_replay import integrity
+from common_leaderboard_attribution import require_deployment_scope
 from production_score_core import indices,totals,rank,sensitivity
 
 def main(output):
@@ -13,6 +14,7 @@ def main(output):
  if output.exists():raise ValueError('Use a new output directory outside the artifact')
  if ROOT==output.resolve() or ROOT in output.resolve().parents:raise ValueError('Output must be outside the artifact')
  data=json.loads((ROOT/'current/score-replay-input.json').read_text())
+ require_deployment_scope(data)
  rows=data['rows'];ref=next(r for r in rows if r['os']=='FreeRTOS')
  if len(rows)!=8 or len(data['score_input_manifest'])!=48:raise ValueError('Incomplete eight-configuration inputs')
  actual=[]
