@@ -1,6 +1,6 @@
 # EunoBench: Anonymous Review Artifact
 
-**Updated 2026-11-07.** This is the current, bounded review snapshot. It replaces
+**Documentation updated 2026-11-09.** This is the current, bounded review snapshot. It replaces
 the former landing page; the historical replay remains available below.
 
 ## Current paper results
@@ -84,8 +84,8 @@ the former landing page; the historical replay remains available below.
   resets, each with 27 real CPU_FROM_CPU2 interrupts and hardware/OS ISR-context
   checks. They use unchanged Contiki process dispatch and PT_SEM, with IDF
   providing boot and interrupt installation, not the tested semaphore or a
-  worker-thread substitute. The **i** marker identifies these three cases;
-  **n** identifies the ten Linux cases. The total is **13/24 across three images
+  worker-thread substitute. The case index distinguishes these three IRQ cases
+  from the ten Linux cases. The total is **13/24 across three images
   and two platforms**, not a full-suite run or a new leaderboard input. The
   other 11 cases have no qualifying completed run on that frozen cooperative
   configuration and are named in the index.
